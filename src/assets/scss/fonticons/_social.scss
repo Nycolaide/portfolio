@@ -2,6 +2,27 @@ $icomoon-font-family: "social" !default;
 $icomoon-font-path: "/icons/Social" !default;
 $icomoon-id: "1ef7eh" !default;
 
+$social-discord: "\e900";
+$social-github: "\e901";
+$social-medium: "\e902";
+$social-snapchat: "\e903";
+$social-twitch: "\e904";
+$social-googleplus: "\ea8d";
+$social-hangouts: "\ea8e";
+$social-facebook: "\ea90";
+$social-instagram: "\ea92";
+$social-whatsapp: "\ea93";
+$social-telegram: "\ea95";
+$social-twitter: "\ea96";
+$social-rss: "\ea9c";
+$social-dribbble: "\eaa7";
+$social-behance: "\eaa8";
+$social-deviantart: "\eaaa";
+$social-blogger: "\eab7";
+$social-tumblr: "\eab9";
+$social-linkedin: "\eaca";
+$social-pinterest: "\ead1";
+
 @font-face {
   font-family: "#{$icomoon-font-family}";
   src: url("#{$icomoon-font-path}/#{$icomoon-font-family}.eot?#{$icomoon-id}");
@@ -30,21 +51,21 @@ i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.social-codepen {
-  &:before {
-    content: $social-codepen;
-  }
-}
+// .social-codepen {
+//   &:before {
+//     content: $social-codepen;
+//   }
+// }
 .social-behance {
   &:before {
     content: $social-behance;
   }
 }
-.social-deezer {
-  &:before {
-    content: $social-deezer;
-  }
-}
+// .social-deezer {
+//   &:before {
+//     content: $social-deezer;
+//   }
+// }
 .social-deviantart {
   &:before {
     content: $social-deviantart;
@@ -60,11 +81,11 @@ i {
     content: $social-dribbble;
   }
 }
-.social-email {
-  &:before {
-    content: $social-email;
-  }
-}
+// .social-email {
+//   &:before {
+//     content: $social-email;
+//   }
+// }
 .social-facebook {
   &:before {
     content: $social-facebook;
@@ -90,61 +111,61 @@ i {
     content: $social-medium;
   }
 }
-.social-messenger {
-  &:before {
-    content: $social-messenger;
-  }
-}
-.social-music {
-  &:before {
-    content: $social-music;
-  }
-}
+// .social-messenger {
+//   &:before {
+//     content: $social-messenger;
+//   }
+// }
+// .social-music {
+//   &:before {
+//     content: $social-music;
+//   }
+// }
 .social-pinterest {
   &:before {
     content: $social-pinterest;
   }
 }
-.social-reddit {
-  &:before {
-    content: $social-reddit;
-  }
-}
-.social-skype {
-  &:before {
-    content: $social-skype;
-  }
-}
-.social-slack {
-  &:before {
-    content: $social-slack;
-  }
-}
+// .social-reddit {
+//   &:before {
+//     content: $social-reddit;
+//   }
+// }
+// .social-skype {
+//   &:before {
+//     content: $social-skype;
+//   }
+// }
+// .social-slack {
+//   &:before {
+//     content: $social-slack;
+//   }
+// }
 .social-snapchat {
   &:before {
     content: $social-snapchat;
   }
 }
-.social-spotify {
-  &:before {
-    content: $social-spotify;
-  }
-}
-.social-stackoverflow {
-  &:before {
-    content: $social-stackoverflow;
-  }
-}
-.social-steam {
-  &:before {
-    content: $social-steam;
-  }
-}
-.social-tiktok {
-  &:before {
-    content: $social-tiktok;
-  }
-}
+// .social-spotify {
+//   &:before {
+//     content: $social-spotify;
+//   }
+// }
+// .social-stackoverflow {
+//   &:before {
+//     content: $social-stackoverflow;
+//   }
+// }
+// .social-steam {
+//   &:before {
+//     content: $social-steam;
+//   }
+// }
+// .social-tiktok {
+//   &:before {
+//     content: $social-tiktok;
+//   }
+// }
 .social-tumblr {
   &:before {
     content: $social-tumblr;
@@ -165,18 +186,18 @@ i {
     content: $social-whatsapp;
   }
 }
-.social-wordpress {
-  &:before {
-    content: $social-wordpress;
-  }
-}
-.social-xbox {
-  &:before {
-    content: $social-xbox;
-  }
-}
-.social-youtube {
-  &:before {
-    content: $social-youtube;
-  }
-}
+// .social-wordpress {
+//   &:before {
+//     content: $social-wordpress;
+//   }
+// }
+// .social-xbox {
+//   &:before {
+//     content: $social-xbox;
+//   }
+// }
+// .social-youtube {
+//   &:before {
+//     content: $social-youtube;
+//   }
+// }

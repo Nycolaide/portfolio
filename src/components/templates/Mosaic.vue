@@ -12,12 +12,12 @@
       :cameraTag="'div'"
       bound="{true}"
       @need-panel="
-        e => {
+        (e) => {
           // ADD PANELS
         }
       "
       @move-end="
-        e => {
+        (e) => {
           // HANDLE INDEX CHANGE
         }
       "
@@ -46,7 +46,7 @@
             :height="150"
             :width="420"
             class="d-block pb-2 pr-2 pl-2"
-            style="margin-top: -12px"
+            style="margin-top: 8px"
             @click.native="cardClickEvent('metho')"
           />
         </v-sheet>

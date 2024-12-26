@@ -65,7 +65,7 @@
       />
       <v-row color="#121212">
         <v-col>
-          <Mosaic :data="categoriesHome" @on-click="openDialog" />
+          <Mosaic :data="CategorySkill" @on-click="openDialog" />
         </v-col>
       </v-row>
 
@@ -247,93 +247,105 @@ export default Vue.extend({
       UserList: [
         {
           id: 1,
-          name: "Panos Panay",
-          picture: "https://files.laurentgrimaldi.dev/user/panospanay.jpg",
+          name: "Panos Panay Hey",
+          picture: "panospanay.jpg",
           work: "Chief Product Officer Microsoft",
           link: "https://twitter.com/panos_panay",
         },
         {
           id: 2,
           name: "Dona Sarkar",
-          picture: "https://files.laurentgrimaldi.dev/user/donasarkar.jpg",
+          // picture: "https://files.laurentgrimaldi.dev/user/donasarkar.jpg",
+          picture: "donasarkar.jpg",
           work: "Leading Dev Advocacy Microsoft",
           link: "https://twitter.com/donasarkar",
         },
         {
           id: 3,
           name: "Joueur du Grenier",
-          picture: "https://files.laurentgrimaldi.dev/user/jdg.jpg",
+          // picture: "https://files.laurentgrimaldi.dev/user/jdg.jpg",
+          picture: "jdg.jpg",
           work: "Youtubeur",
           link: "https://www.youtube.com/user/joueurdugrenier",
         },
         {
           id: 4,
           name: "Hugo Lisoir",
-          picture: "https://files.laurentgrimaldi.dev/user/hugolisoir.jpg",
+          // picture: "https://files.laurentgrimaldi.dev/user/hugolisoir.jpg",
+          picture: "hugolisoir.jpg",
           work: "Youtubeur",
           link: "https://www.youtube.com/channel/UCDC6DBi0kRp6Jk21xqfvFLA",
         },
         {
           id: 5,
           name: "Alexandre Astier",
-          picture: "https://files.laurentgrimaldi.dev/user/alexandreastier.png",
+          // picture: "https://files.laurentgrimaldi.dev/user/alexandreastier.png",
+          picture: "alexandreastier.png",
           work: "C'est pas faux",
           link: "https://twitter.com/AAstierOff",
         },
         {
           id: 6,
           name: "Jonathan Ive",
-          picture: "https://files.laurentgrimaldi.dev/user/jonathanive.jpg",
+          // picture: "https://files.laurentgrimaldi.dev/user/jonathanive.jpg",
+          picture: "jonathanive.jpg",
           work: "Designer",
           link: "https://designwanted.com/design/jonathan-ive-apple/",
         },
         {
           id: 7,
           name: "Re:Take",
-          picture: "https://files.laurentgrimaldi.dev/user/retake.jpg",
+          // picture: "https://files.laurentgrimaldi.dev/user/retake.jpg",
+          picture: "retake.jpg",
           work: "Youtubeur",
           link: "https://www.youtube.com/user/PizzaLauncher",
         },
         {
           id: 8,
           name: "Viva la Dirt League",
-          picture: "https://files.laurentgrimaldi.dev/user/vivaladirtleague",
+          // picture: "https://files.laurentgrimaldi.dev/user/vivaladirtleague",
+          picture: "vivaladirtleague.jpg",
           work: "Youtubeur",
           link: "https://www.youtube.com/user/VivaLaDirtLeague",
         },
         {
           id: 9,
           name: "Benjamin Brillaud",
-          picture: "https://files.laurentgrimaldi.dev/user/notabene.jpg",
+          // picture: "https://files.laurentgrimaldi.dev/user/notabene.jpg",
+          picture: "notabene.jpg",
           work: "Youtubeur",
           link: "https://www.youtube.com/user/notabenemovies",
         },
         {
           id: 10,
           name: "Tev",
-          picture: "https://files.laurentgrimaldi.dev/user/tev.jpg",
+          // picture: "https://files.laurentgrimaldi.dev/user/tev.jpg",
+          picture: "tev.jpg",
           work: "CEO de Candysan & Youtubeur IciJapon",
           link: "https://twitter.com/IciJapon",
         },
         {
           id: 11,
           name: "Natsume Akatsuki",
-          picture:
-            "https://files.laurentgrimaldi.dev/user/natsumeakatsuki.jpeg",
+          // picture:
+          //   "https://files.laurentgrimaldi.dev/user/natsumeakatsuki.jpeg",
+          picture: "natsumeakatsuki.jpeg",
           work: "Mangaka",
           link: "https://fr.wikipedia.org/wiki/Natsume_Akatsuki",
         },
         {
           id: 12,
           name: "AstronoGeek",
-          picture: "https://files.laurentgrimaldi.dev/user/astronogeek.jpg",
+          // picture: "https://files.laurentgrimaldi.dev/user/astronogeek.jpg",
+          picture: "astronogeek.jpg",
           work: "Youtubeur",
           link: "https://www.youtube.com/channel/UC5X4e8ScZI2AFd_vkjSoyoQ",
         },
         {
           id: 13,
           name: "Joeel56",
-          picture: "https://files.laurentgrimaldi.dev/user/joeel56.jpeg",
+          // picture: "https://files.laurentgrimaldi.dev/user/joeel56.jpeg",
+          picture: "joeel56.jpeg",
           work: "Web Developpeur / Youtubeuse ",
           link: "https://www.instagram.com/joeel56/?hl=fr",
         },

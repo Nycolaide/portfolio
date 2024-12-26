@@ -17,7 +17,8 @@
           <v-tooltip bottom>
             <template v-slot:activator="{ on, attrs }">
               <v-img
-                :src="data.picture"
+                :src="require(`../assets/user/${data.picture}`)"
+                aspect-ratio="1"
                 class="rounded-circle ml-2 mr-2"
                 v-bind="attrs"
                 v-on="on"
@@ -43,8 +44,8 @@ export default Vue.extend({
   props: {
     data: {
       type: Object,
-      required: false
-    }
-  }
+      required: false,
+    },
+  },
 });
 </script>
