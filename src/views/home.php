@@ -17,8 +17,8 @@
     <?php include_once "dist/server/loading.php"; ?>
 </head>
 <body>
-	<div id="alert" style="padding: 20px">
-	<p>Bonjour ceci est l'ancienne version de mon portfolio, vous pouvez retrouver la nouvelle version sur <a href="https://laurentgrimaldi.dev/">https://laurentgrimaldi.dev</a></p>
+	<div id="alert" style="position: fixed;top: 0;z-index: 9999;background: orange;width: 100%;">
+	<p style="text-align: center;margin: 0;padding: 5px;">Bonjour ceci est l'ancienne version de mon portfolio, vous pouvez retrouver la nouvelle version sur <a href="https://nycolaide.dev/">https://nycolaide.dev</a></p>
 	</div>
     <div id="main">
         <div id="holder">

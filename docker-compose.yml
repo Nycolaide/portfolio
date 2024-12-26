@@ -1,0 +1,19 @@
+services:
+  portfolio_nycolaide_v1:
+    container_name: portfolio_nycolaide_v1
+    build:
+      context: .
+    volumes:
+      - ".:/dist"
+      - "/src"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.portfolio_nycolaide_v1.rule=Host(`v1.nycolaide.dev`)"
+      - "traefik.http.routers.portfolio_nycolaide_v1.tls=true"
+      - "traefik.http.routers.portfolio_nycolaide_v1.tls.certresolver=letsencrypt"
+    networks:
+      - traefik_proxy
+
+networks:
+  traefik_proxy:
+    external: true
