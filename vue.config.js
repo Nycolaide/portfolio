@@ -21,6 +21,10 @@ const productionPlugins = [
 module.exports = {
   transpileDependencies: ["vuetify"],
   lintOnSave: false,
+  devServer: {
+    // not reccomended for production
+    disableHostCheck: true,
+  },
   //  configureWebpack: config => {
   //    if (process.env.NODE_ENV === "production") {
   //      config.plugins.push(...productionPlugins);
