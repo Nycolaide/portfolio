@@ -1,34 +1,38 @@
-# Portfolio v2
+# sv
 
-Ceci est mon second portfolio créé en 2021. Il était disponible sur le domaine laurentgrimaldi.dev.
-Ce portfolio n'est plus à jour et n'est plus maintenu.
+Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
-## Environnement
+## Creating a project
 
-- Vue.js 2
-- Vuetify
-- Sass
-- HTML 5
-- CSS 3
-- Node.js 14.1
-- Dépencance à des API wordpress (c'est API ne sont plus disponible)
+If you're seeing this, you've probably already done this step. Congrats!
 
-## Env
+```bash
+# create a new project in the current directory
+npx sv create
 
-### Project setup
-
-```
-npm install
+# create a new project in my-app
+npx sv create my-app
 ```
 
-### Compiles and hot-reloads for development
+## Developing
 
-```
-npm run serve
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+
+```bash
+npm run dev
+
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
 ```
 
-### Compiles and minifies for production
+## Building
 
-```
+To create a production version of your app:
+
+```bash
 npm run build
 ```
+
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
