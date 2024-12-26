@@ -7,7 +7,7 @@
     <!--<AppBar />-->
     <!-- !navigation-bar -->
 
-    <v-app-bar flat dense color="header">
+    <v-app-bar flat dense color="header" style="margin-top: 34px;">
       <!-- -->
       <v-container class="content--app pr-0 pl-0 pr-mb-2 pl-mb-2">
         <v-toolbar flat dense color="header">

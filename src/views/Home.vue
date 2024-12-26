@@ -1,5 +1,15 @@
 <template>
   <div class="home">
+    <div
+      id="alert"
+      style="position: fixed;top: 0;z-index: 9999;background: orange;width: 100%;"
+    >
+      <p style="text-align: center;margin: 0;padding: 5px;">
+        Bonjour ceci est l'ancienne version de mon portfolio, vous pouvez
+        retrouver la nouvelle version sur
+        <a href="https://nycolaide.dev/">https://nycolaide.dev</a>
+      </p>
+    </div>
     <!--<Header />-->
     <v-sheet color="header">
       <v-container class="pt-12 pb-16 content--app">

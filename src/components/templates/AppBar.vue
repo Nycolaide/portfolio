@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar color="bg">
+  <v-app-bar color="bg" style="margin-top: 34px">
     <v-tooltip bottom>
       <template v-slot:activator="{ on }">
         <v-img
