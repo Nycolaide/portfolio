@@ -1,10 +1,34 @@
-# Portfolio v1
+# minecore
 
-Ceci est mon premier portfolio créé en 2018. Il était disponible sur le domaine laurentgrimaldi.com .
-Ce portfolio n'est plus à jour et n'est plus maintenu.
+## Project setup
+```
+npm install
+```
 
-## Environnement
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-- PHP 7
-- Sass
-- Pas de compilation nécessaire
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Run your unit tests
+```
+npm run test:unit
+```
+
+### Run your end-to-end tests
+```
+npm run test:e2e
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
