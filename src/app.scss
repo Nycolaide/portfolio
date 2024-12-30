@@ -4,3 +4,14 @@
 
 // fonts
 @use './lato.scss';
+
+// background
+
+body {
+	background-color: var(--myt-color-background);
+
+	opacity: 1;
+	background-image: radial-gradient(#444cf7 1.6500000000000001px, #e5e5f7 1.6500000000000001px);
+
+	background-size: 33px 33px;
+}

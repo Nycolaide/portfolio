@@ -5,12 +5,12 @@
 <h1>Welcome to SvelteKit</h1>
 <p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
 
-<Grid>
-	<GridRow>
-		<GridCol offsetMd="3" md="6">
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores laborum reiciendis tenetur.
-			Repellendus, dolores praesentium? Delectus nostrum, atque iusto asperiores officiis amet
-			blanditiis assumenda quod minus facere? Corporis, quaerat quod.
+<Grid fluid>
+	<GridRow class="align-center" style="min-height: calc(100vh - (64px * 2))">
+		<GridCol offsetMd="1" md="5">
+			<h1 class="font-black mb-1">Laurent Grimaldi</h1>
+			<p class="font-light mb-3">@Nycolaide</p>
+			<p>Hi, I’m a front-end engineer and a creator on my library component for Svelte</p>
 		</GridCol>
 	</GridRow>
 </Grid>
