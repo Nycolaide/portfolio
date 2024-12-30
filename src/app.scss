@@ -1,3 +1,6 @@
-@use "mytril/base";
-@use "mytril/utilities";
-@use "mytril/components";
+@use 'mytril/base';
+@use 'mytril/components';
+@use 'mytril/utilities';
+
+// fonts
+@use './lato.scss';

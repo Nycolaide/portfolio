@@ -1,6 +1,11 @@
 <script lang="ts">
-    import "../app.scss";
+	import PrimaryNav from '$lib/components/primary-nav.svelte';
+	import '../app.scss';
+	import { App } from 'mytril';
 	let { children } = $props();
 </script>
 
-{@render children()}
+<App>
+	<PrimaryNav />
+	{@render children()}
+</App>
