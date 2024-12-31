@@ -1,0 +1,182 @@
+[
+	{
+		"name": "angular",
+		"url": "https://angular.dev/",
+		"color": "#e42092",
+		"icon": "angular.svg"
+	},
+	{
+		"name": "css",
+		"url": "https://www.w3.org/Style/CSS/#specs",
+		"color": "#016cb4",
+		"icon": "css3.svg"
+	},
+	{
+		"name": "docker",
+		"url": "https://www.docker.com/",
+		"color": "#1d63ed",
+		"icon": "docker.svg"
+	},
+	{
+		"name": "html",
+		"url": "https://html.spec.whatwg.org/multipage/",
+		"color": "#dd4b25",
+		"icon": "html5.svg"
+	},
+	{
+		"name": "javascript",
+		"url": "https://ecma-international.org/",
+		"color": "#efd81d",
+		"icon": "javascript.svg"
+	},
+	{
+		"name": "jquery",
+		"url": "https://jquery.com/",
+		"color": "#076fae",
+		"icon": "jquery.svg"
+	},
+	{
+		"name": "less",
+		"url": "https://lesscss.org/",
+		"color": "#22436d",
+		"icon": "less.svg"
+	},
+	{
+		"name": "mongodb",
+		"url": "https://www.mongodb.com",
+		"color": "#001e2b",
+		"icon": "mongodb.svg"
+	},
+	{
+		"name": "mysql",
+		"url": "https://www.mysql.com/",
+		"color": "#00758f",
+		"icon": "mysql.svg"
+	},
+	{
+		"name": "next.js",
+		"url": "https://nextjs.org/",
+		"color": "#ffffff",
+		"icon": "next.svg"
+	},
+	{
+		"name": "node.js",
+		"url": "https://nodejs.org",
+		"color": "#417e38",
+		"icon": "nodejs.svg"
+	},
+	{
+		"name": "nuxt.js",
+		"url": "https://nuxt.com/",
+		"color": "#00C678",
+		"icon": "nuxt.svg"
+	},
+	{
+		"name": "php",
+		"url": "https://www.php.net/",
+		"color": "#4F5B93",
+		"icon": "php.svg"
+	},
+	{
+		"name": "postgresql",
+		"url": "https://www.postgresql.org/",
+		"color": "#336791",
+		"icon": "postgresql.svg"
+	},
+	{
+		"name": "python",
+		"url": "https://www.python.org/",
+		"color": "#3C78A9",
+		"icon": "python.svg"
+	},
+	{
+		"name": "react",
+		"url": "https://react.dev/",
+		"color": "#58C4DC",
+		"icon": "react.svg"
+	},
+	{
+		"name": "redux",
+		"url": "https://redux.js.org/",
+		"color": "#764ABC",
+		"icon": "redux.svg"
+	},
+	{
+		"name": "rollup",
+		"url": "https://rollupjs.org/",
+		"color": "#FF3232",
+		"icon": "rollup.svg"
+	},
+	{
+		"name": "sass",
+		"url": "https://sass-lang.com/",
+		"color": "#CF649A",
+		"icon": "sass.svg"
+	},
+	{
+		"name": "sql",
+		"url": "https://www.iso.org/standard/76583.html",
+		"color": "#000000",
+		"icon": "sql.svg"
+	},
+	{
+		"name": "svelte",
+		"url": "https://svelte.dev/",
+		"color": "#FF3E00",
+		"icon": "svelte.svg"
+	},
+	{
+		"name": "swift",
+		"url": "https://www.swift.org/",
+		"color": "#F05138",
+		"icon": "swift.svg"
+	},
+	{
+		"name": "tailwindcss",
+		"url": "https://tailwindcss.com/",
+		"color": "#38BDF8",
+		"icon": "tailwindcss.svg"
+	},
+	{
+		"name": "typescript",
+		"url": "https://www.typescriptlang.org/",
+		"color": "#3178C6",
+		"icon": "typescript.svg"
+	},
+	{
+		"name": "vite",
+		"url": "https://vite.dev/",
+		"color": "#BD34FE",
+		"icon": "vite.svg"
+	},
+	{
+		"name": "vue",
+		"url": "https://vuejs.org/",
+		"color": "#42D392",
+		"icon": "vue.svg"
+	},
+	{
+		"name": "vuetify",
+		"url": "https://vuetifyjs.com/",
+		"color": "#2196F3",
+		"icon": "vuetify.svg"
+	},
+	{
+		"name": "webpack",
+		"url": "https://webpack.js.org/",
+		"color": "#1C78C0",
+		"icon": "webpack.svg"
+	},
+	{
+		"name": "bootstrap",
+		"url": "https://getbootstrap.com/",
+		"color": "#702DF5",
+		"icon": "bootstrap.svg"
+	},
+	{
+		"name": "kubernetes",
+		"url": "https://kubernetes.io/",
+		"color": "#326CE5",
+		"icon": "kubernetes.svg"
+	}
+]

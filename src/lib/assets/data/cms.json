@@ -1,0 +1,44 @@
+[
+	{
+		"name": "CraftMyCMS",
+		"url": "https://github.com/kevinguiot/CraftMyCMS",
+		"color": "#0056B3",
+		"icon": "craftmycms.svg"
+	},
+	{
+		"name": "drupal",
+		"url": "https://new.drupal.org/drupal-cms",
+		"color": "#12285F",
+		"icon": "drupal.svg"
+	},
+	{
+		"name": "e-majine",
+		"url": "https://www.e-majine.com/",
+		"color": "#27A0D4",
+		"icon": "e-majine.svg"
+	},
+	{
+		"name": "gesweb",
+		"url": "https://www.gesweb.net/",
+		"color": "#0137F3",
+		"icon": "gesweb.svg"
+	},
+	{
+		"name": "joomla",
+		"url": "https://www.joomla.fr/",
+		"color": "#F44321",
+		"icon": "joomla.svg"
+	},
+	{
+		"name": "prestashop",
+		"url": "https://prestashop.fr/",
+		"color": "#A4DBE8",
+		"icon": "prestashop.svg"
+	},
+	{
+		"name": "wordpress",
+		"url": "https://wordpress.com/",
+		"color": "#3858E9",
+		"icon": "wordpress.svg"
+	}
+]

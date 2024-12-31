@@ -1,0 +1,32 @@
+[
+	{
+		"name": "android",
+		"url": "https://www.android.com/",
+		"color": "#2F9C46",
+		"icon": "android.svg"
+	},
+	{
+		"name": "apple",
+		"url": "https://www.apple.com/",
+		"color": "#FFFFFF",
+		"icon": "apple.svg"
+	},
+	{
+		"name": "ios",
+		"url": "https://www.apple.com",
+		"color": "#000000",
+		"icon": "ios.svg"
+	},
+	{
+		"name": "ubuntu",
+		"url": "https://ubuntu.com/",
+		"color": "#E95420",
+		"icon": "ubuntu.svg"
+	},
+	{
+		"name": "windows",
+		"url": "https://www.microsoft.com/fr-fr/software-download/windows11",
+		"color": "#0067B8",
+		"icon": "windows.svg"
+	}
+]

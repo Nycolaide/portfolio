@@ -1,0 +1,50 @@
+[
+	{
+		"name": "battle.net",
+		"url": "https://eu.shop.battle.net/",
+		"color": "#0074E0",
+		"icon": "battle.svg"
+	},
+	{
+		"name": "electronic arts",
+		"url": "https://www.ea.com/",
+		"color": "#0074E0",
+		"icon": "electronicarts.svg"
+	},
+	{
+		"name": "epic games",
+		"url": "https://www.epicgames.com/",
+		"color": "#ACACAD",
+		"icon": "epicgames.svg"
+	},
+	{
+		"name": "minecraft",
+		"url": "https://www.minecraft.net",
+		"color": "#6CC349",
+		"icon": "minecraft.svg"
+	},
+	{
+		"name": "origin",
+		"url": "https://www.ea.com/",
+		"color": "#EA571F",
+		"icon": "origin.svg"
+	},
+	{
+		"name": "steam",
+		"url": "https://store.steampowered.com/",
+		"color": "#19222C",
+		"icon": "steam.svg"
+	},
+	{
+		"name": "ubisoft",
+		"url": "https://www.ubisoft.com/",
+		"color": "#FFFFFF",
+		"icon": "ubisoft.svg"
+	},
+	{
+		"name": "xbox",
+		"url": "https://www.xbox.com/",
+		"color": "#107B10",
+		"icon": "xbox.svg"
+	}
+]
