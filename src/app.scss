@@ -15,3 +15,22 @@ body {
 
 	background-size: 33px 33px;
 }
+
+#secondary-navigation {
+	--secondary-navigation--width: 542px;
+
+	bottom: 30px;
+	max-width: var(--secondary-navigation--width);
+	margin-left: calc((100% / 2) - (var(--secondary-navigation--width) / 2));
+	background: color-mix(in oklab, var(--myt-color-on-background), transparent 20%);
+
+	.myt-toolbar--content {
+		width: calc(100% - 1.1rem);
+	}
+}
+
+#close-bottom-view-modal {
+	z-index: 10000;
+	bottom: 34px;
+	right: 34px;
+}
