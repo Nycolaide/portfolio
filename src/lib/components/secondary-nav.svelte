@@ -8,8 +8,8 @@
 	contentClass="mx-3 ga-2"
 	style="bottom: 30px;z-index: 10000;"
 >
-	<Btn color="on-surface" href="?modal=lang" link={false}>Languages</Btn>
-	<Btn color="on-surface" href="?modal=env" link={false}>Environements</Btn>
+	<Btn color="on-surface" href="?modal=dev" link={false}>Languages</Btn>
+	<Btn color="on-surface" href="?modal=tools" link={false}>Environements</Btn>
 	<Spacer />
 	<Btn size="xl" class="px-2">Visit my CV</Btn>
 </Toolbar>

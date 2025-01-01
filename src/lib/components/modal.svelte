@@ -1,8 +1,10 @@
 <script lang="ts">
-	import { Btn, Card, CardActions, CardText } from 'mytril';
+	import { Btn, Card, CardActions, CardText, Icon } from 'mytril';
 	import { page } from '$app/state';
 	import { goto } from '$app/navigation';
-	import { fetchUsers } from '$lib/stores/socialStore';
+	import { fetchSkills, skills, type SkillCategory } from '$lib/stores/skillStore';
+
+	import closeSVG from '$lib/assets/icons/close.svg';
 
 	let open: boolean = $state(false);
 
@@ -12,8 +14,9 @@
 	});
 
 	$effect(() => {
-		if (open) {
-			fetchUsers();
+		if (open && page.url.searchParams.get('modal') && page.url.searchParams.get('modal') !== null) {
+			const key = page.url.searchParams.get('modal') as SkillCategory;
+			if (key !== null) fetchSkills(key);
 		}
 	});
 
@@ -29,6 +32,17 @@
 	<div class="content">
 		<Card>
 			<CardText>
+				{#if $skills.loading}
+					Loading...
+				{:else if $skills.data}
+					{#each $skills.data as { name }}
+						<p>{name}</p>
+					{/each}
+				{:else}
+					No data
+				{/if}
+			</CardText>
+			<CardText>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa saepe maiores dolores, sint
 				asperiores modi quo a? Soluta explicabo sint, consequatur eligendi ea rem odio dolores
 				facere culpa veniam. Quos.
@@ -39,7 +53,9 @@
 </div>
 
 {#if open}
-	<Btn id="close-bottom-view-modal" icon size="lg" onclick={closeModal} class="fixed">Close</Btn>
+	<Btn id="close-bottom-view-modal" icon size="lg" onclick={closeModal} class="fixed">
+		<Icon icon={`svg:${closeSVG}`} />
+	</Btn>
 {/if}
 
 <style>
