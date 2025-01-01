@@ -1519,10 +1519,10 @@ ms@^2.1.3:
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.3.tgz#574c8138ce1d2b5861f0b44579dbadd60c6615b2"
   integrity sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==
 
-mytril@^0.4.11:
-  version "0.4.11"
-  resolved "https://registry.yarnpkg.com/mytril/-/mytril-0.4.11.tgz#abc31e77b2f1b25af10a99fb0237924bce86e32a"
-  integrity sha512-Zf5TAlWdSOJsKsMf6f5eiHjGV6i/zwCxgAJ1clVqZH/guZ0LdUp8faFSHif5VNbeENICmzpNtf7w2DkHmiVsiA==
+mytril@^0.4.12:
+  version "0.4.12"
+  resolved "https://registry.yarnpkg.com/mytril/-/mytril-0.4.12.tgz#5183980956b7094e1c2f47e2754b93d7ec203d25"
+  integrity sha512-maG8QhIBs5WSm6MTHp7zVdUAxqvTr++tGMLy1FWVLnXDIjEqJuqVEI4ttIPeGauuQ/MsE/G+NXyuxF6pqC1/jw==
 
 nanoid@^3.3.7:
   version "3.3.8"

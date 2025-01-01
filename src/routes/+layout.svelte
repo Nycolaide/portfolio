@@ -7,6 +7,7 @@
 	import '../app.scss';
 	import { App } from 'mytril';
 	import { fetchSocials } from '$lib/stores/socialStore';
+	import BottomNav from '$lib/components/bottom-nav.svelte';
 
 	onMount(() => {
 		fetchSocials();
@@ -21,4 +22,6 @@
 	<SecondaryNav />
 	<Footer />
 	<Modal />
+
+	<BottomNav />
 </App>
