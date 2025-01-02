@@ -19,3 +19,7 @@
 		</GridCol>
 	</GridRow>
 </Grid>
+
+<div class="element-test">
+	<div class="element-test__child" style="height: 70vh; width: 100%">1</div>
+</div>
