@@ -1,12 +1,11 @@
 <script lang="ts">
-	import { Btn, Card, CardActions, CardText, Icon } from 'mytril';
+	import { Btn, Card, CardActions, CardText, CardTitle, Icon } from 'mytril';
 	import { page } from '$app/state';
 	import { goto } from '$app/navigation';
 	import { fetchSkills, skills, type SkillCategory } from '$lib/stores/skillStore';
 
-	import closeSVG from '$lib/assets/icons/close.svg';
-
 	let open: boolean = $state(false);
+	let title: string = $state('');
 
 	$effect(() => {
 		if (page.url.searchParams.get('modal')) open = true;
@@ -16,7 +15,10 @@
 	$effect(() => {
 		if (open && page.url.searchParams.get('modal') && page.url.searchParams.get('modal') !== null) {
 			const key = page.url.searchParams.get('modal') as SkillCategory;
-			if (key !== null) fetchSkills(key);
+			if (key !== null) {
+				title = key;
+				fetchSkills(key);
+			}
 		}
 	});
 
@@ -31,21 +33,23 @@
 	<button class="overlay" onclick={closeModal}><span>close</span></button>
 	<div class="content">
 		<Card>
-			<CardText>
+			<CardTitle class="text-xl">{title}</CardTitle>
+			<CardText id="view-on-modal">
 				{#if $skills.loading}
 					Loading...
 				{:else if $skills.data}
-					{#each $skills.data as { name }}
-						<p>{name}</p>
+					{#each $skills.data as { name, lvl, description }}
+						<div>
+							<p>{name}</p>
+							{#if description}
+								<p>{description}</p>
+							{/if}
+							<p>{lvl}</p>
+						</div>
 					{/each}
 				{:else}
 					No data
 				{/if}
-			</CardText>
-			<CardText>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa saepe maiores dolores, sint
-				asperiores modi quo a? Soluta explicabo sint, consequatur eligendi ea rem odio dolores
-				facere culpa veniam. Quos.
 			</CardText>
 			<CardActions class="my-8" />
 		</Card>
@@ -54,7 +58,7 @@
 
 {#if open}
 	<Btn id="close-bottom-view-modal" icon size="lg" onclick={closeModal} class="fixed">
-		<Icon icon={`svg:${closeSVG}`} />
+		<Icon icon={`svg:icons/app/close.svg`} />
 	</Btn>
 {/if}
 

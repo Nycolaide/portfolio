@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { Grid, GridCol, GridRow } from 'mytril';
+	import { setRouteParams } from '$lib/helpers';
+	import { Btn, Grid, GridCol, GridRow } from 'mytril';
 </script>
 
 <h1>Welcome to SvelteKit</h1>
@@ -11,6 +12,10 @@
 			<h1 class="font-black mb-1">Laurent Grimaldi</h1>
 			<p class="font-light mb-3">@Nycolaide</p>
 			<p>Hi, I’m a front-end engineer and a creator on my library component for Svelte</p>
+			<p>
+				<Btn onclick={() => setRouteParams('modal', 'dev')}>Languages</Btn>
+				<Btn onclick={() => setRouteParams('modal', 'tools')}>Environements</Btn>
+			</p>
 		</GridCol>
 	</GridRow>
 </Grid>

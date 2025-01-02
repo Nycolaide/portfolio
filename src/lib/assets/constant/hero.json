@@ -13,15 +13,86 @@
 		"dev": [
 			{
 				"name": "html",
-				"lvl": 100
+				"lvl": 95
 			},
 			{
 				"name": "css",
-				"lvl": 100
+				"lvl": 80
 			},
 			{
 				"name": "javascript",
-				"lvl": 100
+				"lvl": 80
+			},
+			{
+				"name": "typescript",
+				"lvl": 70
+			},
+			{
+				"name": "svelte",
+				"description": "v4 and v5",
+				"lvl": 70
+			},
+			{
+				"name": "react",
+				"description": "v16 at lastest",
+				"lvl": 85
+			},
+			{
+				"name": "next",
+				"lvl": 50
+			},
+			{
+				"name": "redux",
+				"lvl": 70
+			},
+			{
+				"name": "tailwindcss",
+				"lvl": 50
+			},
+			{
+				"name": "vite",
+				"lvl": 60
+			},
+			{
+				"name": "vue",
+				"description": "only v2 actually",
+				"lvl": 60
+			},
+			{
+				"name": "vuetify",
+				"description": "v2 and v3 actually",
+				"lvl": 70
+			},
+			{
+				"name": "angular",
+				"description": "only angular.js",
+				"lvl": 25
+			},
+			{
+				"name": "sass",
+				"lvl": 80
+			},
+			{
+				"name": "less",
+				"lvl": 80
+			},
+			{
+				"name": "php",
+				"description": "on v5.6 to v7.3 actually",
+				"lvl": 50
+			},
+			{
+				"name": "bootstrap",
+				"description": "only on v3 actually",
+				"lvl": 80
+			},
+			{
+				"name": "jquery",
+				"lvl": 30
+			},
+			{
+				"name": "less",
+				"lvl": 80
 			}
 		],
 		"tools": [
