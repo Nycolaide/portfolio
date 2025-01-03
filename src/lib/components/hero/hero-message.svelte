@@ -1,0 +1,41 @@
+<script lang="ts">
+	import { Card, CardText, Icon } from 'mytril';
+</script>
+
+<div class="box-card absolute" style="bottom: 0;">
+	<Card color="background" class="rounded-tl rounded-br rounded-tr-xl" style="overflow: initial;">
+		<Icon icon="svg:icons/app/corner.svg" class="svg-corner-top" size="lg" color="background" />
+		<CardText>
+			<p class="text-2xl font-regular">
+				Developer and gamer with a passion for creating and exploring
+			</p>
+		</CardText>
+		<Icon icon="svg:icons/app/corner.svg" class="svg-corner-bottom" size="lg" color="background" />
+	</Card>
+</div>
+
+<style lang="scss">
+	.box-card {
+		max-width: 50%;
+
+		@media screen and (max-width: 790px) {
+			max-width: 85%;
+		}
+
+		:global(.svg-corner-top) {
+			position: absolute;
+			top: -29px;
+			left: -1px;
+			transform: rotate(-90deg);
+			z-index: 9999;
+		}
+
+		:global(.svg-corner-bottom) {
+			position: absolute;
+			right: -29px;
+			bottom: -1px;
+			transform: rotate(-90deg);
+			z-index: 9999;
+		}
+	}
+</style>

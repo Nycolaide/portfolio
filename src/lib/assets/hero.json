@@ -1,0 +1,211 @@
+{
+	"front-end": [
+		{
+			"name": "html",
+			"url": "https://html.spec.whatwg.org/multipage/",
+			"color": "#dd4b25",
+			"icon": "html5.svg",
+			"level": 90
+		},
+		{
+			"name": "css",
+			"url": "https://www.w3.org/Style/CSS/#specs",
+			"color": "#016cb4",
+			"icon": "css3.svg",
+			"level": 80
+		},
+		{
+			"name": "javascript",
+			"url": "https://ecma-international.org/",
+			"color": "#efd81d",
+			"icon": "javascript.svg",
+			"level": 70
+		},
+		{
+			"name": "jquery",
+			"url": "https://jquery.com/",
+			"color": "#076fae",
+			"icon": "jquery.svg",
+			"level": 30
+		},
+		{
+			"name": "less",
+			"url": "https://lesscss.org/",
+			"color": "#22436d",
+			"icon": "less.svg",
+			"level": 80
+		},
+		{
+			"name": "next.js",
+			"url": "https://nextjs.org/",
+			"color": "#ffffff",
+			"icon": "next.svg",
+			"level": 50
+		},
+		{
+			"name": "php",
+			"url": "https://www.php.net/",
+			"color": "#4F5B93",
+			"icon": "php.svg",
+			"level": 50
+		},
+		{
+			"name": "react",
+			"url": "https://react.dev/",
+			"color": "#58C4DC",
+			"icon": "react.svg",
+			"level": 90
+		},
+		{
+			"name": "redux",
+			"url": "https://redux.js.org/",
+			"color": "#764ABC",
+			"icon": "redux.svg",
+			"level": 80
+		},
+		{
+			"name": "rollup",
+			"url": "https://rollupjs.org/",
+			"color": "#FF3232",
+			"icon": "rollup.svg",
+			"level": 50
+		},
+		{
+			"name": "sass",
+			"url": "https://sass-lang.com/",
+			"color": "#CF649A",
+			"icon": "sass.svg",
+			"level": 80
+		},
+		{
+			"name": "svelte",
+			"url": "https://svelte.dev/",
+			"color": "#FF3E00",
+			"icon": "svelte.svg",
+			"level": 85
+		},
+		{
+			"name": "tailwindcss",
+			"url": "https://tailwindcss.com/",
+			"color": "#38BDF8",
+			"icon": "tailwindcss.svg",
+			"level": 40
+		},
+		{
+			"name": "typescript",
+			"url": "https://www.typescriptlang.org/",
+			"color": "#3178C6",
+			"icon": "typescript.svg",
+			"level": 50
+		},
+		{
+			"name": "vitejs",
+			"url": "https://vite.dev/",
+			"color": "#BD34FE",
+			"icon": "vite.svg",
+			"level": 40
+		},
+		{
+			"name": "vue",
+			"url": "https://vuejs.org/",
+			"color": "#42D392",
+			"icon": "vue.svg",
+			"level": 65
+		},
+		{
+			"name": "vuetify",
+			"url": "https://vuetifyjs.com/",
+			"color": "#2196F3",
+			"icon": "vuetify.svg",
+			"level": 70
+		}
+	],
+	"back-end": [
+		{
+			"name": "node.js",
+			"url": "https://nodejs.org",
+			"color": "#417e38",
+			"icon": "nodejs.svg",
+			"level": 35
+		},
+		{
+			"name": "mongodb",
+			"url": "https://www.mongodb.com",
+			"color": "#001e2b",
+			"icon": "mongodb.svg",
+			"level": 20
+		},
+		{
+			"name": "mysql",
+			"url": "https://www.mysql.com/",
+			"color": "#00758f",
+			"icon": "mysql.svg",
+			"level": 50
+		},
+		{
+			"name": "postgresql",
+			"url": "https://www.postgresql.org/",
+			"color": "#336791",
+			"icon": "postgresql.svg",
+			"level": 40
+		},
+		{
+			"name": "sql",
+			"url": "https://www.iso.org/standard/76583.html",
+			"color": "#000000",
+			"icon": "sql.svg",
+			"level": 80
+		}
+	],
+	"cms": [
+		{
+			"name": "CraftMyCMS",
+			"url": "https://github.com/kevinguiot/CraftMyCMS",
+			"color": "#0056B3",
+			"icon": "craftmycms.svg",
+			"level": 70
+		},
+		{
+			"name": "drupal",
+			"url": "https://new.drupal.org/drupal-cms",
+			"color": "#12285F",
+			"icon": "drupal.svg",
+			"level": 30
+		},
+		{
+			"name": "e-majine",
+			"url": "https://www.e-majine.com/",
+			"color": "#27A0D4",
+			"icon": "e-majine.svg",
+			"level": 40
+		},
+		{
+			"name": "gesweb",
+			"url": "https://www.gesweb.net/",
+			"color": "#0137F3",
+			"icon": "gesweb.svg",
+			"level": 50
+		},
+		{
+			"name": "joomla",
+			"url": "https://www.joomla.fr/",
+			"color": "#F44321",
+			"icon": "joomla.svg",
+			"level": 30
+		},
+		{
+			"name": "prestashop",
+			"url": "https://prestashop.fr/",
+			"color": "#A4DBE8",
+			"icon": "prestashop.svg",
+			"level": 20
+		},
+		{
+			"name": "wordpress",
+			"url": "https://wordpress.com/",
+			"color": "#3858E9",
+			"icon": "wordpress.svg",
+			"level": 60
+		}
+	]
+}

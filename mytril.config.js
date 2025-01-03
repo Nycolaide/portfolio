@@ -1,6 +1,6 @@
 /** @type {import('mytril').Config} */
 export default {
-	themes: 'light',
+	themes: ['light', 'dark'],
 	defaultTheme: 'light',
 	colors: {},
 	typography: {

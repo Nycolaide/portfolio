@@ -3,180 +3,259 @@
 		"name": "angular",
 		"url": "https://angular.dev/",
 		"color": "#e42092",
-		"icon": "angular.svg"
+		"icon": "angular.svg",
+		"category": "framework"
 	},
 	{
 		"name": "css",
 		"url": "https://www.w3.org/Style/CSS/#specs",
 		"color": "#016cb4",
-		"icon": "css3.svg"
+		"icon": "css3.svg",
+		"category": "language"
 	},
 	{
 		"name": "docker",
 		"url": "https://www.docker.com/",
 		"color": "#1d63ed",
-		"icon": "docker.svg"
+		"icon": "docker.svg",
+		"category": "tool"
 	},
 	{
 		"name": "html",
 		"url": "https://html.spec.whatwg.org/multipage/",
 		"color": "#dd4b25",
-		"icon": "html5.svg"
+		"icon": "html5.svg",
+		"category": "language"
 	},
 	{
 		"name": "javascript",
 		"url": "https://ecma-international.org/",
 		"color": "#efd81d",
-		"icon": "javascript.svg"
+		"icon": "javascript.svg",
+		"category": "language"
 	},
 	{
 		"name": "jquery",
 		"url": "https://jquery.com/",
 		"color": "#076fae",
-		"icon": "jquery.svg"
+		"icon": "jquery.svg",
+		"category": "library"
 	},
 	{
 		"name": "less",
 		"url": "https://lesscss.org/",
 		"color": "#22436d",
-		"icon": "less.svg"
+		"icon": "less.svg",
+		"category": "language"
 	},
 	{
 		"name": "mongodb",
 		"url": "https://www.mongodb.com",
 		"color": "#001e2b",
-		"icon": "mongodb.svg"
+		"icon": "mongodb.svg",
+		"category": "database"
 	},
 	{
 		"name": "mysql",
 		"url": "https://www.mysql.com/",
 		"color": "#00758f",
-		"icon": "mysql.svg"
+		"icon": "mysql.svg",
+		"category": "database"
 	},
 	{
 		"name": "next.js",
 		"url": "https://nextjs.org/",
 		"color": "#ffffff",
-		"icon": "next.svg"
+		"icon": "next.svg",
+		"category": "framework"
 	},
 	{
 		"name": "node.js",
 		"url": "https://nodejs.org",
 		"color": "#417e38",
-		"icon": "nodejs.svg"
+		"icon": "nodejs.svg",
+		"category": "runtime"
 	},
 	{
 		"name": "nuxt.js",
 		"url": "https://nuxt.com/",
 		"color": "#00C678",
-		"icon": "nuxt.svg"
+		"icon": "nuxt.svg",
+		"category": "framework"
 	},
 	{
 		"name": "php",
 		"url": "https://www.php.net/",
 		"color": "#4F5B93",
-		"icon": "php.svg"
+		"icon": "php.svg",
+		"category": "language"
 	},
 	{
 		"name": "postgresql",
 		"url": "https://www.postgresql.org/",
 		"color": "#336791",
-		"icon": "postgresql.svg"
+		"icon": "postgresql.svg",
+		"category": "database"
 	},
 	{
 		"name": "python",
 		"url": "https://www.python.org/",
 		"color": "#3C78A9",
-		"icon": "python.svg"
+		"icon": "python.svg",
+		"category": "language"
 	},
 	{
 		"name": "react",
 		"url": "https://react.dev/",
 		"color": "#58C4DC",
-		"icon": "react.svg"
+		"icon": "react.svg",
+		"category": "library"
 	},
 	{
 		"name": "redux",
 		"url": "https://redux.js.org/",
 		"color": "#764ABC",
-		"icon": "redux.svg"
+		"icon": "redux.svg",
+		"category": "library"
 	},
 	{
 		"name": "rollup",
 		"url": "https://rollupjs.org/",
 		"color": "#FF3232",
-		"icon": "rollup.svg"
+		"icon": "rollup.svg",
+		"category": "tool"
 	},
 	{
 		"name": "sass",
 		"url": "https://sass-lang.com/",
 		"color": "#CF649A",
-		"icon": "sass.svg"
+		"icon": "sass.svg",
+		"category": "language"
 	},
 	{
 		"name": "sql",
 		"url": "https://www.iso.org/standard/76583.html",
 		"color": "#000000",
-		"icon": "sql.svg"
+		"icon": "sql.svg",
+		"category": "language"
 	},
 	{
 		"name": "svelte",
 		"url": "https://svelte.dev/",
 		"color": "#FF3E00",
-		"icon": "svelte.svg"
+		"icon": "svelte.svg",
+		"category": "framework"
 	},
 	{
 		"name": "swift",
 		"url": "https://www.swift.org/",
 		"color": "#F05138",
-		"icon": "swift.svg"
+		"icon": "swift.svg",
+		"category": "language"
 	},
 	{
 		"name": "tailwindcss",
 		"url": "https://tailwindcss.com/",
 		"color": "#38BDF8",
-		"icon": "tailwindcss.svg"
+		"icon": "tailwindcss.svg",
+		"category": "framework"
 	},
 	{
 		"name": "typescript",
 		"url": "https://www.typescriptlang.org/",
 		"color": "#3178C6",
-		"icon": "typescript.svg"
+		"icon": "typescript.svg",
+		"category": "language"
 	},
 	{
-		"name": "vite",
+		"name": "vitejs",
 		"url": "https://vite.dev/",
 		"color": "#BD34FE",
-		"icon": "vite.svg"
+		"icon": "vite.svg",
+		"category": "tool"
 	},
 	{
 		"name": "vue",
 		"url": "https://vuejs.org/",
 		"color": "#42D392",
-		"icon": "vue.svg"
+		"icon": "vue.svg",
+		"category": "framework"
 	},
 	{
 		"name": "vuetify",
 		"url": "https://vuetifyjs.com/",
 		"color": "#2196F3",
-		"icon": "vuetify.svg"
+		"icon": "vuetify.svg",
+		"category": "framework"
 	},
 	{
 		"name": "webpack",
 		"url": "https://webpack.js.org/",
 		"color": "#1C78C0",
-		"icon": "webpack.svg"
+		"icon": "webpack.svg",
+		"category": "tool"
 	},
 	{
 		"name": "bootstrap",
 		"url": "https://getbootstrap.com/",
 		"color": "#702DF5",
-		"icon": "bootstrap.svg"
+		"icon": "bootstrap.svg",
+		"category": "framework"
 	},
 	{
 		"name": "kubernetes",
 		"url": "https://kubernetes.io/",
 		"color": "#326CE5",
-		"icon": "kubernetes.svg"
+		"icon": "kubernetes.svg",
+		"category": "tool"
+	},
+	{
+		"name": "CraftMyCMS",
+		"url": "https://github.com/kevinguiot/CraftMyCMS",
+		"color": "#0056B3",
+		"icon": "craftmycms.svg",
+		"category": "cms"
+	},
+	{
+		"name": "drupal",
+		"url": "https://new.drupal.org/drupal-cms",
+		"color": "#12285F",
+		"icon": "drupal.svg",
+		"category": "cms"
+	},
+	{
+		"name": "e-majine",
+		"url": "https://www.e-majine.com/",
+		"color": "#27A0D4",
+		"icon": "e-majine.svg",
+		"category": "cms"
+	},
+	{
+		"name": "gesweb",
+		"url": "https://www.gesweb.net/",
+		"color": "#0137F3",
+		"icon": "gesweb.svg",
+		"category": "cms"
+	},
+	{
+		"name": "joomla",
+		"url": "https://www.joomla.fr/",
+		"color": "#F44321",
+		"icon": "joomla.svg",
+		"category": "cms"
+	},
+	{
+		"name": "prestashop",
+		"url": "https://prestashop.fr/",
+		"color": "#A4DBE8",
+		"icon": "prestashop.svg",
+		"category": "cms"
+	},
+	{
+		"name": "wordpress",
+		"url": "https://wordpress.com/",
+		"color": "#3858E9",
+		"icon": "wordpress.svg",
+		"category": "cms"
 	}
 ]

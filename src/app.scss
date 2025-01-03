@@ -5,68 +5,12 @@
 // fonts
 @use './lato.scss';
 
-// background
-
+// app
 body {
-	// background-color: var(--myt-color-background);
-	// background-image: repeating-linear-gradient(
-	// 		45deg,
-	// 		currentColor 25%,
-	// 		transparent 25%,
-	// 		transparent 75%,
-	// 		currentColor 75%,
-	// 		currentColor
-	// 	),
-	// 	repeating-linear-gradient(
-	// 		45deg,
-	// 		currentColor 25%,
-	// 		transparent 25%,
-	// 		transparent 75%,
-	// 		currentColor 75%,
-	// 		currentColor
-	// 	);
-	// background-position:
-	// 	0 0,
-	// 	10px 10px;
-	// background-size: calc(2 * 10px) calc(2 * 10px);
-	// background-size: 100px 100px;
-
-	// opacity: 1;
-	// background-image: radial-gradient(#444cf7 1.6500000000000001px, #e5e5f7 1.6500000000000001px);
-}
-
-div.element-test {
 	background-image: url(images/stroke-bg-1.svg), url(images/stroke-bg-2.svg);
 	background-position:
 		top left,
 		bottom right;
 	background-size: contain;
 	background-repeat: no-repeat;
-	background-size: 80%;
-	background-size: 33px 33px;
-}
-
-#secondary-navigation {
-	--secondary-navigation--width: 542px;
-
-	bottom: 30px;
-	max-width: var(--secondary-navigation--width);
-	margin-left: calc((100% / 2) - (var(--secondary-navigation--width) / 2));
-	background: color-mix(in oklab, var(--myt-color-on-background), transparent 20%);
-
-	.myt-toolbar--content {
-		width: calc(100% - 1.1rem);
-	}
-}
-
-#close-bottom-view-modal {
-	z-index: 10000;
-	bottom: 34px;
-	right: 34px;
-}
-
-#view-on-modal {
-	min-height: 70vh;
-	max-height: 70vh;
-	overflow: auto;
 }

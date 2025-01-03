@@ -1,24 +1,27 @@
 <script lang="ts">
-	import Footer from '$lib/components/footer.svelte';
-	import Modal from '$lib/components/modal.svelte';
-	import PrimaryNav from '$lib/components/primary-nav.svelte';
-	import SecondaryNav from '$lib/components/secondary-nav.svelte';
 	import { onMount } from 'svelte';
 	import '../app.scss';
 	import { App } from 'mytril';
-	import { fetchSocials } from '$lib/stores/socialStore';
+	import { getLocalTheme } from 'mytril/tools';
+
+	// api
+	import { fetchGitHubProfile } from '$lib/api';
+	import Navigation from '$lib/components/navigation.svelte';
 
 	onMount(() => {
-		fetchSocials();
+		fetchGitHubProfile();
+		getLocalTheme('@nycolaide-shceme', true);
 	});
 
 	let { children } = $props();
 </script>
 
 <App>
-	<PrimaryNav />
+	<Navigation />
+
 	{@render children()}
-	<SecondaryNav />
-	<Footer />
-	<Modal />
+
+	<footer class="text-center py-5 text-sm">
+		<p>&copy; {new Date().getFullYear()} Made with 🤍 by Nycolaide</p>
+	</footer>
 </App>
