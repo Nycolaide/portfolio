@@ -66,6 +66,10 @@
 					border-color: var(--myt-color-background);
 					border-width: 1px;
 					border-style: solid;
+					transition:
+						color 0.5s,
+						background-color 0.5s,
+						border-color 0.5s;
 				}
 
 				.background-card {

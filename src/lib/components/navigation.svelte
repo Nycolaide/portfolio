@@ -73,6 +73,7 @@
 		background: var(--myt-color-background);
 		height: 12px;
 		z-index: 1003;
+		transition: background 0.5s;
 	}
 
 	:global(.overflow-initial) {
@@ -110,17 +111,26 @@
 			position: absolute;
 			bottom: -28px;
 			left: 0;
+			transition:
+				color 0.5s,
+				background-color 0.5s;
 		}
 
 		:global(.svg-corner-top) {
 			top: 0;
 			position: absolute;
 			right: -28px;
+			transition:
+				color 0.5s,
+				background-color 0.5s;
 		}
 
 		.logo-nycolaide {
 			grid-template-columns: 32px 68px;
 			background-color: var(--myt-color-background);
+			transition:
+				color 0.5s,
+				background-color 0.5s;
 
 			div:last-child {
 				line-height: 1.15rem;
