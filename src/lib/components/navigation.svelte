@@ -17,8 +17,8 @@
 </script>
 
 <div class="top-line"></div>
-<AppBar color="transparent" class="mt-3" contentClass="overflow-initial">
-	<div id="hero-logo" class="ms-8">
+<AppBar color="transparent" class="mt-3" contentClass="overflow-initial responsive-bar">
+	<div id="hero-logo" class="max-md:ms-8">
 		<a href="/">
 			<div class="logo-nycolaide grid pa-4 rounded-br-xl">
 				<div class="text-2xl align-self-center font-black">N.</div>
@@ -40,7 +40,7 @@
 		rounded="pill"
 	>
 		{#each navigation as { name, link }}
-			<Btn text rounded="pill" href={link}>
+			<Btn class="font-bold" text rounded="pill" href={link} color="on-surface">
 				{useCapitalize(name)}
 			</Btn>
 		{/each}
@@ -99,13 +99,13 @@
 		width: auto;
 		position: relative;
 
-		@media screen and (min-width: 840px) {
-			margin-inline-start: 32px;
-		}
+		// @media screen and (min-width: 840px) {
+		// 	margin-inline-start: 32px;
+		// }
 
-		@media screen and (min-width: 1800px) {
-			margin-inline-start: 83px;
-		}
+		// @media screen and (min-width: 1800px) {
+		// 	margin-inline-start: 83px;
+		// }
 
 		:global(.svg-corner-bottom) {
 			position: absolute;

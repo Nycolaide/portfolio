@@ -14,6 +14,7 @@
 		<h2 class="text-4xl font-regular">Blablabla bla bla ? oh blah blah blahhhhh ...</h2>
 	</CardText>
 	<CardActions>
+		Follow me on: Github / LinkedIn / Twitter
 		<Spacer />
 		<div class="grid justify-end">
 			<Btn class="font-bold" block size="lg" outlined rounded="pill">Here we go!</Btn>

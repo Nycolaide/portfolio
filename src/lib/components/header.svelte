@@ -31,7 +31,7 @@
 		max-width: 1800px;
 		// padding: 0 40px;
 		padding: 0 32px;
-		margin-top: 12px;
+		margin-top: 11px;
 
 		@media screen and (max-width: 790px) {
 			padding: 0px 34px;

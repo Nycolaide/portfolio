@@ -14,3 +14,11 @@ body {
 	background-size: contain;
 	background-repeat: no-repeat;
 }
+
+@media screen and (min-width: 840px) {
+	.responsive-bar {
+		max-width: 1800px;
+		padding: 0 32px;
+		margin: 0 auto;
+	}
+}
