@@ -5,7 +5,7 @@
 	let navigation = $state([
 		{ name: 'projects', link: '#projects' },
 		{ name: 'about', link: '#about' },
-		{ name: 'skills', link: '#skills' },
+		{ name: 'blog', link: '/blog' },
 		{ name: 'contact', link: '#contact' }
 	]);
 

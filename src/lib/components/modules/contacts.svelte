@@ -11,7 +11,7 @@
 
 <Card
 	id="contact"
-	class="pa-8 mt-16 text-center sm:text-left"
+	class="sm:pa-8 mt-16 text-center sm:text-left"
 	rounded="xl"
 	color="secondary"
 	colorText="on-secondary"
@@ -76,15 +76,9 @@
 						Here we go!
 					</Btn>
 					<Tooltip text="Copied to clipboard" bind:open={isCopied}>
-						<Btn
-							class="pa-0"
-							density="compact"
-							link
-							colorText="on-secondary"
-							onclick={() => copy('laurent.grimaldi@minedelve.com')}
-						>
+						<button class="mt-2" onclick={() => copy('laurent.grimaldi@minedelve.com')}>
 							laurent.grimaldi@minedelve.com
-						</Btn>
+						</button>
 					</Tooltip>
 				</div>
 			</GridCol>
@@ -95,12 +89,17 @@
 <style lang="scss">
 	h2 {
 		font-family: var(--myt-typescale-body);
-		max-width: 70%;
+
+		@media screen and (min-width: 790px) {
+			max-width: 70%;
+		}
 	}
 
 	:global(#contact) {
-		margin-left: 18px;
-		margin-right: 18px;
+		@media screen and (min-width: 790px) {
+			margin-left: 18px;
+			margin-right: 18px;
+		}
 
 		.text-title-contact {
 			margin: 0 auto;

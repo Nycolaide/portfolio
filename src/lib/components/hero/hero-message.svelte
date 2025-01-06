@@ -37,6 +37,10 @@
 			left: -1px;
 			transform: rotate(-90deg);
 			z-index: 9999;
+			transition:
+				color 0.5s,
+				background-color 0.5s,
+				border-color 0.5s;
 		}
 
 		:global(.svg-corner-bottom) {
@@ -45,6 +49,10 @@
 			bottom: -1px;
 			transform: rotate(-90deg);
 			z-index: 9999;
+			transition:
+				color 0.5s,
+				background-color 0.5s,
+				border-color 0.5s;
 		}
 	}
 </style>

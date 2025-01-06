@@ -30,7 +30,7 @@
 						<Grid>
 							<GridRow>
 								{#each json?.['front-end'] as { name, level, icon, color, url }}
-									<GridCol cols="8" sm="6" md="4" lg="3">
+									<GridCol cols="12" sm="6" md="4" lg="3">
 										<p class="code">
 											<Icon icon={`svg:icons/code/${icon}`} {color} class="mr-2" />
 											{useCapitalize(name)}
@@ -47,7 +47,7 @@
 								{/each}
 								<Divider class="my-4" inset />
 								{#each json?.['back-end'] as { name, level, icon, color, url }}
-									<GridCol cols="8" sm="6" md="4" lg="3">
+									<GridCol cols="12" sm="6" md="4" lg="3">
 										<p class="code">
 											<Icon icon={`svg:icons/code/${icon}`} {color} class="mr-2" />
 											{useCapitalize(name)}
@@ -64,7 +64,7 @@
 								{/each}
 								<Divider class="my-4" inset />
 								{#each json?.['cms'] as { name, level, icon, color, url }}
-									<GridCol cols="8" sm="6" md="4" lg="3">
+									<GridCol cols="12" sm="6" md="4" lg="3">
 										<p class="code">
 											<Icon icon={`svg:icons/cms/${icon}`} {color} class="mr-2" />
 											{useCapitalize(name)}
