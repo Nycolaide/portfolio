@@ -1,15 +1,24 @@
 <script lang="ts">
-	import { Card, CardText, Icon } from 'mytril';
+	import { Btn, Card, CardActions, CardText, Icon } from 'mytril';
 </script>
 
 <div class="box-card absolute" style="bottom: 0;">
-	<Card color="background" class="rounded-tl rounded-br rounded-tr-xl" style="overflow: initial;">
+	<Card
+		color="background"
+		class="rounded-tl rounded-br rounded-bl rounded-tr-xl"
+		style="overflow: initial;"
+	>
 		<Icon icon="svg:icons/app/corner.svg" class="svg-corner-top" size="lg" color="background" />
 		<CardText>
 			<p class="text-2xl font-regular">
 				Developer and gamer with a passion for creating and exploring
 			</p>
 		</CardText>
+		<CardActions>
+			<Btn rounded="pill" icon href="#about" color="on-surface">
+				<Icon icon="svg:icons/app/arrow-bottom.svg" size="lg" color="surface" />
+			</Btn>
+		</CardActions>
 		<Icon icon="svg:icons/app/corner.svg" class="svg-corner-bottom" size="lg" color="background" />
 	</Card>
 </div>

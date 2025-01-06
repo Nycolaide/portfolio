@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { copyToClipboard } from '$lib/utils';
-	import { Btn, Card, CardActions, CardText, Spacer, Tooltip } from 'mytril';
+	import { Btn, Card, CardText, Grid, GridCol, GridRow, Icon, Tooltip } from 'mytril';
 
 	let isCopied = $state(false);
 
@@ -9,27 +9,105 @@
 	};
 </script>
 
-<Card id="contact" class="pa-8 mt-16" rounded="xl" color="secondary" colorText="on-secondary">
+<Card
+	id="contact"
+	class="pa-8 mt-16 text-center sm:text-left"
+	rounded="xl"
+	color="secondary"
+	colorText="on-secondary"
+>
 	<CardText>
-		<h2 class="text-4xl font-regular">Blablabla bla bla ? oh blah blah blahhhhh ...</h2>
+		<h2 class="text-title-contact text-2xl sm:text-4xl font-regular">
+			Let's create something great together
+		</h2>
 	</CardText>
-	<CardActions>
-		Follow me on: Github / LinkedIn / Twitter
-		<Spacer />
-		<div class="grid justify-end">
-			<Btn class="font-bold" block size="lg" outlined rounded="pill">Here we go!</Btn>
-			<Tooltip text="Copied to clipboard" bind:open={isCopied}>
-				<Btn class="pa-0" density="compact" link onclick={() => copy('email@adresse.com')}>
-					email@adresse.com
-				</Btn>
-			</Tooltip>
-		</div>
-	</CardActions>
+	<Grid>
+		<GridRow noGutters>
+			<GridCol cols="12" sm="6">
+				<div>
+					<p class="mb-2">Follow me on:</p>
+					<Btn
+						icon
+						density="comfortable"
+						rounded="pill"
+						text
+						size="lg"
+						href="https://github.com/Nycolaide"
+						target="_blank"
+					>
+						<Icon icon="svg:icons/social/github.svg" size="lg" color="background" />
+					</Btn>
+					<Btn
+						icon
+						density="comfortable"
+						rounded="pill"
+						text
+						size="lg"
+						href="https://www.npmjs.com/~nycolaide"
+						target="_blank"
+					>
+						<Icon icon="svg:icons/social/npm.svg" size="lg" color="background" />
+					</Btn>
+
+					<Btn
+						icon
+						density="comfortable"
+						rounded="pill"
+						text
+						size="lg"
+						href="https://www.linkedin.com/in/nycolaide/"
+						target="_blank"
+					>
+						<Icon icon="svg:icons/social/linkedin.svg" size="lg" color="background" />
+					</Btn>
+				</div>
+			</GridCol>
+			<GridCol cols="12" sm="6">
+				<div class="grid sm:justify-end">
+					<Btn
+						class="font-bold"
+						block
+						size="lg"
+						outlined
+						rounded="pill"
+						color="on-secondary"
+						href="mailto:laurent.grimaldi@minedelve.com"
+					>
+						Here we go!
+					</Btn>
+					<Tooltip text="Copied to clipboard" bind:open={isCopied}>
+						<Btn
+							class="pa-0"
+							density="compact"
+							link
+							colorText="on-secondary"
+							onclick={() => copy('laurent.grimaldi@minedelve.com')}
+						>
+							laurent.grimaldi@minedelve.com
+						</Btn>
+					</Tooltip>
+				</div>
+			</GridCol>
+		</GridRow>
+	</Grid>
 </Card>
 
 <style lang="scss">
 	h2 {
 		font-family: var(--myt-typescale-body);
 		max-width: 70%;
+	}
+
+	:global(#contact) {
+		margin-left: 18px;
+		margin-right: 18px;
+
+		.text-title-contact {
+			margin: 0 auto;
+
+			@media screen and (min-width: 790px) {
+				margin: inherit;
+			}
+		}
 	}
 </style>

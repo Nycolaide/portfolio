@@ -1,24 +1,24 @@
 <script lang="ts">
 	import { Card } from 'mytril';
-	import HeroCounter from './hero/hero-counter.svelte';
 	import HeroMusic from './hero/hero-music.svelte';
+	import HeroBlog from './hero/hero-blog.svelte';
 	import HeroMessage from './hero/hero-message.svelte';
 </script>
 
 <div class="header-grid-box">
 	<div>
 		<div class="header-left-box">
-			<Card class="absolute" rounded="xl">
+			<Card class="absolute rounded-bl" rounded="xl">
 				<div class="background-card"></div>
 				<HeroMessage />
 			</Card>
 		</div>
 		<div class="header-right-box">
-			<Card id="hero-stats" rounded="xl" class="align-center">
-				<HeroCounter />
-			</Card>
-			<Card id="hero-others" rounded="xl" color="primary" colorText="on-primary">
+			<Card id="hero-stats" rounded="xl" color="on-surface" colorText="surface">
 				<HeroMusic />
+			</Card>
+			<Card id="hero-others" rounded="xl" color="info" colorText="on-info">
+				<HeroBlog />
 			</Card>
 		</div>
 	</div>
@@ -29,13 +29,8 @@
 		width: 100%;
 		margin: auto;
 		max-width: 1800px;
-		// padding: 0 40px;
 		padding: 0 32px;
 		margin-top: 11px;
-
-		@media screen and (max-width: 790px) {
-			padding: 0px 34px;
-		}
 
 		& > div {
 			display: flex;
@@ -108,6 +103,17 @@
 					@media screen and (max-width: 790px) {
 						width: 100%;
 					}
+				}
+
+				:global(#hero-others),
+				:global(#hero-stats) {
+					border-color: var(--myt-color-background);
+					border-width: 1px;
+					border-style: solid;
+					transition:
+						color 0.5s,
+						background-color 0.5s,
+						border-color 0.5s;
 				}
 			}
 		}

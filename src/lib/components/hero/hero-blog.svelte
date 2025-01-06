@@ -2,28 +2,26 @@
 	import { Btn, CardActions, CardText, Icon, Spacer } from 'mytril';
 </script>
 
-<CardText id="card-msg" class="pb-0">
-	<div class="grid">
-		<img src="images/bg.jpg" class="cover-music rounded-lg" alt="background" />
-		<div>
-			<p class="font-bold">Code with Music</p>
-			<p class="font-thin text-xs">on Youtube Music</p>
-		</div>
-	</div>
-
-	<div class="mt-2 paragraph">
-		<p>Discover my coding playlist, Don't hesitate to follow me for the latest updates.</p>
-	</div>
+<CardText>
+	<img src="images/bg.jpg" class="cover-article rounded-lg" alt="background" />
+</CardText>
+<CardText>
+	<p class="text-lg mb-4">First Article Blog</p>
+	<p style="max-height: 94px;">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis ducimus mollitia similique
+		porro atque maxime, at ipsum doloremque quia quas, voluptatem aliquam ratione minus? Quisquam
+		aliquid explicabo facere iste blanditiis!
+	</p>
 </CardText>
 
-<CardActions class="relative pa-0">
+<CardActions class="relative pa-0" style="top: -0;">
 	<Spacer />
 
 	<div class="action-area align-content-end text-end">
 		<Icon icon="svg:icons/app/corner.svg" class="svg-corner-top" size="lg" color="background" />
 		<div>
-			<Btn icon rounded="pill" color="#FF0033">
-				<Icon size="lg" icon="svg:icons/social/youtube-music.svg" color="background" />
+			<Btn icon rounded="pill" color="on-surface">
+				<Icon size="lg" icon="svg:icons/app/arrow-right.svg" color="surface" />
 			</Btn>
 		</div>
 
@@ -32,29 +30,10 @@
 </CardActions>
 
 <style lang="scss">
-	:global(#card-msg .myt-icon) {
-		--c-icon-size-multiplier: 2.75;
-	}
-
-	:global(#card-msg) {
-		.paragraph {
-			height: 30px;
-		}
-
-		& > div:first-child {
-			display: grid;
-			grid-template-columns: 64px 1fr;
-			gap: 1rem;
-			align-items: center;
-			min-height: 64px;
-		}
-	}
-
-	.cover-music {
+	.cover-article {
 		width: 100%;
 		height: 100%;
-		max-width: 64px;
-		max-height: 64px;
+		object-fit: cover;
 	}
 
 	.action-area {

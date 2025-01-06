@@ -11,7 +11,7 @@
 
 	const toggleTheme = (type: string) => {
 		const scheme = type === 'dark' ? 'light' : 'dark';
-		localStorage.setItem('@nycolaide-shceme', scheme);
+		localStorage.setItem('@nycolaide-scheme', scheme);
 		setTheme(scheme);
 	};
 </script>

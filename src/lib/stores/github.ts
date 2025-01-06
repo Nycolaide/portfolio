@@ -9,3 +9,4 @@ interface GitHubProfile {
 }
 
 export const githubProfile = writable<GitHubProfile | null>(null);
+export const githubMinedelve = writable<GitHubProfile | null>(null);

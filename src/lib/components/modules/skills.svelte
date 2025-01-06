@@ -25,7 +25,7 @@
 	<Grid>
 		<GridRow>
 			<GridCol>
-				<Card color="surface-container">
+				<Card color="surface-container" rounded="xl">
 					<CardText>
 						<Grid>
 							<GridRow>
@@ -34,7 +34,7 @@
 										<p class="code">
 											<Icon icon={`svg:icons/code/${icon}`} {color} class="mr-2" />
 											{useCapitalize(name)}
-											<a href={url} class="external-link">
+											<a href={url} class="external-link" target="_blank">
 												<Icon
 													size="xs"
 													icon="svg:icons/app/external-link.svg"
@@ -45,13 +45,13 @@
 										<Progress {level} />
 									</GridCol>
 								{/each}
-								<Divider class="my-4" />
+								<Divider class="my-4" inset />
 								{#each json?.['back-end'] as { name, level, icon, color, url }}
 									<GridCol cols="8" sm="6" md="4" lg="3">
 										<p class="code">
 											<Icon icon={`svg:icons/code/${icon}`} {color} class="mr-2" />
 											{useCapitalize(name)}
-											<a href={url} class="external-link">
+											<a href={url} class="external-link" target="_blank">
 												<Icon
 													size="xs"
 													icon="svg:icons/app/external-link.svg"
@@ -62,13 +62,13 @@
 										<Progress {level} />
 									</GridCol>
 								{/each}
-								<Divider class="my-4" />
+								<Divider class="my-4" inset />
 								{#each json?.['cms'] as { name, level, icon, color, url }}
 									<GridCol cols="8" sm="6" md="4" lg="3">
 										<p class="code">
 											<Icon icon={`svg:icons/cms/${icon}`} {color} class="mr-2" />
 											{useCapitalize(name)}
-											<a href={url} class="external-link">
+											<a href={url} class="external-link" target="_blank">
 												<Icon
 													size="xs"
 													icon="svg:icons/app/external-link.svg"
@@ -97,5 +97,12 @@
 
 	.external-link {
 		display: none;
+	}
+
+	:global(#skills) {
+		:global(.myt-card) {
+			margin-right: 1px;
+			margin-left: 1px;
+		}
 	}
 </style>

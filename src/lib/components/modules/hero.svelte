@@ -30,13 +30,17 @@
 				style="width: fit-content;"
 				href="/#contact"
 			>
-				Here we go!
+				Contact me
 			</Btn>
 		</GridCol>
 	</GridRow>
 </Grid>
 
 <style lang="scss">
+	:global(#about) {
+		padding: 16px 17px;
+	}
+
 	img {
 		width: 100%;
 		max-width: 300px;

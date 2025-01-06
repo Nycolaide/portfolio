@@ -5,12 +5,19 @@
 	import { getLocalTheme } from 'mytril/tools';
 
 	// api
-	import { fetchGitHubProfile } from '$lib/api';
+	import { fetchGitHubMinedelve, fetchGitHubProfile, fetchNpmMytril } from '$lib/api';
+
+	// components
 	import Navigation from '$lib/components/navigation.svelte';
 
 	onMount(() => {
+		// call api
 		fetchGitHubProfile();
-		getLocalTheme('@nycolaide-shceme', true);
+		fetchNpmMytril();
+		fetchGitHubMinedelve();
+
+		// get theme
+		getLocalTheme('@nycolaide-scheme', true);
 	});
 
 	let { children } = $props();
