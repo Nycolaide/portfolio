@@ -20,7 +20,7 @@
 	<div class="action-area align-content-end text-end">
 		<Icon icon="svg:icons/app/corner.svg" class="svg-corner-top" size="lg" color="background" />
 		<div>
-			<Btn icon rounded="pill" color="on-surface">
+			<Btn icon rounded="pill" color="on-surface" href="/blog">
 				<Icon size="lg" icon="svg:icons/app/arrow-right.svg" color="surface" />
 			</Btn>
 		</div>

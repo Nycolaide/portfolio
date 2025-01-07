@@ -24,3 +24,6 @@ vite.config.ts.timestamp-*
 
 # Docker
 docker-compose.yml
+
+# Articles
+src/lib/data/articles.json

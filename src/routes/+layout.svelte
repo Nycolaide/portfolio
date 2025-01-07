@@ -6,6 +6,7 @@
 
 	// api
 	import { fetchGitHubMinedelve, fetchGitHubProfile, fetchNpmMytril } from '$lib/api';
+	import Footer from '$lib/components/footer.svelte';
 
 	onMount(() => {
 		// call api
@@ -22,4 +23,6 @@
 
 <App>
 	{@render children()}
+
+	<Footer />
 </App>

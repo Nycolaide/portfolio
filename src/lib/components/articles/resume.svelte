@@ -6,7 +6,7 @@
 	import Gravatar from '$lib/assets/github-avatar.png';
 </script>
 
-<Card href="#" rounded="lg">
+<Card href="/blog/article-test" rounded="lg">
 	<CardText>
 		<img src="images/bg.jpg" class="cover-article rounded-lg" alt="background" />
 	</CardText>
