@@ -68,9 +68,10 @@
 				}
 
 				.background-card {
-					background-image: url('/images/bg.jpg');
+					background-image: url('/images/bg-v2.png');
 					background-size: cover;
 					background-repeat: no-repeat;
+					background-position: center;
 					width: 100%;
 					height: 100%;
 					position: absolute;

@@ -4,7 +4,7 @@
 
 <CardText id="card-msg" class="pb-0">
 	<div class="grid">
-		<img src="images/bg.jpg" class="cover-music rounded-lg" alt="background" />
+		<img src="/images/youtube-music.jpg" class="cover-music rounded-lg" alt="background" />
 		<div>
 			<p class="font-bold">Code with Music</p>
 			<p class="font-thin text-xs">on Youtube Music</p>
