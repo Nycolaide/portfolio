@@ -1,8 +1,11 @@
 <script lang="ts">
 	import { Btn, Grid, GridCol, GridRow, Spacer, Toolbar } from 'mytril';
+	import Seo from '$lib/components/seo.svelte';
 
-	let { children, title, date, cover } = $props();
+	let { children, title, date, cover, descritpion } = $props();
 </script>
+
+<Seo {title} description={descritpion} />
 
 <Grid>
 	<GridRow>

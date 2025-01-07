@@ -36,7 +36,6 @@
 			top: -29px;
 			left: -1px;
 			transform: rotate(-90deg);
-			z-index: 9999;
 			transition:
 				color 0.5s,
 				background-color 0.5s,
@@ -48,7 +47,6 @@
 			right: -29px;
 			bottom: -1px;
 			transform: rotate(-90deg);
-			z-index: 9999;
 			transition:
 				color 0.5s,
 				background-color 0.5s,

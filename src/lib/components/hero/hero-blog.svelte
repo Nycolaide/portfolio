@@ -1,16 +1,17 @@
 <script lang="ts">
+	import { posts } from '$lib/stores/posts';
 	import { Btn, CardActions, CardText, Icon, Spacer } from 'mytril';
+
+	let post = $posts[0];
 </script>
 
 <CardText>
-	<img src="images/bg.jpg" class="cover-article rounded-lg" alt="background" />
+	<img src={post.cover} class="cover-article rounded-lg" alt={post.title} />
 </CardText>
 <CardText>
-	<p class="text-lg mb-4">First Article Blog</p>
+	<p class="text-lg mb-4">{post?.title}</p>
 	<p style="max-height: 94px;">
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis ducimus mollitia similique
-		porro atque maxime, at ipsum doloremque quia quas, voluptatem aliquam ratione minus? Quisquam
-		aliquid explicabo facere iste blanditiis!
+		{post?.description}
 	</p>
 </CardText>
 
@@ -20,7 +21,7 @@
 	<div class="action-area align-content-end text-end">
 		<Icon icon="svg:icons/app/corner.svg" class="svg-corner-top" size="lg" color="background" />
 		<div>
-			<Btn icon rounded="pill" color="on-surface" href="/blog">
+			<Btn icon rounded="pill" color="on-surface" href={`/blog/${post.slug}`}>
 				<Icon size="lg" icon="svg:icons/app/arrow-right.svg" color="surface" />
 			</Btn>
 		</div>
@@ -53,7 +54,6 @@
 			top: 29px;
 			left: -28px;
 			transform: rotate(-180deg);
-			z-index: 9999;
 			transition:
 				color 0.5s,
 				background-color 0.5s,
@@ -65,7 +65,6 @@
 			right: 0;
 			bottom: 57px;
 			transform: rotate(180deg);
-			z-index: 9999;
 			transition:
 				color 0.5s,
 				background-color 0.5s,

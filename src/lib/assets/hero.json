@@ -1,14 +1,14 @@
 {
 	"front-end": [
 		{
-			"name": "html",
+			"name": "HTML",
 			"url": "https://html.spec.whatwg.org/multipage/",
 			"color": "#dd4b25",
 			"icon": "html5.svg",
 			"level": 90
 		},
 		{
-			"name": "css",
+			"name": "CSS",
 			"url": "https://www.w3.org/Style/CSS/#specs",
 			"color": "#016cb4",
 			"icon": "css3.svg",
@@ -43,7 +43,7 @@
 			"level": 50
 		},
 		{
-			"name": "php",
+			"name": "PHP",
 			"url": "https://www.php.net/",
 			"color": "#4F5B93",
 			"icon": "php.svg",
@@ -71,7 +71,7 @@
 			"level": 50
 		},
 		{
-			"name": "sass",
+			"name": "SASS",
 			"url": "https://sass-lang.com/",
 			"color": "#CF649A",
 			"icon": "sass.svg",
@@ -150,7 +150,7 @@
 			"level": 40
 		},
 		{
-			"name": "sql",
+			"name": "SQL",
 			"url": "https://www.iso.org/standard/76583.html",
 			"color": "#000000",
 			"icon": "sql.svg",

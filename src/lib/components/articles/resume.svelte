@@ -4,22 +4,22 @@
 
 	// default
 	import Gravatar from '$lib/assets/github-avatar.png';
+
+	let { post } = $props();
 </script>
 
-<Card href="/blog/article-test" rounded="lg">
+<Card href={'/blog/' + post.slug} rounded="lg">
 	<CardText>
-		<img src="images/bg.jpg" class="cover-article rounded-lg" alt="background" />
+		<img src={post.cover} class="cover-article rounded-lg" alt={post.cover} />
 	</CardText>
 	<CardText>
-		<p class="text-lg mb-4">First Article Blog</p>
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis ducimus mollitia similique
-			porro atque maxime, at ipsum doloremque quia quas, voluptatem aliquam ratione minus? Quisquam
-			aliquid explicabo facere iste blanditiis!
+		<p class="text-lg md:text-xl lg:text-2xl mb-4">{post.title}</p>
+		<p class="lg:text-lg">
+			{post.description}
 		</p>
 	</CardText>
 	<CardText class="flex">
-		<div>DATEEEEEEEEEEEEEEEE</div>
+		<div class="lg:text-lg font-light">{post.date}</div>
 		<Spacer />
 		<div class="profil flex align-center ga-2 me-2">
 			<img

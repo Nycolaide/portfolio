@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { AppBar, Btn, Icon, Spacer, Toolbar } from 'mytril';
+	import { AppBar, Btn, Divider, Icon, List, ListItem, Menu, Spacer, Toolbar } from 'mytril';
 	import { useTheme, setTheme, useCapitalize } from 'mytril/tools';
 
 	let navigation = $state([
@@ -56,13 +56,37 @@
 
 	<Spacer class="md:none" />
 
-	<Btn class="me-10 md:none" rounded="pill" icon onclick={() => toggleTheme($useTheme)}>
-		{#if $useTheme === 'dark'}
-			<Icon icon="svg:icons/app/sun.svg" />
-		{:else}
-			<Icon icon="svg:icons/app/moon.svg" />
-		{/if}
-	</Btn>
+	<Menu>
+		<svelte:fragment slot="activator">
+			<Btn rounded="pill" class="me-10 md:none font-bold">{useCapitalize('menu')}</Btn>
+		</svelte:fragment>
+
+		<List dense>
+			{#each navigation as { name, link }}
+				<ListItem class="font-bold" href={link} color="on-surface">
+					{useCapitalize(name)}
+				</ListItem>
+			{/each}
+
+			<Divider />
+
+			<ListItem class="font-bold" onclick={() => toggleTheme($useTheme)} color="on-surface">
+				<svelte:fragment slot="prepend">
+					{#if $useTheme === 'dark'}
+						<Icon icon="svg:icons/app/sun.svg" />
+					{:else}
+						<Icon icon="svg:icons/app/moon.svg" />
+					{/if}
+				</svelte:fragment>
+
+				{#if $useTheme === 'dark'}
+					Light
+				{:else}
+					Dark
+				{/if}
+			</ListItem>
+		</List>
+	</Menu>
 </AppBar>
 
 <style lang="scss">

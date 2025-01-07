@@ -18,7 +18,7 @@ async function updateMarkdownMetadata() {
 					const { data } = matter(content);
 					const exists = metadataList.some((item) => item.id === data.id);
 					if (!exists) {
-						metadataList.push(data);
+						metadataList.push({ ...data, slug: dir.name });
 					}
 				} catch (err) {
 					console.error(`Error reading file ${mdFilePath}:`, err);
