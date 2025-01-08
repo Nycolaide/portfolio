@@ -22,7 +22,13 @@
 	<div class="action-area align-content-end text-end">
 		<Icon icon="svg:icons/app/corner.svg" class="svg-corner-top" size="lg" color="background" />
 		<div>
-			<Btn icon rounded="pill" color="#FF0033">
+			<Btn
+				icon
+				rounded="pill"
+				color="#FF0033"
+				href="https://music.youtube.com/playlist?list=PLcuwjYZE7RhzyPYDkDgBWdNplYBgnwHCM&si=IPnxYQFXF7mFl48m"
+				target="_blank"
+			>
 				<Icon size="lg" icon="svg:icons/social/youtube-music.svg" color="background" />
 			</Btn>
 		</div>

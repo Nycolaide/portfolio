@@ -31,6 +31,13 @@
 			max-width: 85%;
 		}
 
+		:global(.myt-card) {
+			outline-color: var(--myt-color-background) !important;
+			outline-width: 1px !important;
+			outline-offset: 0;
+			outline-style: solid !important;
+		}
+
 		:global(.svg-corner-top) {
 			position: absolute;
 			top: -29px;
