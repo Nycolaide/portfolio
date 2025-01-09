@@ -32,16 +32,18 @@
 </CardText>
 
 <CardActions class="relative pa-0" style="top: -0;">
-	<div class="ml-2">
-		{#each $posts.slice(0, 5) as post, i}
-			<button
-				class="pagination-item"
-				class:is-selected={i === index}
-				onclick={() => (index = i)}
-				aria-label={String(i)}
-			></button>
-		{/each}
-	</div>
+	{#if $posts.length > 1}
+		<div class="ml-2">
+			{#each $posts.slice(0, 5) as post, i}
+				<button
+					class="pagination-item"
+					class:is-selected={i === index}
+					onclick={() => (index = i)}
+					aria-label={String(i)}
+				></button>
+			{/each}
+		</div>
+	{/if}
 
 	<Spacer />
 
