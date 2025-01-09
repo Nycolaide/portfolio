@@ -1,15 +1,5 @@
 <script lang="ts">
-	import {
-		Card,
-		CardText,
-		CardTitle,
-		Divider,
-		Grid,
-		GridCol,
-		GridRow,
-		List,
-		ListSubheader
-	} from 'mytril';
+	import { Card, CardText, CardTitle, Grid, GridCol, GridRow, List, ListSubheader } from 'mytril';
 	import json from '$lib/assets/hero.json';
 	import SkillPreview from '../skill-preview.svelte';
 </script>

@@ -18,9 +18,9 @@
 
 <div class="top-line"></div>
 <AppBar color="transparent" class="mt-3" contentClass="overflow-initial responsive-bar">
-	<div id="hero-logo" class="max-md:ms-8">
+	<div id="hero-logo" class="max-md:pl-8 rounded-br-xl">
 		<a href="/">
-			<div class="logo-nycolaide grid pa-4 rounded-br-xl">
+			<div class="logo-nycolaide grid pa-4">
 				<div class="text-2xl align-self-center font-black">N.</div>
 				<div class="text-md">
 					<span class="block">Laurent</span>
@@ -28,8 +28,8 @@
 				</div>
 			</div>
 		</a>
-		<Icon icon="svg:icons/app/corner.svg" class="svg-corner-bottom" size="lg" color="background" />
-		<Icon icon="svg:icons/app/corner.svg" class="svg-corner-top" size="lg" color="background" />
+		<Icon icon="svg:images/conver-v2.svg" class="svg-corner-bottom" size="lg" color="background" />
+		<Icon icon="svg:images/conver-v2.svg" class="svg-corner-top" size="lg" color="background" />
 	</div>
 
 	<Toolbar
@@ -122,6 +122,10 @@
 		justify-content: space-between;
 		width: auto;
 		position: relative;
+		background-color: var(--myt-color-background);
+		transition:
+			color 0.5s,
+			background-color 0.5s;
 
 		// @media screen and (min-width: 840px) {
 		// 	margin-inline-start: 32px;
@@ -133,28 +137,73 @@
 
 		:global(.svg-corner-bottom) {
 			position: absolute;
-			bottom: -28px;
-			left: 0;
+			bottom: -25px;
+			left: 29px;
 			transition:
 				color 0.5s,
 				background-color 0.5s;
+
+			:global(svg) {
+				border-left: 1px solid var(--myt-color-background);
+				border-top: 1px solid var(--myt-color-background);
+			}
+
+			// &::before {
+			// 	content: '';
+			// 	position: absolute;
+			// 	top: 0;
+			// 	left: -1px;
+			// 	width: 100%;
+			// 	height: 100%;
+			// 	transition: border-color 0.5s;
+			// 	border-left: 1px solid var(--myt-color-background);
+			// }
+
+			// &::after {
+			// 	content: '';
+			// 	position: absolute;
+			// 	top: -1px;
+			// 	left: 0;
+			// 	width: 100%;
+			// 	height: 100%;
+			// 	transition: border-color 0.5s;
+			// 	border-top: 1px solid var(--myt-color-background);
+			// }
 		}
 
 		:global(.svg-corner-top) {
-			top: 0;
+			top: -1px;
 			position: absolute;
-			right: -28px;
+			right: -26px;
 			transition:
 				color 0.5s,
 				background-color 0.5s;
+
+			// &::before {
+			// 	content: '';
+			// 	position: absolute;
+			// 	top: 0;
+			// 	left: -1px;
+			// 	width: 100%;
+			// 	height: 100%;
+			// 	transition: border-color 0.5s;
+			// 	border-left: 1px solid var(--myt-color-background);
+			// }
+
+			// &::after {
+			// 	content: '';
+			// 	position: absolute;
+			// 	top: -1px;
+			// 	left: 0;
+			// 	width: 100%;
+			// 	height: 100%;
+			// 	transition: border-color 0.5s;
+			// 	border-top: 1px solid var(--myt-color-background);
+			// }
 		}
 
 		.logo-nycolaide {
 			grid-template-columns: 32px 68px;
-			background-color: var(--myt-color-background);
-			transition:
-				color 0.5s,
-				background-color 0.5s;
 
 			div:last-child {
 				line-height: 1.15rem;
