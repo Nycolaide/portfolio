@@ -2,7 +2,23 @@
 	import { posts } from '$lib/stores/posts';
 	import { Btn, CardActions, CardText, Icon, Spacer } from 'mytril';
 
-	let post = $posts[0];
+	let post = $state($posts[0]);
+	let index = $state(0);
+	let intervalId: ReturnType<typeof setInterval>;
+
+	const changeIndex = () => {
+		let limit = $posts.length > 5 ? 5 : $posts.length;
+		return (index = index + 1 < limit - 1 ? index + 1 : 0);
+	};
+
+	$effect(() => {
+		if (index) post = $posts[index];
+	});
+
+	$effect(() => {
+		intervalId = setInterval(changeIndex, 5000);
+		return () => clearInterval(intervalId);
+	});
 </script>
 
 <CardText>
@@ -16,6 +32,17 @@
 </CardText>
 
 <CardActions class="relative pa-0" style="top: -0;">
+	<div class="ml-2">
+		{#each $posts.slice(0, 5) as post, i}
+			<button
+				class="pagination-item"
+				class:is-selected={i === index}
+				onclick={() => (index = i)}
+				aria-label={String(i)}
+			></button>
+		{/each}
+	</div>
+
 	<Spacer />
 
 	<div class="action-area align-content-end text-end">
@@ -35,6 +62,20 @@
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+	}
+
+	.pagination-item {
+		border: 0;
+		border-radius: 9999px;
+		background-color: color-mix(in oklab, var(--myt-color-on-surface) 50%, transparent);
+		height: 10px;
+		width: 10px;
+		margin-right: 5px;
+
+		&.is-selected,
+		&:hover {
+			background: var(--myt-color-on-surface);
+		}
 	}
 
 	.action-area {

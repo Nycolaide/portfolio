@@ -2,7 +2,9 @@
 export default {
 	themes: ['light', 'dark'],
 	defaultTheme: 'light',
-	colors: {},
+	colors: {
+		contact: '#fb7185'
+	},
 	typography: {
 		fontFamily: {
 			heading: 'Lato-Black, sans-serif',

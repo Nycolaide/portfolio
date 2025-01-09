@@ -28,9 +28,9 @@
 
 <Card
 	id="contact"
-	class="sm:pa-8 mt-16 text-center sm:text-left"
+	class="sm:pa-8 mt-16 mx-3 text-center sm:text-left"
 	rounded="xl"
-	color="info"
+	color="contact"
 	colorText="on-info"
 >
 	<CardText>
