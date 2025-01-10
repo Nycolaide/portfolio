@@ -38,7 +38,7 @@ jobs:
           passphrase: ${{ secrets.VPS_SSH_PASSPHRASE }}
           port: 55555
           script: |
-            cd /apps/portfolio-lgi/alpha
+            cd apps/portfolio-lgi/alpha
             git pull origin develop
             npm install
             docker compose build
