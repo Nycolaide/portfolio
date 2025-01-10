@@ -58,9 +58,11 @@
 				:global(.myt-card) {
 					width: 100%;
 					height: 100%;
-					border-color: var(--myt-color-background);
-					border-width: 1px;
-					border-style: solid;
+					// border-color: var(--myt-color-background);
+					// border-width: 1px;
+					// border-style: solid;
+					overflow: initial !important;
+
 					transition:
 						color 0.5s,
 						background-color 0.5s,
@@ -76,6 +78,7 @@
 					height: 100%;
 					position: absolute;
 					overflow: hidden;
+					border-radius: 1.25rem;
 				}
 			}
 
@@ -90,6 +93,7 @@
 				:global(#hero-stats) {
 					width: 280px;
 					min-height: 200px;
+					overflow: initial;
 
 					@media screen and (max-width: 790px) {
 						width: 100%;
@@ -100,6 +104,7 @@
 					position: relative;
 					width: 280px;
 					height: 100%;
+					overflow: initial;
 
 					@media screen and (max-width: 790px) {
 						width: 100%;

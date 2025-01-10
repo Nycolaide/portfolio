@@ -18,7 +18,7 @@
 
 <div class="top-line"></div>
 <AppBar color="transparent" class="mt-3" contentClass="overflow-initial responsive-bar">
-	<div id="hero-logo" class="max-md:pl-8 rounded-br-xl">
+	<div id="hero-logo" class="pl-8 rounded-br-xl">
 		<a href="/">
 			<div class="logo-nycolaide grid pa-4">
 				<div class="text-2xl align-self-center font-black">N.</div>
@@ -143,36 +143,14 @@
 				color 0.5s,
 				background-color 0.5s;
 
-			:global(svg) {
-				border-left: 1px solid var(--myt-color-background);
-				border-top: 1px solid var(--myt-color-background);
-			}
-
-			// &::before {
-			// 	content: '';
-			// 	position: absolute;
-			// 	top: 0;
-			// 	left: -1px;
-			// 	width: 100%;
-			// 	height: 100%;
-			// 	transition: border-color 0.5s;
+			// :global(svg) {
 			// 	border-left: 1px solid var(--myt-color-background);
-			// }
-
-			// &::after {
-			// 	content: '';
-			// 	position: absolute;
-			// 	top: -1px;
-			// 	left: 0;
-			// 	width: 100%;
-			// 	height: 100%;
-			// 	transition: border-color 0.5s;
 			// 	border-top: 1px solid var(--myt-color-background);
 			// }
 		}
 
 		:global(.svg-corner-top) {
-			top: -1px;
+			top: 0;
 			position: absolute;
 			right: -26px;
 			transition:
