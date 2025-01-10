@@ -2,6 +2,7 @@
 	import { AppBar, Btn, Divider, Icon, List, ListItem, Menu, Spacer, Toolbar } from 'mytril';
 	import { useTheme, setTheme, useCapitalize } from 'mytril/tools';
 
+	let openMenu = $state(false);
 	let navigation = $state([
 		{ name: 'projects', link: '#projects' },
 		{ name: 'about', link: '#about' },
@@ -56,14 +57,19 @@
 
 	<Spacer class="md:none" />
 
-	<Menu>
+	<Menu bind:open={openMenu}>
 		<svelte:fragment slot="activator">
 			<Btn rounded="pill" class="me-10 md:none font-bold">{useCapitalize('menu')}</Btn>
 		</svelte:fragment>
 
 		<List dense>
 			{#each navigation as { name, link }}
-				<ListItem class="font-bold" href={link} color="on-surface">
+				<ListItem
+					class="font-bold"
+					href={link}
+					color="on-surface"
+					onclick={() => (openMenu = false)}
+				>
 					{useCapitalize(name)}
 				</ListItem>
 			{/each}
@@ -150,7 +156,7 @@
 		}
 
 		:global(.svg-corner-top) {
-			top: 0;
+			top: -1px;
 			position: absolute;
 			right: -26px;
 			transition:

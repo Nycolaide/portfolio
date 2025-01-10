@@ -3,6 +3,7 @@
 	import Resume from '$lib/components/articles/resume.svelte';
 	import { Btn, Grid, GridCol, GridRow } from 'mytril';
 	import Seo from '$lib/components/seo.svelte';
+	import ResumePrimary from '$lib/components/articles/resume-primary.svelte';
 
 	let post = $posts[0];
 	let postList = $posts.slice(1);
@@ -25,15 +26,15 @@
 <Grid class="mt-5 md:mt-16">
 	<GridRow>
 		<GridCol cols="12">
-			<Resume {post} />
+			<ResumePrimary {post} />
 		</GridCol>
 	</GridRow>
 
 	{#if postList.length !== 0}
 		<GridRow>
-			<GridCol cols="12" class="font-bold text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl"
-				>Other posts</GridCol
-			>
+			<GridCol cols="12" class="font-bold text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">
+				Other posts
+			</GridCol>
 		</GridRow>
 		<GridRow>
 			{#each postList as post}

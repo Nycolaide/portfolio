@@ -8,15 +8,16 @@
 
 	const changeIndex = () => {
 		let limit = $posts.length > 5 ? 5 : $posts.length;
-		return (index = index + 1 < limit - 1 ? index + 1 : 0);
+		const newIndex = index + 1 < limit ? index + 1 : 0;
+		return (index = newIndex);
 	};
 
 	$effect(() => {
-		if (index) post = $posts[index];
+		if (index !== -1) post = $posts[index];
 	});
 
 	$effect(() => {
-		intervalId = setInterval(changeIndex, 5000);
+		intervalId = setInterval(changeIndex, 7500);
 		return () => clearInterval(intervalId);
 	});
 </script>
@@ -39,7 +40,7 @@
 					class="pagination-item"
 					class:is-selected={i === index}
 					onclick={() => (index = i)}
-					aria-label={String(i)}
+					aria-label={String(post.title)}
 				></button>
 			{/each}
 		</div>

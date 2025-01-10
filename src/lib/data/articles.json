@@ -7,5 +7,14 @@
     "author": "Article Author Props",
     "cover": "/images/bg.jpg",
     "slug": "article-test"
+  },
+  {
+    "id": 1,
+    "title": "Article Title Props 2",
+    "description": "Article Description Props 2",
+    "date": "01/10/2025",
+    "author": "Article Author Props 2",
+    "cover": "/images/cover-article-test.jpg",
+    "slug": "article-test-2"
   }
 ]

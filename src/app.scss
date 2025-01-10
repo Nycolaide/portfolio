@@ -5,6 +5,9 @@
 // fonts
 @use './lato.scss';
 
+// content
+@use './code.scss';
+@use './markdown.scss';
 // app
 // body {
 // 	background-image: url(images/stroke-bg-1.svg), url(images/stroke-bg-2.svg);

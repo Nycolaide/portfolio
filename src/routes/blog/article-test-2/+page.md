@@ -1,10 +1,10 @@
 ---
-id: 0
-title: Article Title Props
-description: Article Description Props
-date: 01/07/2025
-author: Article Author Props
-cover: /images/bg.jpg
+id: 1
+title: Article Title Props 2
+description: Article Description Props 2
+date: 01/10/2025
+author: Article Author Props 2
+cover: /images/cover-article-test.jpg
 ---
 
 # Title h1

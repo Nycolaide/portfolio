@@ -14,12 +14,56 @@
 	<Grid>
 		<GridRow>
 			<GridCol cols="12" md="6">
-				<Card class="h-100">
-					<CardTitle>Front-end</CardTitle>
+				<Card>
+					<CardTitle>Framework</CardTitle>
 					<CardText>
 						<Grid>
 							<GridRow>
-								{#each json?.['front-end'] as skill}
+								{#each json?.['frameworks'] as skill}
+									<GridCol cols="12" sm="6" xl="3">
+										<SkillPreview {skill} />
+									</GridCol>
+								{/each}
+							</GridRow>
+						</Grid>
+					</CardText>
+				</Card>
+				<Card class="mt-5">
+					<CardTitle>Languages</CardTitle>
+					<CardText>
+						<Grid>
+							<GridRow>
+								{#each json?.['languages'] as skill}
+									<GridCol cols="12" sm="6" xl="3">
+										<SkillPreview {skill} />
+									</GridCol>
+								{/each}
+							</GridRow>
+						</Grid>
+					</CardText>
+				</Card>
+
+				<Card class="mt-5">
+					<CardTitle>Runtime</CardTitle>
+					<CardText>
+						<Grid>
+							<GridRow>
+								{#each json?.['runtime'] as skill}
+									<GridCol cols="12" sm="6" xl="3">
+										<SkillPreview {skill} />
+									</GridCol>
+								{/each}
+							</GridRow>
+						</Grid>
+					</CardText>
+				</Card>
+
+				<Card class="mt-5">
+					<CardTitle>CSS tools</CardTitle>
+					<CardText>
+						<Grid>
+							<GridRow>
+								{#each json?.['css-tools'] as skill}
 									<GridCol cols="12" sm="6" xl="3">
 										<SkillPreview {skill} />
 									</GridCol>
@@ -31,11 +75,26 @@
 			</GridCol>
 			<GridCol cols="12" md="6">
 				<Card>
-					<CardTitle>Back-end</CardTitle>
+					<CardTitle>CLI tools</CardTitle>
 					<CardText>
 						<Grid>
 							<GridRow>
-								{#each json?.['back-end'] as skill}
+								{#each json?.['cli-tools'] as skill}
+									<GridCol cols="12" sm="6" xl="3">
+										<SkillPreview {skill} />
+									</GridCol>
+								{/each}
+							</GridRow>
+						</Grid>
+					</CardText>
+				</Card>
+
+				<Card class="mt-5">
+					<CardTitle>Databases</CardTitle>
+					<CardText>
+						<Grid>
+							<GridRow>
+								{#each json?.['database'] as skill}
 									<GridCol cols="12" sm="6" xl="3">
 										<SkillPreview {skill} />
 									</GridCol>
@@ -53,6 +112,21 @@
 								{#each json?.['cms'] as skill}
 									<GridCol cols="12" sm="6" xl="3">
 										<SkillPreview {skill} type="cms" />
+									</GridCol>
+								{/each}
+							</GridRow>
+						</Grid>
+					</CardText>
+				</Card>
+
+				<Card class="mt-5">
+					<CardTitle>Developers tools</CardTitle>
+					<CardText>
+						<Grid>
+							<GridRow>
+								{#each json?.['tools'] as skill}
+									<GridCol cols="12" sm="6" xl="3">
+										<SkillPreview {skill} type="tools" />
 									</GridCol>
 								{/each}
 							</GridRow>

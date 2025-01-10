@@ -1,8 +1,44 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import { Btn, Grid, GridCol, GridRow, Spacer, Toolbar } from 'mytril';
 	import Seo from '$lib/components/seo.svelte';
 
 	let { children, title, date, cover, descritpion } = $props();
+
+	onMount(() => {
+		wrapPreTags();
+		wrapTableTags();
+	});
+
+	function wrapPreTags() {
+		const preTags = document.querySelectorAll<HTMLPreElement>('pre');
+		preTags.forEach((pre) => {
+			const megaWrapper = document.createElement('div');
+			megaWrapper.className = 'preview-code';
+
+			const codeWrapper = document.createElement('div');
+			codeWrapper.className = 'code-wrapper';
+
+			pre.parentNode?.insertBefore(megaWrapper, pre);
+			megaWrapper.appendChild(codeWrapper);
+			codeWrapper.appendChild(pre);
+		});
+	}
+
+	function wrapTableTags() {
+		const tableTags = document.querySelectorAll<HTMLPreElement>('table');
+		tableTags.forEach((table) => {
+			const megaWrapper = document.createElement('div');
+			megaWrapper.className = 'table';
+
+			const codeWrapper = document.createElement('div');
+			codeWrapper.className = 'table-wrapper';
+
+			table.parentNode?.insertBefore(megaWrapper, table);
+			megaWrapper.appendChild(codeWrapper);
+			codeWrapper.appendChild(table);
+		});
+	}
 </script>
 
 <Seo {title} description={descritpion} />
@@ -24,7 +60,7 @@
 <Grid class="mt-14 relative">
 	<GridRow>
 		<GridCol cols="12">
-			<article>
+			<article class="markdown">
 				<div
 					class="text-center sm:text-left mb-16 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl"
 				>
