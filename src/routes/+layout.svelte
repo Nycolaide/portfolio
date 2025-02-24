@@ -1,5 +1,9 @@
 <script lang="ts">
-	import '../app.css';
+	import '../styles/app.css';
+
+	// icons
+	import 'mingcute_icon/font/Mingcute.css';
+
 	let { children } = $props();
 </script>
 

@@ -1,0 +1,20 @@
+[
+	{
+		"name": "mytril",
+		"description": "Librairie de composants Svelte",
+		"labelCounter": "Téléchargements",
+		"url": "https://minedelve.com/mytril"
+	},
+	{
+		"name": "Minedelve",
+		"description": "Communauté de développeur",
+		"labelCounter": "Followers",
+		"url": "https://minedelve.com"
+	},
+	{
+		"name": "Github",
+		"description": "Découvrez en plus sur mon",
+		"labelCounter": "Followers",
+		"url": "https://github.com/Nycolaide"
+	}
+]
