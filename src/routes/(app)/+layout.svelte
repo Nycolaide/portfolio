@@ -21,6 +21,8 @@
 
 		<h1>{@html $t('welcome', { name: 'nycolaide' })}</h1>
 
+		<span class="icomoon icomoon-vuetify"></span>
+
 		<h1>{$t('hero.introduction')}</h1>
 
 		<h1>{$t('timer.d')}</h1>

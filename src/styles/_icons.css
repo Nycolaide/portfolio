@@ -1,0 +1,252 @@
+@font-face {
+	font-family: 'icomoon';
+	src: url('/fonts/icomoon.eot?8zmq3');
+	src:
+		url('/fonts/icomoon.eot?8zmq3#iefix') format('embedded-opentype'),
+		url('/fonts/icomoon.ttf?8zmq3') format('truetype'),
+		url('/fonts/icomoon.woff?8zmq3') format('woff'),
+		url('/fonts/icomoon.svg?8zmq3#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+
+.icomoon {
+	font-family: 'icomoon' !important;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icomoon-sql:before {
+	content: '\e94a';
+}
+.icomoon-craftmycms:before {
+	content: '\e91b';
+}
+.icomoon-npm:before {
+	content: '\e903';
+}
+.icomoon-pinterest:before {
+	content: '\e904';
+}
+.icomoon-reddit:before {
+	content: '\e905';
+}
+.icomoon-skype:before {
+	content: '\e906';
+}
+.icomoon-slack:before {
+	content: '\e907';
+}
+.icomoon-snapchat:before {
+	content: '\e908';
+}
+.icomoon-teams:before {
+	content: '\e909';
+}
+.icomoon-teamspeak:before {
+	content: '\e90a';
+}
+.icomoon-threads:before {
+	content: '\e90b';
+}
+.icomoon-twitch:before {
+	content: '\e90c';
+}
+.icomoon-whatsapp:before {
+	content: '\e90d';
+}
+.icomoon-x:before {
+	content: '\e90e';
+}
+.icomoon-youtube:before {
+	content: '\e90f';
+}
+.icomoon-youtube-music:before {
+	content: '\e910';
+}
+.icomoon-bluesky:before {
+	content: '\e911';
+}
+.icomoon-codepen:before {
+	content: '\e912';
+}
+.icomoon-discord:before {
+	content: '\e913';
+}
+.icomoon-facebook:before {
+	content: '\e914';
+}
+.icomoon-github:before {
+	content: '\e915';
+}
+.icomoon-instagram:before {
+	content: '\e916';
+}
+.icomoon-linkedin:before {
+	content: '\e917';
+}
+.icomoon-mastodon:before {
+	content: '\e918';
+}
+.icomoon-messenger:before {
+	content: '\e919';
+}
+.icomoon-mumble:before {
+	content: '\e91a';
+}
+.icomoon-drupal:before {
+	content: '\e91c';
+}
+.icomoon-e-majine:before {
+	content: '\e91d';
+}
+.icomoon-gesweb:before {
+	content: '\e91e';
+}
+.icomoon-joomla:before {
+	content: '\e91f';
+}
+.icomoon-prestashop:before {
+	content: '\e920';
+}
+.icomoon-wordpress:before {
+	content: '\e921';
+}
+.icomoon-android:before {
+	content: '\e922';
+}
+.icomoon-apple:before {
+	content: '\e923';
+}
+.icomoon-ios:before {
+	content: '\e924';
+}
+.icomoon-ubuntu:before {
+	content: '\e925';
+}
+.icomoon-windows:before {
+	content: '\e926';
+}
+.icomoon-git:before {
+	content: '\e927';
+}
+.icomoon-github1:before {
+	content: '\e928';
+}
+.icomoon-gitlab:before {
+	content: '\e929';
+}
+.icomoon-vscode:before {
+	content: '\e92a';
+}
+.icomoon-swift:before {
+	content: '\e92b';
+}
+.icomoon-tailwindcss:before {
+	content: '\e92c';
+}
+.icomoon-typescript:before {
+	content: '\e92d';
+}
+.icomoon-vbscript:before {
+	content: '\e92e';
+}
+.icomoon-visualbasic:before {
+	content: '\e92f';
+}
+.icomoon-vite:before {
+	content: '\e930';
+}
+.icomoon-vue:before {
+	content: '\e931';
+}
+.icomoon-vuetify:before {
+	content: '\e932';
+}
+.icomoon-webpack:before {
+	content: '\e933';
+}
+.icomoon-angular:before {
+	content: '\e934';
+}
+.icomoon-aspclassic:before {
+	content: '\e935';
+}
+.icomoon-bootstrap:before {
+	content: '\e936';
+}
+.icomoon-css3:before {
+	content: '\e937';
+}
+.icomoon-docker:before {
+	content: '\e938';
+}
+.icomoon-html5:before {
+	content: '\e939';
+}
+.icomoon-javascript:before {
+	content: '\e93a';
+}
+.icomoon-jquery:before {
+	content: '\e93b';
+}
+.icomoon-kubernetes:before {
+	content: '\e93c';
+}
+.icomoon-less:before {
+	content: '\e93d';
+}
+.icomoon-mongodb:before {
+	content: '\e93e';
+}
+.icomoon-mysql:before {
+	content: '\e93f';
+}
+.icomoon-next:before {
+	content: '\e940';
+}
+.icomoon-nodejs:before {
+	content: '\e941';
+}
+.icomoon-nuxt:before {
+	content: '\e942';
+}
+.icomoon-php:before {
+	content: '\e943';
+}
+.icomoon-postgresql:before {
+	content: '\e944';
+}
+.icomoon-python:before {
+	content: '\e945';
+}
+.icomoon-react:before {
+	content: '\e946';
+}
+.icomoon-redux:before {
+	content: '\e947';
+}
+.icomoon-rollup:before {
+	content: '\e948';
+}
+.icomoon-sass:before {
+	content: '\e949';
+}
+.icomoon-svelte:before {
+	content: '\e94b';
+}
+.icomoon-minedelve:before {
+	content: '\e900';
+}
+.icomoon-mytril-line:before {
+	content: '\e902';
+}
+.icomoon-mytril:before {
+	content: '\e901';
+}
