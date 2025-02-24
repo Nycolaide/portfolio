@@ -12,8 +12,9 @@ export const load: LayoutLoad = async ({ data, fetch }) => {
 	const social = await callApi({ url: 'api/social' }, fetch);
 
 	if (typeof window !== 'undefined' && typeof localStorage !== 'undefined') {
-		if (!useLocalData) {
-			storage({ ...api });
+		if (useLocalData) {
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any
+			storage({ ...api } as any);
 		} else {
 			const dataStorage = localStorage.getItem('storage') || null;
 			response = (dataStorage && JSON.parse(dataStorage)) || {};

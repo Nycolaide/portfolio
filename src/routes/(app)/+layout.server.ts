@@ -7,7 +7,7 @@ export const load: LayoutServerLoad = async ({ fetch, cookies }) => {
 
 	if (!session) useLocalData = true;
 
-	if (!useLocalData) {
+	if (useLocalData) {
 		const hero = await callApi({ url: '/api/github' }, fetch);
 		const minedelve = await callApi(
 			{ url: `/api/github/org?organisation=${encodeURIComponent('minedelve')}` },

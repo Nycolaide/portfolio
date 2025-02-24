@@ -1,5 +1,5 @@
-import type { Github } from '$lib/types';
+import type { GitHubOrganization, GitHubUser } from '$lib/types';
 import { writable } from 'svelte/store';
 
-export const heroGitHub = writable<Github | null>(null);
-export const minedelveGitHub = writable<Github | null>(null);
+export const heroGitHub = writable<GitHubUser | null>(null);
+export const minedelveGitHub = writable<GitHubOrganization | null>(null);
