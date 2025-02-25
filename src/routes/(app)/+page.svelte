@@ -37,7 +37,7 @@
 	>
 		<Corner class="corner-bottom absolute right-[-1.813rem] bottom-[-1px] rotate-[-90deg]" />
 		<Corner class="corner-top absolute top-[-1.813rem] left-[-1px] rotate-[-90deg]" />
-		<div class="text-3xl sm:text-4xl lg:text-5xl">
+		<div class="xs:text-3xl text-2xl sm:text-4xl lg:text-5xl">
 			Développeur Web passionné et joueur à ses heures perdu
 		</div>
 		<div class="actions">
@@ -76,7 +76,7 @@
 	</List>
 </div>
 
-<div class="about">
+<div class="about !mt-[4rem] !mb-[4rem]">
 	<Grid>
 		<GridRow>
 			<GridCol cols="12" order="2" sm="6" md="6">
@@ -96,7 +96,7 @@
 							class="w-[10rem] rotate-[-6deg] rounded-4xl"
 							src={data?.api?.hero?.avatar_url || 'images/nycolaide.png'}
 						/>
-						<Card class="max-xs:-left-[10%] max-xs:w-[120%] min-xs:max-w-[21.875rem] -top-4">
+						<Card class="-top-4 max-w-[21.875rem]">
 							<CardText class="grid grid-cols-3 gap-2">
 								<div>
 									<div class="!ms-1 font-bold">
@@ -161,7 +161,7 @@
 </div>
 
 <div class="contact">
-	<Card class="flex flex-col justify-between sm:!p-10 lg:!p-16" rounded="2xl">
+	<Card class="!mt-[7rem] flex flex-col justify-between sm:!p-10 lg:!p-16" rounded="2xl">
 		<CardText
 			class="xs:!text-3xl min-h-[12rem] text-center !text-xl font-bold max-sm:!mt-10 sm:max-w-[80%] sm:text-start  sm:!text-3xl lg:max-w-[40.625rem]  lg:!text-5xl"
 		>
@@ -209,5 +209,9 @@
 	.about {
 		max-width: 67.5rem;
 		margin: 0 auto;
+	}
+
+	.projects :global(.myt-list-item) {
+		transition: margin-inline-start 0.3s;
 	}
 </style>

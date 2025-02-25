@@ -37,11 +37,11 @@
 		border-radius: 0.625rem;
 		overflow: hidden;
 		margin-top: 0.938rem;
+		transition: width 0.5s;
 
 		.progress-bar {
 			height: 100%;
 			background: var(--color-info);
-			transition: width 0.5s;
 		}
 	}
 </style>

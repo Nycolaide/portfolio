@@ -23,7 +23,12 @@
 		width: 100%;
 		margin: auto;
 		max-width: 112.5rem;
-		padding: 0 2.5rem;
+		padding: 0 1.5rem;
+		transition: padding 0.3s;
+
+		@media screen and (min-width: 40rem) {
+			padding: 0 2.5rem;
+		}
 	}
 
 	:global(.custom-background) {

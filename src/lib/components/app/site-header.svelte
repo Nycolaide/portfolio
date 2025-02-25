@@ -2,6 +2,7 @@
 	import { Corner } from '$lib/components/app';
 	import { capitalize } from 'mytril/actions';
 	import { Btn, Icon, List, ListItem, Menu } from 'mytril/components';
+	import { themeStore, setColorScheme } from 'mytril/stores';
 
 	const navigation = [
 		{ name: 'projects', path: '/#projects' },
@@ -37,8 +38,26 @@
 				right
 			/>
 
-			<Btn class="order-2 !hidden sm:!flex" icon circle>
-				<Icon icon="font:mgc_full_moon_line" />
+			<Btn
+				class="order-2 !hidden sm:!flex"
+				icon
+				circle
+				onclick={() =>
+					setColorScheme(
+						$themeStore.colorScheme === 'system'
+							? 'light'
+							: $themeStore.colorScheme === 'light'
+								? 'dark'
+								: 'system'
+					)}
+			>
+				{#if $themeStore.colorScheme === 'light'}
+					<Icon icon="font:mgc_sun_line" />
+				{:else if $themeStore.colorScheme === 'dark'}
+					<Icon icon="font:mgc_full_moon_line" />
+				{:else}
+					<Icon icon="font:mgc_moonlight_line" />
+				{/if}
 			</Btn>
 
 			<Menu closeOnClick>
@@ -68,7 +87,12 @@
 		width: 100%;
 		margin: auto;
 		max-width: 112.5rem;
-		padding: 0 2.5rem;
+		padding: 0 1.5rem;
+		transition: padding 0.3s;
+
+		@media screen and (min-width: 40rem) {
+			padding: 0 2.5rem;
+		}
 
 		@media screen and (max-width: 40rem) {
 			background-color: rgb(142, 97, 186);
