@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { SiteHeader, SiteFooter } from '$lib/components/app';
-	import { t, locale, locales } from '$lib/stores';
 	import { App } from 'mytril/components';
 	let { data, children } = $props();
 
@@ -9,24 +8,6 @@
 
 <div class="custom-background">
 	<App>
-		<p>
-			<select bind:value={$locale}>
-				{#each locales as l}
-					<option value={l}>{l}</option>
-				{/each}
-			</select>
-		</p>
-
-		<h1>{$t('title')}</h1>
-
-		<h1>{@html $t('welcome', { name: 'nycolaide' })}</h1>
-
-		<span class="icomoon icomoon-vuetify"></span>
-
-		<h1>{$t('hero.introduction')}</h1>
-
-		<h1>{$t('timer.d')}</h1>
-
 		<SiteHeader />
 
 		<div class="main-container">

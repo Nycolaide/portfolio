@@ -2,6 +2,9 @@ import { callApi } from '$lib/actions/call-api';
 import { storage } from '$lib/actions/storage';
 import type { LayoutLoad } from './$types';
 
+// TEMPS
+import mockApi from './mock-api.json';
+
 export const load: LayoutLoad = async ({ data, fetch }) => {
 	const { useLocalData, api } = data;
 	let response = {};
@@ -21,8 +24,10 @@ export const load: LayoutLoad = async ({ data, fetch }) => {
 		}
 	}
 
+	console.log('api', api);
+
 	return {
-		api: api || response,
+		api: mockApi || response,
 		skills: skills.data,
 		projects: projects.data,
 		social: social.data

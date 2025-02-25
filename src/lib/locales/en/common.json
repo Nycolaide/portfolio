@@ -1,6 +1,0 @@
-{
-	"title": "Hello, World!",
-	"welcome": "Hi <strong>{{name}}</strong>, how are you?",
-	"time": "The current time is: {{time}}",
-	"timer": { "d": "day", "h": "hours", "days": { "monday": "monday" } }
-}
