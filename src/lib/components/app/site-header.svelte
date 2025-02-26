@@ -3,7 +3,7 @@
 	import { Corner } from '$lib/components/app';
 	import { t } from '$lib/stores';
 	import { capitalize } from 'mytril/actions';
-	import { Btn, Icon, List, ListItem, Menu } from 'mytril/components';
+	import { Btn, Divider, Icon, List, ListItem, Menu } from 'mytril/components';
 	import { themeStore, setColorScheme } from 'mytril/stores';
 
 	const navigation = [
@@ -79,6 +79,49 @@
 								{capitalize($t(`navigation.${item.name}`))}
 							</ListItem>
 						{/each}
+						<Divider />
+						<Btn
+							class="!mt-2 sm:!hidden"
+							icon
+							circle
+							onclick={() =>
+								setColorScheme(
+									$themeStore.colorScheme === 'system'
+										? 'light'
+										: $themeStore.colorScheme === 'light'
+											? 'dark'
+											: 'system'
+								)}
+						>
+							{#if $themeStore.colorScheme === 'light'}
+								<Icon icon="font:mgc_sun_line" />
+							{:else if $themeStore.colorScheme === 'dark'}
+								<Icon icon="font:mgc_full_moon_line" />
+							{:else}
+								<Icon icon="font:mgc_moonlight_line" />
+							{/if}
+						</Btn>
+						<!-- <ListItem
+							onclick={() => setColorScheme('system')}
+							class="font-bold"
+							active={$themeStore.colorScheme === 'system'}
+						>
+							{capitalize($t(`theme.system`))}
+						</ListItem>
+						<ListItem
+							onclick={() => setColorScheme('light')}
+							class="font-bold"
+							active={$themeStore.colorScheme === 'light'}
+						>
+							{capitalize($t(`theme.light`))}
+						</ListItem>
+						<ListItem
+							onclick={() => setColorScheme('dark')}
+							class="font-bold"
+							active={$themeStore.colorScheme === 'dark'}
+						>
+							{capitalize($t(`theme.dark`))}
+						</ListItem> -->
 					</List>
 				</Menu>
 

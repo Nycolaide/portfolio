@@ -7,7 +7,7 @@
 </script>
 
 <ListItem class="!mt-2 !mb-4 hover:!ms-8" href={project.url} target="_blank">
-	<ListItemSubtitle class="!text-xs uppercase md:!text-sm">
+	<ListItemSubtitle class="!mb-4 !text-xs uppercase md:!text-sm">
 		{project.description}
 	</ListItemSubtitle>
 	<ListItemTitle class="xs:!text-5xl !text-3xl md:!text-7xl">

@@ -1,9 +1,9 @@
 import type { GitHubOrganization, GitHubUser, NpmCounter } from '$lib/types';
 
 export const storage = (props: {
-	hero?: { data: GitHubUser };
-	github?: { [key: string]: { data: GitHubOrganization } };
-	npm?: { [key: string]: { data: NpmCounter } };
+	hero?: GitHubUser;
+	github?: { [key: string]: GitHubOrganization };
+	npm?: { [key: string]: NpmCounter };
 }) => {
 	const { hero, github, npm } = props;
 	const history = localStorage.getItem('storage') || null;
@@ -19,17 +19,17 @@ export const storage = (props: {
 		if (historyParsed['npm']) newData['npm'] = historyParsed['npm'] || {};
 	}
 
-	if (hero) newData['hero'] = hero.data || {};
+	if (hero) newData['hero'] = hero || {};
 
 	if (github) {
 		for (const [key, value] of Object.entries(github)) {
-			newData['github'] = { ...newData.github, [key]: value.data || {} };
+			newData['github'] = { ...newData.github, [key]: value || {} };
 		}
 	}
 
 	if (npm) {
 		for (const [key, value] of Object.entries(npm)) {
-			newData['npm'] = { ...newData.package, [key]: value.data || {} };
+			newData['npm'] = { ...newData.package, [key]: value || {} };
 		}
 	}
 

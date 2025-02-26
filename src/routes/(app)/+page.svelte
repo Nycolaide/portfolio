@@ -78,7 +78,7 @@
 				<GridCol cols="12">
 					<Img
 						class="w-[10rem] rotate-[-6deg] rounded-4xl border-6 border-neutral-400"
-						src={'images/nycolaide.png'}
+						src={data?.api?.hero?.avatar_url || 'images/nycolaide.png'}
 					/>
 					<Card class="-top-4 max-w-[21.875rem]" background="primary" color="on-primary">
 						<CardText class="grid grid-cols-3 gap-2">
@@ -170,7 +170,7 @@
 				<Btn
 					size="lg"
 					rounded="pill"
-					class="max-sm:w-full sm:!ms-auto"
+					class="max-sm:w-full sm:!ms-auto sm:w-fit"
 					block
 					href="mailto:laurent@nycolaide.dev"
 				>

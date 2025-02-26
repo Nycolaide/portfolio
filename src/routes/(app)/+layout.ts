@@ -1,21 +1,33 @@
+import { callApi } from '$lib/actions/call-api';
 import { storage } from '$lib/actions/storage';
 import type { ResponseAllApi } from '$lib/types';
 import type { LayoutLoad } from './$types';
 
-export const load: LayoutLoad = async ({ data }) => {
-	const { useLocalData, api } = data;
+export const load: LayoutLoad = async ({ fetch, data }) => {
+	const { session } = data;
 	let response = {};
 
-	// // local API
-	// const skills = await callApi({ url: '/api/skills' }, fetch);
-	// const projects = await callApi({ url: 'api/projects' }, fetch);
-	// const social = await callApi({ url: 'api/social' }, fetch);
+	if (!session) {
+		const hero = await callApi({ url: '/api/github' }, fetch);
+		const minedelve = await callApi(
+			{ url: `/api/github/org?organisation=${encodeURIComponent('minedelve')}` },
+			fetch
+		);
+		const mytril = await callApi({ url: `/api/npm?name=${encodeURIComponent('mytril')}` }, fetch);
 
-	if (typeof window !== 'undefined' && typeof localStorage !== 'undefined') {
-		if (useLocalData) {
+		const api = {
+			hero: hero.data,
+			github: { minedelve: minedelve.data },
+			npm: { mytril: mytril.data }
+		};
+		response = api;
+
+		if (typeof window !== 'undefined' && typeof localStorage !== 'undefined') {
 			// eslint-disable-next-line @typescript-eslint/no-explicit-any
-			storage({ ...api } as any);
-		} else {
+			storage(api as any);
+		}
+	} else {
+		if (typeof window !== 'undefined' && typeof localStorage !== 'undefined') {
 			const dataStorage = localStorage.getItem('storage') || null;
 			response = (dataStorage && JSON.parse(dataStorage)) || {};
 		}
@@ -23,8 +35,5 @@ export const load: LayoutLoad = async ({ data }) => {
 
 	return {
 		api: response as ResponseAllApi
-		// skills: skills.data,
-		// projects: projects.data,
-		// social: social.data as SocialPlatform[]
 	};
 };
