@@ -41,5 +41,9 @@ jobs:
             cd apps/portfolio-lgi/alpha
             git pull origin develop
             npm install
+            npm install -D mytril@insiders
+            npm run build
             docker compose build
             docker compose up -d
+            git restore package-lock.json
+            git restore package.lock
