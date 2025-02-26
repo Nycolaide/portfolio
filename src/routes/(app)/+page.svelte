@@ -2,7 +2,7 @@
 	import { Corner, SectionTitle } from '$lib/components/app';
 	import Seo from '$lib/components/app/seo.svelte';
 	import { Project, Skill } from '$lib/components/hero';
-	import { t } from '$lib/stores';
+	import { projects, skills, socials, t } from '$lib/stores';
 	import { capitalize } from 'mytril/actions';
 	import {
 		Btn,
@@ -49,7 +49,7 @@
 <SectionTitle>{capitalize($t('heading.projects'))}</SectionTitle>
 
 <List id="projects" class="projects !mr-auto !ml-auto max-w-[67.5rem] !pt-[4rem] !pb-[4rem]">
-	{#each data?.projects as project}
+	{#each $projects as project}
 		<Project {data} {project} />
 	{/each}
 </List>
@@ -127,7 +127,7 @@
 						<CardTitle>{capitalize($t(`hero.categories.${category}`))}</CardTitle>
 						<Grid>
 							<GridRow>
-								{#each data?.skills?.[category] as skill}
+								{#each $skills?.[category] as skill}
 									<GridCol cols="12" sm="6">
 										<Skill {skill} />
 									</GridCol>
@@ -158,7 +158,7 @@
 			<GridCol class="text-center sm:text-start" cols="12" sm="6">
 				<p>{capitalize($t('hero.contact.follow-us'))}:</p>
 				<div class="!mt-4 flex justify-center gap-2 sm:justify-start">
-					{#each Object.entries(data?.social ?? {}) as [, platform]}
+					{#each Object.entries($socials ?? {}) as [, platform]}
 						<Btn icon circle variant="outline" href={platform.url} target="_blank" color="white">
 							<Icon icon={`font:${platform.icon}`} color="white" />
 						</Btn>
