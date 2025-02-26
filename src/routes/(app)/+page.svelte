@@ -166,7 +166,13 @@
 				</div>
 			</GridCol>
 			<GridCol cols="12" sm="6" class="text-center sm:relative sm:top-[20px] sm:text-end">
-				<Btn size="lg" rounded="pill" class="max-sm:w-full sm:!ms-auto" block>
+				<Btn
+					size="lg"
+					rounded="pill"
+					class="max-sm:w-full sm:!ms-auto"
+					block
+					href="mailto:laurent@nycolaide.dev"
+				>
 					{capitalize($t('hero.contact.lets-go'))}
 				</Btn>
 				<a href="mailto:laurent@nycolaide.dev" class="text-sm opacity-70">

@@ -10,3 +10,15 @@ export interface ResponseAllApi {
 	github: GitHubOrganization[];
 	npm: NpmCounter[];
 }
+
+interface SkillItems {
+	name: string;
+	url: string;
+	color: string;
+	icon: string;
+	level: number;
+}
+
+export interface Skills {
+	[key: string]: SkillItems[];
+}
