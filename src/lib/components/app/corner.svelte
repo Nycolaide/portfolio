@@ -32,9 +32,10 @@
 
 <style lang="postcss">
 	svg {
-		color: orange;
+		color: var(--color-background);
 		width: 1.875rem;
 		height: 1.875rem;
+		transition: color 0.5s;
 
 		&.corner-right {
 			transform: scale(-1, 1);

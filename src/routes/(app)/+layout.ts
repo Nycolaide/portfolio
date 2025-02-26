@@ -1,9 +1,7 @@
 import { callApi } from '$lib/actions/call-api';
 import { storage } from '$lib/actions/storage';
+import type { ResponseAllApi, SocialPlatform } from '$lib/types';
 import type { LayoutLoad } from './$types';
-
-// TEMPS
-import mockApi from './mock-api.json';
 
 export const load: LayoutLoad = async ({ data, fetch }) => {
 	const { useLocalData, api } = data;
@@ -24,12 +22,10 @@ export const load: LayoutLoad = async ({ data, fetch }) => {
 		}
 	}
 
-	console.log('api', api);
-
 	return {
-		api: mockApi || response,
+		api: response as ResponseAllApi,
 		skills: skills.data,
 		projects: projects.data,
-		social: social.data
+		social: social.data as SocialPlatform[]
 	};
 };

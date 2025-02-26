@@ -34,7 +34,7 @@
 		"jsdom": "^25.0.1",
 		"mdsvex": "^0.12.3",
 		"mingcute_icon": "^2.9.6",
-		"mytril": "^0.5.0-insiders.25",
+		"mytril": "^0.5.0-insiders.26",
 		"prettier": "^3.4.2",
 		"prettier-plugin-svelte": "^3.3.3",
 		"prettier-plugin-tailwindcss": "^0.6.11",

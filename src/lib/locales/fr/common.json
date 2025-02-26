@@ -1,5 +1,18 @@
 {
-	"title": "Bonjour le monde !",
-	"welcome": "Bonjour, <strong>{{name}}</strong>, comment allez-vous ?",
-	"time": "L'heure actuelle est : {{time}}"
+	"menu": "menu",
+	"navigation": {
+		"projects": "projets",
+		"about": "à propos",
+		"skills": "compétences",
+		"contact": "contact"
+	},
+	"level-skill": {
+		"beginner": "débutant",
+		"intermediate": "intermédiaire",
+		"advanced": "avancé"
+	},
+	"heading": {
+		"projects": "mes projets",
+		"skills": "mes compétences"
+	}
 }

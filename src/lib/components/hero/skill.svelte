@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { Icon, Tooltip } from 'mytril/components';
 	import { capitalize } from 'mytril/actions';
+	import { t } from '$lib/stores';
 
 	let { skill } = $props();
-	let message = $state('');
+	let message = $state('beginner');
 
 	$effect(() => {
 		if (skill?.level < 40) {
@@ -23,7 +24,7 @@
 		<Icon icon="font:mgc_external_link_line" color="on-surface" size="sm" />
 	</a>
 </p>
-<Tooltip label={capitalize(message)}>
+<Tooltip label={capitalize($t(`level-skill.${message}`))}>
 	<div class="progress">
 		<div class="progress-bar" style={`width: ${skill?.level}%`}></div>
 	</div>
@@ -33,15 +34,18 @@
 	.progress {
 		width: 100%;
 		height: 0.5rem;
-		background: var(--color-surface-variant);
+		background-color: var(--color-surface-variant);
 		border-radius: 0.625rem;
 		overflow: hidden;
 		margin-top: 0.938rem;
-		transition: width 0.5s;
+		transition:
+			width 0.5s,
+			color 0.5s,
+			background-color 0.5s;
 
 		.progress-bar {
 			height: 100%;
-			background: var(--color-info);
+			background-color: var(--color-info);
 		}
 	}
 </style>

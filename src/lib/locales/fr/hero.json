@@ -1,1 +1,25 @@
-{ "introduction": "Développeur Web passionné et joueur à ses heures perdu" }
+{
+	"introduction": "développeur Web passionné et joueur à ses heures perdu",
+	"bio": "développeur FrontEnd en React.js, Svelte et Vue.js. Fondateur de Minedelve et créateur de la librairie de composants Svelte Mytril. Et gamer à mes heures perdue.",
+	"contact": {
+		"message": "créons ensemble quelque chose de d'extraordinaire !",
+		"follow-us": "retrouvez moi sur",
+		"lets-go": "c'est parti !",
+		"contact-me": "me contacter"
+	},
+	"counters": {
+		"public_repos": "dépots",
+		"followers": "abonées",
+		"following": "abonnements"
+	},
+	"categories": {
+		"frameworks": "frameworks",
+		"languages": "languages",
+		"runtime": "runtime",
+		"css-tools": "CSS tools",
+		"cli-tools": "CLI tools",
+		"database": "database",
+		"cms": "CMS",
+		"tools": "outils"
+	}
+}

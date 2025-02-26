@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { Corner } from '$lib/components/app';
+	import { t } from '$lib/stores';
 	import { capitalize } from 'mytril/actions';
 	import { Btn, Icon, List, ListItem, Menu } from 'mytril/components';
 	import { themeStore, setColorScheme } from 'mytril/stores';
@@ -62,20 +63,30 @@
 
 			<Menu closeOnClick>
 				{#snippet activator(model)}
-					<Btn class="order-1 md:!hidden" onclick={model.toggle} rounded="pill">Menu</Btn>
+					<Btn
+						class="order-1 !font-bold md:!hidden"
+						onclick={(el: PointerEvent | HTMLElement) => model.toggle(el)}
+						rounded="pill"
+					>
+						{capitalize($t('menu'))}
+					</Btn>
 				{/snippet}
 				<List dense nav>
 					{#each navigation as item}
-						<ListItem href={item.path}>{capitalize(item.name)}</ListItem>
+						<ListItem href={item.path} class="font-bold"
+							>{capitalize($t(`navigation.${item.name}`))}</ListItem
+						>
 					{/each}
 				</List>
 			</Menu>
 
-			<nav class="relative order-last flex hidden h-full items-center gap-2 !pl-2 md:!flex">
+			<nav class="relative order-last hidden h-full items-center gap-2 !pl-2 md:!flex">
 				<Corner class="corner-top absolute top-[-1px] left-[-1.813rem]" right />
 
 				{#each navigation as item}
-					<Btn href={item.path} variant="text" rounded="pill">{capitalize(item.name)}</Btn>
+					<Btn href={item.path} variant="text" rounded="pill" class="font-bold">
+						{capitalize($t(`navigation.${item.name}`))}
+					</Btn>
 				{/each}
 			</nav>
 		</div>
@@ -87,19 +98,21 @@
 		width: 100%;
 		margin: auto;
 		max-width: 112.5rem;
-		padding: 0 1.5rem;
-		transition: padding 0.3s;
+		padding: 0 1rem;
+		transition:
+			padding 0.3s,
+			background-color 0.5s;
 
 		@media screen and (min-width: 40rem) {
 			padding: 0 2.5rem;
 		}
 
 		@media screen and (max-width: 40rem) {
-			background-color: rgb(142, 97, 186);
+			background-color: var(--color-background);
 		}
 
 		> div:first-child {
-			background-color: orangered;
+			background-color: var(--color-background);
 		}
 
 		.header-logo-wrapper {
@@ -107,7 +120,7 @@
 			align-items: center;
 			justify-content: space-between;
 			position: relative;
-			background-color: orange;
+			background-color: var(--color-background);
 		}
 		.header-nav-wrapper {
 			display: flex;
@@ -117,7 +130,7 @@
 
 			nav {
 				justify-content: space-between;
-				background-color: orange;
+				background-color: var(--color-background);
 				border-end-start-radius: 2rem;
 			}
 		}
