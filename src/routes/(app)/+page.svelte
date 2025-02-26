@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { scrollToAnchor } from '$lib/actions/scroll-to-anchor.js';
 	import { Corner, SectionTitle } from '$lib/components/app';
 	import Seo from '$lib/components/app/seo.svelte';
 	import { Project, Skill } from '$lib/components/hero';
@@ -39,7 +40,7 @@
 			{capitalize($t('hero.introduction'))}
 		</div>
 		<div class="actions">
-			<Btn icon circle href="/#about" background="primary">
+			<Btn icon circle onclick={() => scrollToAnchor('about')} background="primary">
 				<Icon icon="font:mgc_arrow_down_fill" color="on-primary" />
 			</Btn>
 		</div>
@@ -65,7 +66,7 @@
 				class="!mt-4 max-sm:w-full"
 				rounded="pill"
 				size="lg"
-				href="/#contact"
+				onclick={() => scrollToAnchor('contact')}
 				background="primary"
 				color="on-primary"
 			>

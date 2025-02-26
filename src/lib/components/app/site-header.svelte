@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { scrollToAnchor } from '$lib/actions/scroll-to-anchor';
 	import { Corner } from '$lib/components/app';
 	import { t } from '$lib/stores';
 	import { capitalize } from 'mytril/actions';
@@ -6,10 +7,10 @@
 	import { themeStore, setColorScheme } from 'mytril/stores';
 
 	const navigation = [
-		{ name: 'projects', path: '/#projects' },
-		{ name: 'about', path: '/#about' },
-		{ name: 'skills', path: '/#skills' },
-		{ name: 'contact', path: '/#contact' }
+		{ name: 'projects', path: 'projects' },
+		{ name: 'about', path: 'about' },
+		{ name: 'skills', path: 'skills' },
+		{ name: 'contact', path: 'contact' }
 	];
 </script>
 
@@ -74,7 +75,7 @@
 					{/snippet}
 					<List dense nav>
 						{#each navigation as item}
-							<ListItem href={item.path} class="font-bold">
+							<ListItem onclick={() => scrollToAnchor(item.path)} class="font-bold">
 								{capitalize($t(`navigation.${item.name}`))}
 							</ListItem>
 						{/each}
@@ -85,7 +86,13 @@
 					<Corner class="corner-top absolute top-[-1px] left-[-1.813rem]" right />
 
 					{#each navigation as item}
-						<Btn href={item.path} variant="text" rounded="pill" class="font-bold" color="primary">
+						<Btn
+							onclick={() => scrollToAnchor(item.path)}
+							variant="text"
+							rounded="pill"
+							class="font-bold"
+							color="primary"
+						>
 							{capitalize($t(`navigation.${item.name}`))}
 						</Btn>
 					{/each}
