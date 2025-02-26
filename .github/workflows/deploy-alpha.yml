@@ -40,9 +40,9 @@ jobs:
           script: |
             cd apps/portfolio-lgi/alpha
             git pull origin develop
-            npm install
-            npm install -D mytril@insiders
-            npm run build
+            yarn
+            yarn add -D mytril@insiders
+            yarn build
             docker compose build
             docker compose up -d
             git restore package-lock.json
