@@ -14,124 +14,130 @@
 </script>
 
 <header class="fixed z-99 w-full">
-	<div class="top-0 left-0 h-[0.625rem] w-full"></div>
-	<div class="flex items-start justify-between">
-		<div class="header-logo-wrapper h-[5rem] sm:rounded-ee-[2rem]">
-			<Corner class="corner-bottom absolute bottom-[-1.813rem] left-[-1px]" />
-			<Corner class="corner-top absolute top-[-1px] right-[-1.813rem]" />
+	<div>
+		<div class="top-0 h-[0.625rem] w-full"></div>
+		<div class="flex items-start justify-between">
+			<div class="header-logo-wrapper h-[5rem] sm:rounded-ee-[2rem]">
+				<Corner class="corner-bottom absolute bottom-[-1.813rem] left-[-1px]" />
+				<Corner class="corner-top absolute top-[-1px] right-[-1.813rem]" />
 
-			<a href="/">
-				<div
-					class="grid h-full grid-cols-[2.5rem_minmax(6.85rem,_1fr)] items-center gap-2 sm:gap-4"
-				>
-					<div class="text-center text-xl font-bold sm:text-4xl">N.</div>
-					<div>
-						<p class="font-bold">Nycolaide</p>
-						<p class="text-xs opacity-85">Laurent Grimaldi</p>
-					</div>
-				</div>
-			</a>
-		</div>
-
-		<div class="header-nav-wrapper relative h-[5rem] justify-end gap-4">
-			<Corner
-				class="corner-right-bottom absolute right-[-1px] bottom-[-1.813rem] sm:!hidden md:!block"
-				right
-			/>
-
-			<Btn
-				class="order-2 !hidden sm:!flex"
-				icon
-				circle
-				onclick={() =>
-					setColorScheme(
-						$themeStore.colorScheme === 'system'
-							? 'light'
-							: $themeStore.colorScheme === 'light'
-								? 'dark'
-								: 'system'
-					)}
-			>
-				{#if $themeStore.colorScheme === 'light'}
-					<Icon icon="font:mgc_sun_line" />
-				{:else if $themeStore.colorScheme === 'dark'}
-					<Icon icon="font:mgc_full_moon_line" />
-				{:else}
-					<Icon icon="font:mgc_moonlight_line" />
-				{/if}
-			</Btn>
-
-			<Menu closeOnClick>
-				{#snippet activator(model)}
-					<Btn
-						class="order-1 !font-bold md:!hidden"
-						onclick={(el: PointerEvent | HTMLElement) => model.toggle(el)}
-						rounded="pill"
+				<a href="/">
+					<div
+						class="grid h-full grid-cols-[2.5rem_minmax(6.85rem,_1fr)] items-center gap-2 sm:gap-4"
 					>
-						{capitalize($t('menu'))}
-					</Btn>
-				{/snippet}
-				<List dense nav>
-					{#each navigation as item}
-						<ListItem href={item.path} class="font-bold"
-							>{capitalize($t(`navigation.${item.name}`))}</ListItem
+						<div class="text-center text-xl font-bold sm:text-4xl">N.</div>
+						<div>
+							<p class="font-bold">Nycolaide</p>
+							<p class="text-xs opacity-85">Laurent Grimaldi</p>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="header-nav-wrapper relative h-[5rem] justify-end gap-4">
+				<Corner
+					class="corner-right-bottom absolute right-[-1px] bottom-[-1.813rem] sm:!hidden md:!block"
+					right
+				/>
+
+				<Btn
+					class="order-2 !hidden sm:!flex"
+					icon
+					circle
+					onclick={() =>
+						setColorScheme(
+							$themeStore.colorScheme === 'system'
+								? 'light'
+								: $themeStore.colorScheme === 'light'
+									? 'dark'
+									: 'system'
+						)}
+				>
+					{#if $themeStore.colorScheme === 'light'}
+						<Icon icon="font:mgc_sun_line" />
+					{:else if $themeStore.colorScheme === 'dark'}
+						<Icon icon="font:mgc_full_moon_line" />
+					{:else}
+						<Icon icon="font:mgc_moonlight_line" />
+					{/if}
+				</Btn>
+
+				<Menu closeOnClick>
+					{#snippet activator(model)}
+						<Btn
+							class="order-1 !font-bold md:!hidden"
+							onclick={(el: PointerEvent | HTMLElement) => model.toggle(el)}
+							rounded="pill"
 						>
+							{capitalize($t('menu'))}
+						</Btn>
+					{/snippet}
+					<List dense nav>
+						{#each navigation as item}
+							<ListItem href={item.path} class="font-bold">
+								{capitalize($t(`navigation.${item.name}`))}
+							</ListItem>
+						{/each}
+					</List>
+				</Menu>
+
+				<nav class="relative order-last hidden h-full items-center gap-2 !pl-2 md:!flex">
+					<Corner class="corner-top absolute top-[-1px] left-[-1.813rem]" right />
+
+					{#each navigation as item}
+						<Btn href={item.path} variant="text" rounded="pill" class="font-bold" color="primary">
+							{capitalize($t(`navigation.${item.name}`))}
+						</Btn>
 					{/each}
-				</List>
-			</Menu>
-
-			<nav class="relative order-last hidden h-full items-center gap-2 !pl-2 md:!flex">
-				<Corner class="corner-top absolute top-[-1px] left-[-1.813rem]" right />
-
-				{#each navigation as item}
-					<Btn href={item.path} variant="text" rounded="pill" class="font-bold">
-						{capitalize($t(`navigation.${item.name}`))}
-					</Btn>
-				{/each}
-			</nav>
+				</nav>
+			</div>
 		</div>
 	</div>
 </header>
 
 <style lang="postcss">
 	header {
-		width: 100%;
-		margin: auto;
-		max-width: 112.5rem;
-		padding: 0 1rem;
-		transition:
-			padding 0.3s,
-			background-color 0.5s;
-
-		@media screen and (min-width: 40rem) {
-			padding: 0 2.5rem;
-		}
-
-		@media screen and (max-width: 40rem) {
-			background-color: var(--color-background);
-		}
-
-		> div:first-child {
-			background-color: var(--color-background);
-		}
-
-		.header-logo-wrapper {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			position: relative;
-			background-color: var(--color-background);
-		}
-		.header-nav-wrapper {
-			display: flex;
-			align-items: center;
-
+		> div {
 			width: 100%;
+			max-width: 112.5rem;
+			padding: 0 1rem;
+			margin: 0 auto;
+			transition: padding 0.3s;
 
-			nav {
-				justify-content: space-between;
+			@media screen and (min-width: 40rem) {
+				padding: 0 2.5rem;
+			}
+
+			@media screen and (max-width: 40rem) {
 				background-color: var(--color-background);
-				border-end-start-radius: 2rem;
+				transition: background-color 0.5s;
+			}
+
+			> div:first-child {
+				background-color: var(--color-background);
+				transition: background-color 0.5s;
+			}
+
+			.header-logo-wrapper {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				position: relative;
+				background-color: var(--color-background);
+				transition: background-color 0.5s;
+			}
+			.header-nav-wrapper {
+				display: flex;
+				align-items: center;
+
+				width: 100%;
+
+				nav {
+					justify-content: space-between;
+					background-color: var(--color-background);
+					transition: background-color 0.5s;
+					border-end-start-radius: 2rem;
+				}
 			}
 		}
 	}

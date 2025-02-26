@@ -266,6 +266,11 @@
     "@eslint/core" "^0.12.0"
     levn "^0.4.1"
 
+"@fontsource/geist-sans@^5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/geist-sans/-/geist-sans-5.1.0.tgz#5eacb9e8b3a264c2786314f13aa511bbd5075fbb"
+  integrity sha512-4AI/UxIcZiYgK6/cTo4R9oM4VHHLcFdHVv7m2+M42VyY16hhKJADrGe4HPjTxvolmce2IZX/jc6sFJ+GkLB64w==
+
 "@humanfs/core@^0.19.1":
   version "0.19.1"
   resolved "https://registry.yarnpkg.com/@humanfs/core/-/core-0.19.1.tgz#17c55ca7d426733fe3c561906b8173c336b40a77"

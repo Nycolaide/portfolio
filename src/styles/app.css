@@ -3,7 +3,12 @@
 
 /* files */
 @import './_icons.css';
+@import './_pattern.css';
 
 @theme {
 	--breakpoint-xs: 28rem;
+}
+
+:root {
+	--font-sans: 'Geist Sans', sans-serif;
 }

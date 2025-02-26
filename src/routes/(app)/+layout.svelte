@@ -1,9 +1,7 @@
 <script lang="ts">
 	import { SiteHeader, SiteFooter } from '$lib/components/app';
 	import { App } from 'mytril/components';
-	let { data, children } = $props();
-
-	console.log('+layout.svelte', data);
+	let { children } = $props();
 </script>
 
 <App>
