@@ -80,7 +80,7 @@
 					<p class="!mb-2">
 						Je suis aussi le fondateur de <a href="https://minedelve.com" target="_blank">
 							Minedelve
-						</a> c’est notre projet un peu fou : fondée en 2022 et basée en France, Minedelve est une
+						</a> c’est notre projet un peu fou : Fondée en 2022 et basée en France, Minedelve est une
 						équipe passionnée du web dédiée à l'apprentissage, la construction et le partage de projets
 						techniques ambitieux. Notre objectif est de proposer des solutions facilitant le développement
 						de projets.
@@ -90,7 +90,7 @@
 							>Mytril</a
 						>, c'est une librairie de composants Svelte légère, efficace, full customisable et pensé
 						pour obtenir des interfaces propres et bien architecturées avec un minimum d'effort. Je
-						l’ai designée avec une intention claire : arrêter de réinventer des styles pour chaque
+						l’ai designé avec une intention claire : arrêter de réinventer des styles pour chaque
 						projet tout en gardant la flexibilité pour modder à fond et assurer une maintenabilité
 						simplifé.
 					</p>

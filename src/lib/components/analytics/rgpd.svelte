@@ -57,9 +57,9 @@
 	<Card>
 		<CardActions>
 			<Spacer />
-			<Btn onclick={() => handleSetConsentMode('refuse')} size="sm" variant="text"
-				>Refuser les cookies tiers</Btn
-			>
+			<Btn onclick={() => handleSetConsentMode('refuse')} size="sm" variant="text">
+				Refuser mes cookies tiers
+			</Btn>
 		</CardActions>
 		<CardTitle><strong>La protection de vos données, c'est important !</strong></CardTitle>
 		<CardText>
@@ -72,9 +72,9 @@
 		<CardActions>
 			<Spacer />
 			<Btn onclick={() => handleSetConsentMode('accept')} background="primary" color="on-primary">
-				Accepter
+				Accepter mes cookies
 				{#snippet append()}
-					<Icon icon="font:mgc_arrow_right_fill" color="on-primary" />
+					<Icon icon="font:mgc_cookie_line" color="on-primary" />
 				{/snippet}
 			</Btn>
 		</CardActions>
