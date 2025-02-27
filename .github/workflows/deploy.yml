@@ -25,6 +25,10 @@ jobs:
         run: |
           echo "PUBLIC_MODE_PROD=false" >> .env
           echo "VITE_GITHUB_TOKEN=key" >> .env
+          echo "PUBLIC_ANALYTICS_ACTIVATE=false" >> .env
+          echo "PUBLIC_GTM_ACTIVATE=false" >> .env
+          echo "PUBLIC_ANALYTICS_KEY=key" >> .env
+          echo "PUBLIC_GTM_KEY=key" >> .env
 
       - name: Build Svelte project
         run: npm run build
