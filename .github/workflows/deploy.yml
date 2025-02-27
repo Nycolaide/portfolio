@@ -1,9 +1,10 @@
-name: Deploy
+name: Deploy Current
 
 on:
-  push:
+  pull_request:
     branches:
       - main
+    types: [closed]
 
 jobs:
   deploy:
@@ -44,6 +45,9 @@ jobs:
           script: |
             cd apps/portfolio-lgi/current
             git pull origin main
-            npm install
+            yarn
+            yarn add -D mytril@insiders
+            yarn build
             docker compose build
             docker compose up -d
+            git restore package.json
