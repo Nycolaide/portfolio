@@ -12,7 +12,7 @@
 	} from 'mytril/components';
 	import { onMount } from 'svelte';
 
-	let open = $state(true);
+	let open = $state(false);
 
 	onMount(() => {
 		const cookie = getCookie('consent');

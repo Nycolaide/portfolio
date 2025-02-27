@@ -71,6 +71,7 @@
 		<GridCol cols="12" order="2" lg="6">
 			<Card rounded="4xl">
 				<CardText class="!text-lg">
+					<p class="!mb-1 !text-3xl font-bold">Introduction</p>
 					<p class="!mb-2">
 						Je suis un développeur web basé à Paris ! Je me spécialise en tant que développeur
 						FrontEnd, me concentrant sur la construction d'applications web de haute qualité et
