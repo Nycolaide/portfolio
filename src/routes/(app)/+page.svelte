@@ -48,7 +48,7 @@
 		<Corner class="corner-bottom absolute right-[-1.813rem] bottom-[-1px] rotate-[-90deg]" />
 		<Corner class="corner-top absolute top-[-1.813rem] left-[-1px] rotate-[-90deg]" />
 		<div class="xs:text-3xl text-2xl sm:text-4xl lg:text-5xl">
-			{capitalize($t('hero.introduction'))}
+			<h1>{capitalize($t('hero.introduction'))}</h1>
 		</div>
 		<div class="actions">
 			<Btn icon circle onclick={() => scrollToAnchor('about')} background="primary">
@@ -75,24 +75,25 @@
 					<p class="!mb-2">
 						Je suis un développeur web basé à Paris ! Je me spécialise en tant que développeur
 						FrontEnd, me concentrant sur la construction d'applications web de haute qualité et
-						performant à travers un code propre et maintenable.
+						performante à travers un code propre et maintenable.
 					</p>
 					<p class="!mb-2">
-						Je suis aussi le fondateur de <a href="https://minedelve.com" target="_blank">
-							Minedelve
-						</a> c’est notre projet un peu fou : Fondée en 2022 et basée en France, Minedelve est une
-						équipe passionnée du web dédiée à l'apprentissage, la construction et le partage de projets
-						techniques ambitieux. Notre objectif est de proposer des solutions facilitant le développement
-						de projets.
+						J'ai créé <strong>
+							<a href="https://minedelve.com">Minedelve, une mine d'outils robuste</a>
+						</strong>, fondée en 2022, avec une équipe de passionnés du web. Minedelve est dédié à
+						l'apprentissage, la construction et le partage de projets techniques ambitieux. Notre
+						objectif est de proposer des solutions facilitant la mise en place de projets flexibles,
+						capables d’aider à mieux travailler, parfois plus vite, et sans compromettre la qualité.
 					</p>
 					<p>
-						Notre premier projet ce nomme <a href="https://minedelve.com/mytril" target="_blank"
-							>Mytril</a
-						>, c'est une librairie de composants Svelte légère, efficace, full customisable et pensé
-						pour obtenir des interfaces propres et bien architecturées avec un minimum d'effort. Je
-						l’ai designé avec une intention claire : arrêter de réinventer des styles pour chaque
-						projet tout en gardant la flexibilité pour modder à fond et assurer une maintenabilité
-						simplifé.
+						Notre premier projet se nomme <strong>
+							<a href="https://minedelve.com/mytril/docs">
+								Mytril, une librairie de composants Svelte
+							</a>
+						</strong> simple, légère et personnalisable. Cette solution Open Source a été pensée par
+						un front pour des fronts afin de leur faciliter le développement de fonctionnalités sans
+						restrictions ni frustrations. Mytril permet d'obtenir des interfaces complexes structurées
+						et performantes.
 					</p>
 				</CardText>
 				<CardActions>
@@ -108,7 +109,7 @@
 						{/snippet}
 						{capitalize($t('hero.contact.contact-me'))}
 						{#snippet append()}
-							<Icon icon="font:mgc_bird_line" color="on-primary" />
+							<Icon icon="font:mgc_send_plane_line" color="on-primary" />
 						{/snippet}
 					</Btn>
 				</CardActions>
@@ -123,10 +124,6 @@
 		</GridCol>
 	</GridRow>
 </Grid>
-
-<SectionTitle>{capitalize($t('heading.inspired'))}</SectionTitle>
-
-<Inspired />
 
 <SectionTitle>{capitalize($t('heading.skills'))}</SectionTitle>
 
@@ -156,7 +153,7 @@
 	</GridRow>
 </Grid>
 
-<div class="!mb-6 w-full text-center text-4xl opacity-10">
+<div class="!mb-6 w-full text-center text-3xl opacity-10">
 	<p class="font-bold">Chaussette !</p>
 </div>
 
@@ -192,19 +189,25 @@
 					block
 					href="mailto:laurent@nycolaide.dev"
 				>
-					{capitalize($t('hero.contact.lets-go'))}
+					{$t('hero.contact.lets-go')}
 
-					{#snippet append()}
-						<Icon icon="font:mgc_cookie_line" />
+					{#snippet prepend()}
+						<Icon icon="font:mgc_pizza_line" />
 					{/snippet}
 				</Btn>
-				<a href="mailto:laurent@nycolaide.dev" class="text-sm opacity-70">
+				<!-- <a href="mailto:laurent@nycolaide.dev" class="text-sm opacity-70">
 					laurent@nycolaide.dev
-				</a>
+				</a> -->
 			</GridCol>
 		</GridRow>
 	</Grid>
 </Card>
+
+<p class="!mt-8 !mb-8 text-center text-lg uppercase opacity-80">
+	{capitalize($t('heading.inspired'))}
+</p>
+
+<Inspired />
 
 <AboutMe bind:open={openAboutMe} />
 

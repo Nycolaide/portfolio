@@ -7,11 +7,15 @@
 	let { data } = $props();
 
 	const titre = [
-		'eleveur de poney',
-		'vainceur du combat de regard contre Chuck Norris',
-		'producteur régional de licorne',
-		'protecteur du CTRL C CTRL V',
-		'a trouver la poulette'
+		'éleveur de poney',
+		'vainqueur du combat de regard contre Chuck Norris',
+		'producteur régional de lait de licorne',
+		'protecteur du CTRL+C CTRL+V',
+		'a trouvé la poulette',
+		"champion olympique d'aquaponey",
+		'traducteur de klingon',
+		'tchat avec le capitaine Kirk',
+		'amandiiiiinnnee ! reviens !'
 	];
 	let displayTitre = $state('');
 
@@ -32,7 +36,7 @@
 </script>
 
 <div class="relative">
-	<Img src="/images/treasure-invert.png" alt="treasure" aspectRatio="16/7" />
+	<Img src="/images/treasure-invert.png" alt="treasure-nycolaide" aspectRatio="16/7" />
 	<Img
 		class="!absolute bottom-0 w-[33%] rotate-[-6deg] rounded-2xl border-6 border-neutral-400"
 		src={'images/nycolaide-avatar.png'}
@@ -48,7 +52,9 @@
 			<p class="opacity-50">Humain • Développeur FrontEnd</p>
 		</div>
 		<div class="!mb-2 flex items-center gap-2">
-			<Icon icon="font:mgc_random_line" onclick={() => changeTitre()} />
+			<span class="!rotate-12">
+				<Icon icon="font:mgc_random_line" onclick={() => changeTitre()} color="orange" />
+			</span>
 			<p>{capitalize(displayTitre)}</p>
 		</div>
 		<Divider opacity="1" />
@@ -65,7 +71,7 @@
 			</div>
 		</div>
 		<div>
-			<p class="!mt-2 !mb-2 uppercase">Expériences</p>
+			<p class="!mt-2 !mb-2 uppercase">Niveau</p>
 			<div>
 				{#each level as lvl}
 					<span class="hidden">{lvl}</span>

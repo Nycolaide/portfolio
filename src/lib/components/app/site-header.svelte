@@ -27,7 +27,7 @@
 						class="grid h-full grid-cols-[2.5rem_minmax(6.85rem,_1fr)] items-center gap-2 sm:gap-4"
 					>
 						<div>
-							<img src="/logo.svg" alt="nycolaide logo" />
+							<img src="/logo.svg" alt="logo-nycolaide" />
 						</div>
 						<div>
 							<p class="font-bold">Nycolaide</p>
