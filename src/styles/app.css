@@ -1,0 +1,29 @@
+@import 'mytril/css';
+@import 'tailwindcss';
+
+/* files */
+@import './_icons.css';
+@import './_pattern.css';
+
+@theme {
+	--breakpoint-xs: 28rem;
+}
+
+:root {
+	--font-sans: 'Geist Sans', sans-serif;
+}
+
+.animation-float {
+	animation-timing-function: ease-in-out;
+	animation: float 5s infinite;
+}
+
+@keyframes float {
+	0%,
+	100% {
+		transform: translate(0px, 0px);
+	}
+	50% {
+		transform: translate(0px, 10px);
+	}
+}

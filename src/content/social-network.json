@@ -1,0 +1,28 @@
+{
+	"dailydev": {
+		"name": "daily.dev",
+		"icon": "mgc_code_fill",
+		"url": "https://app.daily.dev/nycolaide"
+	},
+	"twitter": { "name": "x", "icon": "mgc_social_x_line", "url": "https://x.com/Nycolaide" },
+	"github": {
+		"name": "github",
+		"icon": "icomoon icomoon-github",
+		"url": "https://github.com/Nycolaide"
+	},
+	"linkedin": {
+		"name": "linkedIn",
+		"icon": "icomoon icomoon-linkedin",
+		"url": "https://www.linkedin.com/in/nycolaide/"
+	},
+	"instagram": {
+		"name": "instagram",
+		"icon": "icomoon icomoon-instagram",
+		"url": "https://www.instagram.com/nycolaide/"
+	},
+	"reddit": {
+		"name": "reddit",
+		"icon": "icomoon icomoon-reddit",
+		"url": "https://www.reddit.com/user/nycolaide/"
+	}
+}

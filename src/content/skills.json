@@ -1,0 +1,256 @@
+{
+	"frameworks": [
+		{
+			"name": "react",
+			"url": "https://react.dev/",
+			"color": "#58C4DC",
+			"icon": "react",
+			"level": 90
+		},
+		{
+			"name": "svelte",
+			"url": "https://svelte.dev/",
+			"color": "#FF3E00",
+			"icon": "svelte",
+			"level": 85
+		},
+		{
+			"name": "vue",
+			"url": "https://vuejs.org/",
+			"color": "#42D392",
+			"icon": "vue",
+			"level": 65
+		},
+		{
+			"name": "next.js",
+			"url": "https://nextjs.org/",
+			"color": "#ffffff",
+			"icon": "next",
+			"level": 55
+		},
+		{
+			"name": "vuetify",
+			"url": "https://vuetifyjs.com/",
+			"color": "#2196F3",
+			"icon": "vuetify",
+			"level": 70
+		},
+		{
+			"name": "VBScript",
+			"url": "https://learn.microsoft.com/en-us/previous-versions/windows/desktop/legacy/aa155042(v=vs.60)",
+			"color": "#0096D6",
+			"icon": "vbscript",
+			"level": 60
+		}
+	],
+	"languages": [
+		{
+			"name": "typescript",
+			"url": "https://www.typescriptlang.org/",
+			"color": "#3178C6",
+			"icon": "typescript",
+			"level": 60
+		},
+		{
+			"name": "HTML",
+			"url": "https://html.spec.whatwg.org/multipage/",
+			"color": "#dd4b25",
+			"icon": "html5",
+			"level": 90
+		},
+		{
+			"name": "CSS",
+			"url": "https://www.w3.org/Style/CSS/#specs",
+			"color": "#016cb4",
+			"icon": "css3",
+			"level": 90
+		},
+		{
+			"name": "javascript",
+			"url": "https://ecma-international.org/",
+			"color": "#efd81d",
+			"icon": "javascript",
+			"level": 80
+		},
+		{
+			"name": "PHP",
+			"url": "https://www.php.net/",
+			"color": "#4F5B93",
+			"icon": "php",
+			"level": 55
+		},
+		{
+			"name": "Visual Basic",
+			"url": "https://learn.microsoft.com/en-us/dotnet/visual-basic/",
+			"color": "#9458B2",
+			"icon": "visualbasic",
+			"level": 40
+		},
+		{
+			"name": "SQL",
+			"url": "https://www.iso.org/standard/76583.html",
+			"color": "#000000",
+			"icon": "sql",
+			"level": 80
+		}
+	],
+	"css-tools": [
+		{
+			"name": "SASS",
+			"url": "https://sass-lang.com/",
+			"color": "#CF649A",
+			"icon": "sass",
+			"level": 80
+		},
+		{
+			"name": "less",
+			"url": "https://lesscss.org/",
+			"color": "#22436d",
+			"icon": "less",
+			"level": 70
+		},
+		{
+			"name": "tailwindcss",
+			"url": "https://tailwindcss.com/",
+			"color": "#38BDF8",
+			"icon": "tailwindcss",
+			"level": 50
+		}
+	],
+	"cli-tools": [
+		{
+			"name": "rollup",
+			"url": "https://rollupjs.org/",
+			"color": "#FF3232",
+			"icon": "rollup",
+			"level": 40
+		},
+		{
+			"name": "vitejs",
+			"url": "https://vite.dev/",
+			"color": "#BD34FE",
+			"icon": "vite",
+			"level": 60
+		}
+	],
+	"runtime": [
+		{
+			"name": "node.js",
+			"url": "https://nodejs.org",
+			"color": "#417e38",
+			"icon": "nodejs",
+			"level": 30
+		},
+		{
+			"name": "ASP Classic",
+			"url": "https://learn.microsoft.com/en-us/asp/classic/",
+			"color": "#C19B4E",
+			"icon": "aspclassic",
+			"level": 45
+		}
+	],
+	"database": [
+		{
+			"name": "mongodb",
+			"url": "https://www.mongodb.com",
+			"color": "#001e2b",
+			"icon": "mongodb",
+			"level": 10
+		},
+		{
+			"name": "mysql",
+			"url": "https://www.mysql.com/",
+			"color": "#00758f",
+			"icon": "mysql",
+			"level": 60
+		},
+		{
+			"name": "postgresql",
+			"url": "https://www.postgresql.org/",
+			"color": "#336791",
+			"icon": "postgresql",
+			"level": 40
+		}
+	],
+	"cms": [
+		{
+			"name": "CraftMyCMS",
+			"url": "https://github.com/kevinguiot/CraftMyCMS",
+			"color": "#0056B3",
+			"icon": "craftmycms",
+			"level": 70
+		},
+		{
+			"name": "drupal",
+			"url": "https://new.drupal.org/drupal-cms",
+			"color": "#12285F",
+			"icon": "drupal",
+			"level": 30
+		},
+		{
+			"name": "e-majine",
+			"url": "https://www.e-majine.com/",
+			"color": "#27A0D4",
+			"icon": "e-majine",
+			"level": 40
+		},
+		{
+			"name": "gesweb",
+			"url": "https://www.gesweb.net/",
+			"color": "#0137F3",
+			"icon": "gesweb",
+			"level": 50
+		},
+		{
+			"name": "joomla",
+			"url": "https://www.joomla.fr/",
+			"color": "#F44321",
+			"icon": "joomla",
+			"level": 30
+		},
+		{
+			"name": "prestashop",
+			"url": "https://prestashop.fr/",
+			"color": "#A4DBE8",
+			"icon": "prestashop",
+			"level": 20
+		},
+		{
+			"name": "wordpress",
+			"url": "https://wordpress.com/",
+			"color": "#3858E9",
+			"icon": "wordpress",
+			"level": 60
+		}
+	],
+	"tools": [
+		{
+			"name": "Git",
+			"url": "https://git-scm.com/",
+			"color": "#F05032",
+			"icon": "git",
+			"level": 90
+		},
+		{
+			"name": "GitHub",
+			"url": "https://github.com/",
+			"color": "#181717",
+			"icon": "github",
+			"level": 85
+		},
+		{
+			"name": "GitLab",
+			"url": "https://gitlab.com/",
+			"color": "#FC6D26",
+			"icon": "gitlab",
+			"level": 80
+		},
+		{
+			"name": "VS Code",
+			"url": "https://code.visualstudio.com/",
+			"color": "#007ACC",
+			"icon": "vscode",
+			"level": 90
+		}
+	]
+}

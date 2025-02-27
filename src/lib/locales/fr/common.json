@@ -1,0 +1,19 @@
+{
+	"menu": "menu",
+	"navigation": {
+		"projects": "projets",
+		"about": "à propos",
+		"skills": "compétences",
+		"contact": "contact"
+	},
+	"level-skill": {
+		"beginner": "débutant",
+		"intermediate": "intermédiaire",
+		"advanced": "avancé"
+	},
+	"heading": {
+		"projects": "mes projets",
+		"skills": "mes compétences",
+		"inspired": "les personnes qui m'inspirent"
+	}
+}

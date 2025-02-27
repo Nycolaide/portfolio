@@ -1,0 +1,25 @@
+{
+	"introduction": "Développeur FrontEnd, passionné et gamer dans l'âme",
+	"bio": "Je suis un développeur web basé à Paris ! Je me spécialise en tant que développeur FrontEnd, me concentrant sur la construction d'applications web de haute qualité et performant à travers un code propre et maintenable.",
+	"contact": {
+		"message": "créons ensemble quelque chose d'extraordinaire !",
+		"follow-us": "suivez moi sur ",
+		"lets-go": "laurent@nycolaide.dev",
+		"contact-me": "me contacter"
+	},
+	"counters": {
+		"public_repos": "dépôts",
+		"followers": "abonnées",
+		"following": "abonnements"
+	},
+	"categories": {
+		"frameworks": "frameworks",
+		"languages": "languages",
+		"runtime": "runtime",
+		"css-tools": "CSS tools",
+		"cli-tools": "CLI tools",
+		"database": "database",
+		"cms": "CMS",
+		"tools": "outils de développement"
+	}
+}

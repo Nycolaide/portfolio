@@ -1,0 +1,91 @@
+[
+	{
+		"id": 1,
+		"name": "Panos Panay",
+		"picture": "panospanay.jpg",
+		"work": "Chief Product Officer Microsoft",
+		"link": "https://twitter.com/panos_panay"
+	},
+	{
+		"id": 2,
+		"name": "Dona Sarkar",
+		"picture": "donasarkar.jpg",
+		"work": "Leading Dev Advocacy Microsoft",
+		"link": "https://twitter.com/donasarkar"
+	},
+	{
+		"id": 3,
+		"name": "Joueur du Grenier",
+		"picture": "jdg.jpg",
+		"work": "Youtubeur",
+		"link": "https://www.youtube.com/user/joueurdugrenier"
+	},
+	{
+		"id": 4,
+		"name": "Marko",
+		"picture": "marko.jpg",
+		"work": "Youtubeur"
+	},
+	{
+		"id": 5,
+		"name": "Alexandre Astier",
+		"picture": "alexandreastier.png",
+		"work": "C'est pas faux",
+		"link": "https://twitter.com/AAstierOff"
+	},
+	{
+		"id": 6,
+		"name": "Jonathan Ive",
+		"picture": "jonathanive.jpg",
+		"work": "Designer",
+		"link": "https://designwanted.com/design/jonathan-ive-apple/"
+	},
+	{
+		"id": 7,
+		"name": "Mickadoule",
+		"picture": "mickadoule.jpg",
+		"work": "Youtubeur"
+	},
+	{
+		"id": 8,
+		"name": "Viva la Dirt League",
+		"picture": "vivaladirtleague.jpg",
+		"work": "Youtubeur",
+		"link": "https://www.youtube.com/user/VivaLaDirtLeague"
+	},
+	{
+		"id": 9,
+		"name": "Benjamin Brillaud",
+		"picture": "notabene.jpg",
+		"work": "Youtubeur",
+		"link": "https://www.youtube.com/user/notabenemovies"
+	},
+	{
+		"id": 10,
+		"name": "Tev",
+		"picture": "tev.jpg",
+		"work": "CEO de Candysan & Youtubeur IciJapon",
+		"link": "https://twitter.com/IciJapon"
+	},
+	{
+		"id": 11,
+		"name": "Natsume Akatsuki",
+		"picture": "natsumeakatsuki.jpeg",
+		"work": "Mangaka",
+		"link": "https://fr.wikipedia.org/wiki/Natsume_Akatsuki"
+	},
+	{
+		"id": 12,
+		"name": "AstronoGeek",
+		"picture": "astronogeek.jpg",
+		"work": "Youtubeur",
+		"link": "https://www.youtube.com/channel/UC5X4e8ScZI2AFd_vkjSoyoQ"
+	},
+	{
+		"id": 13,
+		"name": "Joeel56",
+		"picture": "joeel56.jpeg",
+		"work": "Web Developpeur / Youtubeuse ",
+		"link": "https://www.instagram.com/joeel56/?hl=fr"
+	}
+]

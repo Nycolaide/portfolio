@@ -1,0 +1,12 @@
+.pattern-dot-linear-45 {
+	background-attachment: fixed;
+	background-size: 10px 10px;
+	background-repeat: repeat;
+	background-image: repeating-linear-gradient(
+		45deg,
+		var(--color-rose-500) 0%,
+		transparent 0.5px,
+		transparent 63%,
+		transparent 50%
+	);
+}
