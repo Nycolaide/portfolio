@@ -30,7 +30,7 @@
 
 	const title = 'Développeur Front-End |  Nycolaide - Laurent Grimaldi';
 	const description =
-		'Nycolaide développeur Front End, spécialisé dans les techno React.js, Vue et Svelte. Fondateur de Minedelve et de la librairie de composants Mytril';
+		'Nycolaide développeur Front End, spécialisé dans les techno React.js, Vue.js et Svelte. Fondateur de Minedelve et de la librairie de composants Mytril';
 	const openGraph = {
 		title: title,
 		description: description
