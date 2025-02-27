@@ -42,8 +42,11 @@
 		content={openGraph?.description ? openGraph?.description : description}
 	/>
 	<meta property="og:url" content={openGraph?.url ? openGraph?.url : url} />
-	<meta property="og:site_name" content={openGraph?.site ? openGraph?.site : 'Minedelve'} />
-	<meta property="og:locale" content={openGraph?.locale ? openGraph?.locale : 'en'} />
+	<meta
+		property="og:site_name"
+		content={openGraph?.site ? openGraph?.site : 'Nycolaide Portfolio'}
+	/>
+	<meta property="og:locale" content={openGraph?.locale ? openGraph?.locale : 'fr'} />
 	<meta property="og:image" content={openGraph?.image ? openGraph?.image : '/images/cover.jpg'} />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="675" />

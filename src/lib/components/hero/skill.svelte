@@ -3,7 +3,7 @@
 	import { capitalize } from 'mytril/actions';
 	import { t } from '$lib/stores';
 
-	let { skill } = $props();
+	let { skill, select = $bindable() } = $props();
 	let message = $state('beginner');
 
 	$effect(() => {
@@ -20,9 +20,6 @@
 <p class="flex items-center gap-2">
 	<Icon icon={`font:icomoon icomoon-${skill?.icon}`} color={skill?.color} />
 	<span>{capitalize(skill?.name)}</span>
-	<a href={skill?.url} target="_blank">
-		<Icon icon="font:mgc_external_link_line" color="on-surface" size="sm" />
-	</a>
 </p>
 <Tooltip label={capitalize($t(`level-skill.${message}`))}>
 	<div class="progress">

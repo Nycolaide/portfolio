@@ -26,7 +26,9 @@
 					<div
 						class="grid h-full grid-cols-[2.5rem_minmax(6.85rem,_1fr)] items-center gap-2 sm:gap-4"
 					>
-						<div class="text-center text-xl font-bold sm:text-4xl">N.</div>
+						<div>
+							<img src="/logo.svg" alt="nycolaide logo" />
+						</div>
 						<div>
 							<p class="font-bold">Nycolaide</p>
 							<p class="text-xs opacity-85">Laurent Grimaldi</p>
@@ -101,27 +103,6 @@
 								<Icon icon="font:mgc_moonlight_line" />
 							{/if}
 						</Btn>
-						<!-- <ListItem
-							onclick={() => setColorScheme('system')}
-							class="font-bold"
-							active={$themeStore.colorScheme === 'system'}
-						>
-							{capitalize($t(`theme.system`))}
-						</ListItem>
-						<ListItem
-							onclick={() => setColorScheme('light')}
-							class="font-bold"
-							active={$themeStore.colorScheme === 'light'}
-						>
-							{capitalize($t(`theme.light`))}
-						</ListItem>
-						<ListItem
-							onclick={() => setColorScheme('dark')}
-							class="font-bold"
-							active={$themeStore.colorScheme === 'dark'}
-						>
-							{capitalize($t(`theme.dark`))}
-						</ListItem> -->
 					</List>
 				</Menu>
 
@@ -147,16 +128,44 @@
 
 <style lang="postcss">
 	header {
+		--padding: 1rem;
+
+		@media screen and (min-width: 40rem) {
+			--padding: 2.5rem !important;
+		}
+
+		&:before {
+			content: '';
+			background-color: var(--color-background);
+			height: 134px;
+			width: calc(100vw - (112.5rem + var(--padding) + var(--padding)));
+			min-width: var(--padding);
+			position: absolute;
+			z-index: 100;
+			border-bottom-right-radius: 12px;
+			transition: background-color 0.5s;
+		}
+
+		&:after {
+			content: '';
+			background-color: var(--color-background);
+			top: 0;
+			right: 0;
+			height: 134px;
+			width: calc(100vw - (112.5rem + var(--padding) + var(--padding)));
+			min-width: var(--padding);
+			position: absolute;
+			z-index: 100;
+			border-bottom-left-radius: 12px;
+			transition: background-color 0.5s;
+		}
+
 		> div {
 			width: 100%;
 			max-width: 112.5rem;
-			padding: 0 1rem;
+			padding: 0 var(--padding);
 			margin: 0 auto;
 			transition: padding 0.3s;
-
-			@media screen and (min-width: 40rem) {
-				padding: 0 2.5rem;
-			}
 
 			@media screen and (max-width: 40rem) {
 				background-color: var(--color-background);

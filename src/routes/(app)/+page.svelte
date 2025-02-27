@@ -2,31 +2,43 @@
 	import { scrollToAnchor } from '$lib/actions/scroll-to-anchor.js';
 	import { Corner, SectionTitle } from '$lib/components/app';
 	import Seo from '$lib/components/app/seo.svelte';
-	import { Project, Skill } from '$lib/components/hero';
+	import { AboutMe, Project, Skill, Profil } from '$lib/components/hero';
+	import Inspired from '$lib/components/hero/inspired.svelte';
 	import { projects, skills, socials, t } from '$lib/stores';
 	import { capitalize } from 'mytril/actions';
 	import {
 		Btn,
 		Card,
+		CardActions,
 		CardText,
 		CardTitle,
-		Divider,
 		Grid,
 		GridCol,
 		GridRow,
 		Icon,
 		Img,
-		List
+		List,
+		Spacer
 	} from 'mytril/components';
 
 	let { data } = $props();
+	let openAboutMe = $state(false);
+	let openSelectSkill: null | { name: string; description: string; icon: string } = $state(null);
 	const columns = [
 		['frameworks', 'languages', 'runtime', 'css-tools'],
 		['cli-tools', 'database', 'cms', 'tools']
 	];
+
+	const title = 'Développeur Front-End |  Nycolaide - Laurent Grimaldi';
+	const description =
+		'Nycolaide développeur Front End, spécialisé dans les techno React.js, Vue et Svelte. Fondateur de Minedelve et de la librairie de composants Mytril';
+	const openGraph = {
+		title: title,
+		description: description
+	};
 </script>
 
-<Seo title="Nycolaide - FrontEnd developer Portfolio" />
+<Seo {title} {description} {openGraph} />
 
 <div class="hero-container relative">
 	<Img src="images/background.png" cover class="overflow-hidden rounded-[2rem]" absolute />
@@ -49,73 +61,51 @@
 
 <SectionTitle>{capitalize($t('heading.projects'))}</SectionTitle>
 
-<List id="projects" class="projects !mr-auto !ml-auto max-w-[67.5rem] !pt-[4rem] !pb-[4rem]">
+<List id="projects" class="projects ! !mr-auto !ml-auto max-w-[67.5rem] !pb-[4rem]">
 	{#each $projects as project}
 		<Project {data} {project} />
 	{/each}
 </List>
 
-<Grid id="about" class="about !mr-auto !ml-auto max-w-[67.5rem] !pt-[4rem] !pb-[4rem]">
+<Grid id="about" class="about !mr-auto !ml-auto max-w-[67.5rem] !pt-[4rem]">
 	<GridRow>
 		<GridCol cols="12" order="2" sm="6" md="6">
-			<p class="text-2xl font-bold">Laurent</p>
-			<p class="font-light">@nycolaide • <span class="opacity-80">1995</span></p>
-			<Divider opacity="1" class="!mt-2 !mb-5" />
-			<p>{capitalize($t('hero.bio'))}</p>
-			<Btn
-				class="!mt-4 max-sm:w-full"
-				rounded="pill"
-				size="lg"
-				onclick={() => scrollToAnchor('contact')}
-				background="primary"
-				color="on-primary"
-			>
-				{capitalize($t('hero.contact.contact-me'))}
-			</Btn>
+			<Card rounded="4xl">
+				<CardText>
+					<p>{capitalize($t('hero.bio'))}</p>
+				</CardText>
+				<CardActions>
+					<Btn
+						rounded="pill"
+						size="lg"
+						onclick={() => scrollToAnchor('contact')}
+						background="primary"
+						color="on-primary"
+					>
+						{capitalize($t('hero.contact.contact-me'))}
+					</Btn>
+					<Spacer />
+					<!-- <Btn icon circle onclick={() => (openAboutMe = true)} background="primary">
+						<span class={`transition-rotate ${openAboutMe ? 'rotate-[45deg]' : ''}`}>
+							<Icon icon="font:mgc_add_fill" color="on-primary" />
+						</span>
+					</Btn> -->
+				</CardActions>
+			</Card>
 		</GridCol>
-		<GridCol cols="12" sm="6" md="6" order="1">
+		<GridCol cols="12" sm="6" md="6" order="first">
 			<GridRow>
 				<GridCol cols="12">
-					<Img
-						class="w-[10rem] rotate-[-6deg] rounded-4xl border-6 border-neutral-400"
-						src={data?.api?.hero?.avatar_url || 'images/nycolaide.png'}
-					/>
-					<Card class="-top-4 max-w-[21.875rem]" background="primary" color="on-primary">
-						<CardText class="grid grid-cols-3 gap-2">
-							<div>
-								<div class="!ms-1 font-bold">
-									{data?.api?.hero?.public_repos || 0}
-								</div>
-								<p class="flex items-center gap-1 text-xs">
-									<Icon icon="font:mgc_package_line" color="on-primary" />
-									{capitalize($t('hero.counters.public_repos'))}
-								</p>
-							</div>
-							<div>
-								<div class="!ms-1 font-bold">
-									{data?.api?.hero?.followers || 0}
-								</div>
-								<p class="flex items-center gap-1 text-xs">
-									<Icon icon="font:mgc_group_line" color="on-primary" />
-									{capitalize($t('hero.counters.followers'))}
-								</p>
-							</div>
-							<div>
-								<div class="!ms-1 font-bold">
-									{data?.api?.hero?.following || 0}
-								</div>
-								<p class="flex items-center gap-1 text-xs">
-									<Icon icon="font:mgc_user_heart_line" color="on-primary" />
-									{capitalize($t('hero.counters.following'))}
-								</p>
-							</div>
-						</CardText>
-					</Card>
+					<Profil {data} />
 				</GridCol>
 			</GridRow>
 		</GridCol>
 	</GridRow>
 </Grid>
+
+<SectionTitle>{capitalize($t('heading.inspired'))}</SectionTitle>
+
+<Inspired />
 
 <SectionTitle>{capitalize($t('heading.skills'))}</SectionTitle>
 
@@ -124,13 +114,16 @@
 		{#each columns as column}
 			<GridCol cols="12" md="6" class="!pt-0 !pb-0">
 				{#each column as category}
-					<Card rounded="2xl" class="!mt-4 !p-6">
-						<CardTitle>{capitalize($t(`hero.categories.${category}`))}</CardTitle>
+					<Card rounded="4xl" class="!mt-4 !p-6">
+						<CardTitle>
+							{capitalize($t(`hero.categories.${category}`))}
+						</CardTitle>
+
 						<Grid>
-							<GridRow>
+							<GridRow class="z-10">
 								{#each $skills?.[category] as skill}
 									<GridCol cols="12" sm="6">
-										<Skill {skill} />
+										<Skill {skill} bind:select={openSelectSkill} />
 									</GridCol>
 								{/each}
 							</GridRow>
@@ -142,9 +135,13 @@
 	</GridRow>
 </Grid>
 
+<div class="!mb-6 w-full text-center text-4xl opacity-10">
+	<p class="font-bold">Chaussette !</p>
+</div>
+
 <Card
 	id="contact"
-	class="pattern-dot-linear-45 !mt-[7rem] !mr-auto !ml-auto flex max-w-[67.5rem] flex-col justify-between sm:!p-10 lg:!p-16"
+	class="pattern-dot-linear-45  !mr-auto !ml-auto flex max-w-[67.5rem] flex-col justify-between sm:!p-10 lg:!p-16"
 	rounded="2xl"
 	background="#ff637e"
 	color="white"
@@ -175,6 +172,10 @@
 					href="mailto:laurent@nycolaide.dev"
 				>
 					{capitalize($t('hero.contact.lets-go'))}
+
+					{#snippet append()}
+						<Icon icon="font:mgc_cookie_line" />
+					{/snippet}
 				</Btn>
 				<a href="mailto:laurent@nycolaide.dev" class="text-sm opacity-70">
 					laurent@nycolaide.dev
@@ -183,6 +184,8 @@
 		</GridRow>
 	</Grid>
 </Card>
+
+<AboutMe bind:open={openAboutMe} />
 
 <style lang="postcss">
 	.hero-container {
@@ -206,5 +209,20 @@
 		&:hover {
 			background-color: transparent !important;
 		}
+	}
+
+	.transition-rotate {
+		transition: rotate 0.3s;
+	}
+
+	:global(.card-more),
+	.card-more {
+		width: 112%;
+		margin-left: -42px;
+		height: 114%;
+		background-color: var(--color-surface-variant);
+		color: var(--color-on-surface-variant);
+		border-bottom-right-radius: 0;
+		border-bottom-left-radius: 0;
 	}
 </style>
