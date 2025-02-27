@@ -3,9 +3,9 @@ export default {
 	colorScheme: 'system',
 	colors: {
 		default: {
-			primary: { light: 'var(--color-amber-600)', dark: 'var(--color-amber-500)' },
+			primary: { light: 'var(--color-blue-700)', dark: 'var(--color-blue-600)' },
 			'on-primary': 'var(--color-neutral-50)',
-			background: { light: 'var(--color-stone-200)', dark: 'var(--color-stone-950)' },
+			background: { light: 'var(--color-stone-200)', dark: 'var(--color-gray-950)' },
 			social: {
 				daily: '#a8a9ab',
 				x: { light: 'oklch(0.17 0 0)', dark: 'oklch(0.93 0 0)' },

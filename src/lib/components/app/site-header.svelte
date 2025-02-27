@@ -115,7 +115,6 @@
 							variant="text"
 							rounded="pill"
 							class="font-bold"
-							color="primary"
 						>
 							{capitalize($t(`navigation.${item.name}`))}
 						</Btn>

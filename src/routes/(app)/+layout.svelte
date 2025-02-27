@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { Rgpd } from '$lib/components/analytics';
 	import { SiteHeader, SiteFooter } from '$lib/components/app';
 	import { App } from 'mytril/components';
 	let { children } = $props();
@@ -12,6 +13,8 @@
 	</div>
 
 	<SiteFooter />
+
+	<Rgpd />
 </App>
 
 <style lang="postcss">

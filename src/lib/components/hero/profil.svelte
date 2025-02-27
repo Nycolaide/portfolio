@@ -35,7 +35,7 @@
 	<Img src="/images/treasure-invert.png" alt="treasure" aspectRatio="16/7" />
 	<Img
 		class="!absolute bottom-0 w-[33%] rotate-[-6deg] rounded-2xl border-6 border-neutral-400"
-		src={'images/nycolaide.png'}
+		src={'images/nycolaide-avatar.png'}
 		alt="nycolaide"
 	/>
 </div>
@@ -43,7 +43,7 @@
 <Card class="-top-4 z-1" rounded="4xl">
 	<CardText>
 		<p class="!mb-1 text-3xl font-bold">Laurent</p>
-		<div class="!mb-3 justify-between text-lg sm:flex">
+		<div class="!mb-3 justify-between md:text-lg lg:flex">
 			<p>@Nycolaide</p>
 			<p class="opacity-50">Humain • Développeur FrontEnd</p>
 		</div>

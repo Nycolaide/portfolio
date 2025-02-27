@@ -17,8 +17,7 @@
 		GridRow,
 		Icon,
 		Img,
-		List,
-		Spacer
+		List
 	} from 'mytril/components';
 
 	let { data } = $props();
@@ -69,10 +68,31 @@
 
 <Grid id="about" class="about !mr-auto !ml-auto max-w-[67.5rem] !pt-[4rem]">
 	<GridRow>
-		<GridCol cols="12" order="2" sm="6" md="6">
+		<GridCol cols="12" order="2" lg="6">
 			<Card rounded="4xl">
-				<CardText>
-					<p>{capitalize($t('hero.bio'))}</p>
+				<CardText class="!text-lg">
+					<p class="!mb-2">
+						Je suis un développeur web basé à Paris ! Je me spécialise en tant que développeur
+						FrontEnd, me concentrant sur la construction d'applications web de haute qualité et
+						performant à travers un code propre et maintenable.
+					</p>
+					<p class="!mb-2">
+						Je suis aussi le fondateur de <a href="https://minedelve.com" target="_blank">
+							Minedelve
+						</a> c’est notre projet un peu fou : fondée en 2022 et basée en France, Minedelve est une
+						équipe passionnée du web dédiée à l'apprentissage, la construction et le partage de projets
+						techniques ambitieux. Notre objectif est de proposer des solutions facilitant le développement
+						de projets.
+					</p>
+					<p>
+						Notre premier projet ce nomme <a href="https://minedelve.com/mytril" target="_blank"
+							>Mytril</a
+						>, c'est une librairie de composants Svelte légère, efficace, full customisable et pensé
+						pour obtenir des interfaces propres et bien architecturées avec un minimum d'effort. Je
+						l’ai designée avec une intention claire : arrêter de réinventer des styles pour chaque
+						projet tout en gardant la flexibilité pour modder à fond et assurer une maintenabilité
+						simplifé.
+					</p>
 				</CardText>
 				<CardActions>
 					<Btn
@@ -82,18 +102,18 @@
 						background="primary"
 						color="on-primary"
 					>
+						{#snippet prepend()}
+							<Icon icon="font:mgc_ghost_line" color="on-primary" />
+						{/snippet}
 						{capitalize($t('hero.contact.contact-me'))}
+						{#snippet append()}
+							<Icon icon="font:mgc_bird_line" color="on-primary" />
+						{/snippet}
 					</Btn>
-					<Spacer />
-					<!-- <Btn icon circle onclick={() => (openAboutMe = true)} background="primary">
-						<span class={`transition-rotate ${openAboutMe ? 'rotate-[45deg]' : ''}`}>
-							<Icon icon="font:mgc_add_fill" color="on-primary" />
-						</span>
-					</Btn> -->
 				</CardActions>
 			</Card>
 		</GridCol>
-		<GridCol cols="12" sm="6" md="6" order="first">
+		<GridCol cols="12" md="8" lg="6" order="first">
 			<GridRow>
 				<GridCol cols="12">
 					<Profil {data} />

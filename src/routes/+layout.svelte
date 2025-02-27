@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { Tracking } from '$lib/components/analytics';
 	import '../styles/app.css';
 
 	import '@fontsource/geist-sans/100.css';
@@ -16,5 +17,7 @@
 
 	let { children } = $props();
 </script>
+
+<Tracking />
 
 {@render children()}

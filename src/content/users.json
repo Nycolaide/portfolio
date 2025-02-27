@@ -22,10 +22,9 @@
 	},
 	{
 		"id": 4,
-		"name": "Hugo Lisoir",
-		"picture": "hugolisoir.jpg",
-		"work": "Youtubeur",
-		"link": "https://www.youtube.com/channel/UCDC6DBi0kRp6Jk21xqfvFLA"
+		"name": "Marko",
+		"picture": "marko.jpg",
+		"work": "Youtubeur"
 	},
 	{
 		"id": 5,
@@ -43,10 +42,9 @@
 	},
 	{
 		"id": 7,
-		"name": "Re:Take",
-		"picture": "retake.jpg",
-		"work": "Youtubeur",
-		"link": "https://www.youtube.com/user/PizzaLauncher"
+		"name": "Mickadoule",
+		"picture": "mickadoule.jpg",
+		"work": "Youtubeur"
 	},
 	{
 		"id": 8,

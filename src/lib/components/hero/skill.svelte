@@ -42,7 +42,7 @@
 
 		.progress-bar {
 			height: 100%;
-			background-color: var(--color-info);
+			background-color: var(--color-primary);
 		}
 	}
 </style>
