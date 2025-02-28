@@ -9,7 +9,6 @@
 	import {
 		Btn,
 		Card,
-		CardActions,
 		CardText,
 		CardTitle,
 		Grid,
@@ -21,8 +20,6 @@
 	} from 'mytril/components';
 
 	let { data } = $props();
-	let openAboutMe = $state(false);
-	let openSelectSkill: null | { name: string; description: string; icon: string } = $state(null);
 	const columns = [
 		['frameworks', 'languages', 'runtime', 'css-tools'],
 		['cli-tools', 'database', 'cms', 'tools']
@@ -69,51 +66,7 @@
 <Grid id="about" class="about !mr-auto !ml-auto max-w-[67.5rem] !pt-[4rem]">
 	<GridRow>
 		<GridCol cols="12" order="2" lg="6">
-			<Card rounded="4xl">
-				<CardText class="!text-lg">
-					<p class="!mb-1 !text-3xl font-bold">Introduction</p>
-					<p class="!mb-2">
-						Je suis un développeur web basé à Paris ! Je me spécialise en tant que développeur
-						FrontEnd, me concentrant sur la construction d'applications web de haute qualité et
-						performante à travers un code propre et maintenable.
-					</p>
-					<p class="!mb-2">
-						J'ai créé <strong>
-							<a href="https://minedelve.com">Minedelve, une mine d'outils robuste</a>
-						</strong>, fondée en 2022, avec une équipe de passionnés du web. Minedelve est dédié à
-						l'apprentissage, la construction et le partage de projets techniques ambitieux. Notre
-						objectif est de proposer des solutions facilitant la mise en place de projets flexibles,
-						capables d’aider à mieux travailler, parfois plus vite, et sans compromettre la qualité.
-					</p>
-					<p>
-						Notre premier projet se nomme <strong>
-							<a href="https://minedelve.com/mytril/docs">
-								Mytril, une librairie de composants Svelte
-							</a>
-						</strong> simple, légère et personnalisable. Cette solution Open Source a été pensée par
-						un front pour des fronts afin de leur faciliter le développement de fonctionnalités sans
-						restrictions ni frustrations. Mytril permet d'obtenir des interfaces complexes structurées
-						et performantes.
-					</p>
-				</CardText>
-				<CardActions>
-					<Btn
-						rounded="pill"
-						size="lg"
-						onclick={() => scrollToAnchor('contact')}
-						background="primary"
-						color="on-primary"
-					>
-						{#snippet prepend()}
-							<Icon icon="font:mgc_ghost_line" color="on-primary" />
-						{/snippet}
-						{capitalize($t('hero.contact.contact-me'))}
-						{#snippet append()}
-							<Icon icon="font:mgc_send_plane_line" color="on-primary" />
-						{/snippet}
-					</Btn>
-				</CardActions>
-			</Card>
+			<AboutMe />
 		</GridCol>
 		<GridCol cols="12" md="8" lg="6" order="first">
 			<GridRow>
@@ -141,7 +94,7 @@
 							<GridRow class="z-10">
 								{#each $skills?.[category] as skill}
 									<GridCol cols="12" sm="6">
-										<Skill {skill} bind:select={openSelectSkill} />
+										<Skill {skill} />
 									</GridCol>
 								{/each}
 							</GridRow>
@@ -195,9 +148,6 @@
 						<Icon icon="font:mgc_pizza_line" />
 					{/snippet}
 				</Btn>
-				<!-- <a href="mailto:laurent@nycolaide.dev" class="text-sm opacity-70">
-					laurent@nycolaide.dev
-				</a> -->
 			</GridCol>
 		</GridRow>
 	</Grid>
@@ -208,8 +158,6 @@
 </p>
 
 <Inspired />
-
-<AboutMe bind:open={openAboutMe} />
 
 <style lang="postcss">
 	.hero-container {
@@ -233,20 +181,5 @@
 		&:hover {
 			background-color: transparent !important;
 		}
-	}
-
-	.transition-rotate {
-		transition: rotate 0.3s;
-	}
-
-	:global(.card-more),
-	.card-more {
-		width: 112%;
-		margin-left: -42px;
-		height: 114%;
-		background-color: var(--color-surface-variant);
-		color: var(--color-on-surface-variant);
-		border-bottom-right-radius: 0;
-		border-bottom-left-radius: 0;
 	}
 </style>

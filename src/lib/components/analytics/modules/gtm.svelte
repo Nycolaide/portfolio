@@ -24,7 +24,7 @@
 
 <!-- Google Tag Manager (noscript) -->
 <noscript>
-	<!-- svelte-ignore a11y-missing-attribute -->
+	<!-- svelte-ignore a11y_missing_attribute -->
 	<iframe
 		src={`https://www.googletagmanager.com/ns.html?id=${PUBLIC_GTM_KEY}`}
 		height="0"

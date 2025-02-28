@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { getCookie, setCookie } from '$lib/actions/cookie';
+	import { t } from '$lib/stores';
+	import { capitalize } from 'mytril/actions';
 	import {
 		Btn,
 		Card,
@@ -54,25 +56,28 @@
 </script>
 
 <Dialog bind:open>
-	<Card>
+	<Card rounded="4xl">
 		<CardActions>
 			<Spacer />
-			<Btn onclick={() => handleSetConsentMode('refuse')} size="sm" variant="text">
-				Refuser mes cookies tiers
+			<Btn rounded="pill" onclick={() => handleSetConsentMode('refuse')} size="sm" variant="text">
+				{capitalize($t('analytics.action.refuse'))}
 			</Btn>
 		</CardActions>
-		<CardTitle><strong>La protection de vos données, c'est important !</strong></CardTitle>
+		<CardTitle><strong>{capitalize($t('analytics.title'))}</strong></CardTitle>
 		<CardText>
 			<p>
-				Mon portfolio et nos partenaires utilisent des cookies ou des technologies similaire pour me
-				permettre d'améliorer mon site, votre expérience de navigation, de collecter des
-				statistiques et d'assurer le bon fonctionnement du site.
+				{$t('analytics.content')}
 			</p>
 		</CardText>
-		<CardActions>
+		<CardActions class="!mb-2">
 			<Spacer />
-			<Btn onclick={() => handleSetConsentMode('accept')} background="primary" color="on-primary">
-				Accepter mes cookies
+			<Btn
+				rounded="pill"
+				onclick={() => handleSetConsentMode('accept')}
+				background="primary"
+				color="on-primary"
+			>
+				{capitalize($t('analytics.action.accept'))}
 				{#snippet append()}
 					<Icon icon="font:mgc_cookie_line" color="on-primary" />
 				{/snippet}

@@ -1,0 +1,19 @@
+@keyframes shake {
+	0%,
+	100% {
+		transform: rotate(-20deg);
+	}
+	50% {
+		transform: rotate(20deg);
+	}
+}
+
+@keyframes float {
+	0%,
+	100% {
+		transform: translate(0px, 0px);
+	}
+	50% {
+		transform: translate(0px, 10px);
+	}
+}
