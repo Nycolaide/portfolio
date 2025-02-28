@@ -1,5 +1,7 @@
 {
 	"menu": "menu",
+	"life": "vie",
+	"level": "niveau",
 	"navigation": {
 		"projects": "projets",
 		"about": "à propos",

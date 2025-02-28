@@ -21,7 +21,11 @@ const config = {
 			precompress: true,
 			envPrefix: ''
 		}),
-		alias: { $content: dirname(fileURLToPath(import.meta.url)) + '/src/content' }
+		alias: { $content: dirname(fileURLToPath(import.meta.url)) + '/src/content' },
+		csp: {
+			mode: 'hash',
+			directives: { 'script-src': ['self'] }
+		}
 	},
 
 	extensions: ['.svelte', '.svx']

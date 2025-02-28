@@ -1,37 +1,26 @@
 <script lang="ts">
-	import { t } from '$lib/stores';
+	import { heroTitle, t } from '$lib/stores';
 	import { capitalize } from 'mytril/actions';
 	import { Card, CardText, Divider, Icon, Img } from 'mytril/components';
 	import { onMount } from 'svelte';
 
 	let { data } = $props();
+	let displayTitle = $state('');
 
-	const titre = [
-		'éleveur de poney',
-		'vainqueur du combat de regard contre Chuck Norris',
-		'producteur régional de lait de licorne',
-		'protecteur du CTRL+C CTRL+V',
-		'a trouvé la poulette',
-		"champion olympique d'aquaponey",
-		'traducteur de klingon',
-		'tchat avec le capitaine Kirk',
-		'amandiiiiinnnee ! reviens !'
-	];
-	let displayTitre = $state('');
+	const handleUpdateTitle = () => {
+		const index = Math.floor(Math.random() * heroTitle.length);
+		const prev = heroTitle.findIndex((item) => item.includes(displayTitle));
 
-	const changeTitre = () => {
-		const index = Math.floor(Math.random() * titre.length);
-		const prev = titre.findIndex((item) => item === displayTitre);
+		if (prev === index) handleUpdateTitle();
 
-		if (prev === index) changeTitre();
-
-		return (displayTitre = titre[index]);
+		return (displayTitle = heroTitle[index]);
 	};
+
 	const life = Array.from({ length: 30 }, (_, i) => i + 1);
 	const level = Array.from({ length: 7 }, (_, i) => i + 1);
 
 	onMount(() => {
-		changeTitre();
+		handleUpdateTitle();
 	});
 </script>
 
@@ -49,17 +38,17 @@
 		<p class="!mb-1 text-3xl font-bold">Laurent</p>
 		<div class="!mb-3 justify-between md:text-lg lg:flex">
 			<p>@Nycolaide</p>
-			<p class="opacity-50">Humain • Développeur FrontEnd</p>
+			<p class="opacity-50">{$t('hero.title')}</p>
 		</div>
 		<div class="!mb-2 flex items-center gap-2">
-			<span class="!rotate-12">
-				<Icon icon="font:mgc_random_line" onclick={() => changeTitre()} color="orange" />
+			<span class="roll-dice">
+				<Icon icon="font:mgc_random_line" onclick={() => handleUpdateTitle()} color="orange" />
 			</span>
-			<p>{capitalize(displayTitre)}</p>
+			<p>{capitalize(displayTitle)}</p>
 		</div>
 		<Divider opacity="1" />
 		<div class="!mt-4">
-			<p class="!mt-2 !mb-2 uppercase">Vie</p>
+			<p class="!mt-2 !mb-2 uppercase">{capitalize($t('life'))}</p>
 			<div>
 				{#each life as heart}
 					{#if heart === life.length}
@@ -71,7 +60,7 @@
 			</div>
 		</div>
 		<div>
-			<p class="!mt-2 !mb-2 uppercase">Niveau</p>
+			<p class="!mt-2 !mb-2 uppercase">{capitalize($t('level'))}</p>
 			<div>
 				{#each level as lvl}
 					<span class="hidden">{lvl}</span>
@@ -112,3 +101,11 @@
 		</div>
 	</CardText>
 </Card>
+
+<style lang="postcss">
+	.roll-dice {
+		animation: 0.5s linear infinite shake;
+		transform: rotate(-20deg);
+		cursor: pointer;
+	}
+</style>

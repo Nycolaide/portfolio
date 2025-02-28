@@ -17,14 +17,17 @@
 <svelte:head>
 	<script async src={`https://www.googletagmanager.com/gtag/js?id=${PUBLIC_ANALYTICS_KEY}`}>
 	</script>
+	<!-- eslint-disable svelte/no-at-html-tags -->
 	{@html `<script data-svelte-h="svelte-u4hxyp">
 		window.dataLayer = window.dataLayer || [];
 
 		function gtag() {
+			// eslint-disable-next-line no-undef
 			dataLayer.push(arguments);
 		}
 
 		gtag('js', new Date());
         gtag('config', '${PUBLIC_ANALYTICS_KEY}');
     </script>`}
+	<!-- eslint-enable svelte/no-at-html-tags -->
 </svelte:head>

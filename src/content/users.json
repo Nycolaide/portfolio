@@ -7,11 +7,11 @@
 		"link": "https://twitter.com/panos_panay"
 	},
 	{
-		"id": 2,
-		"name": "Dona Sarkar",
-		"picture": "donasarkar.jpg",
-		"work": "Leading Dev Advocacy Microsoft",
-		"link": "https://twitter.com/donasarkar"
+		"id": 6,
+		"name": "Jonathan Ive",
+		"picture": "jonathanive.jpg",
+		"work": "Designer",
+		"link": "https://designwanted.com/design/jonathan-ive-apple/"
 	},
 	{
 		"id": 3,
@@ -34,16 +34,22 @@
 		"link": "https://twitter.com/AAstierOff"
 	},
 	{
-		"id": 6,
-		"name": "Jonathan Ive",
-		"picture": "jonathanive.jpg",
-		"work": "Designer",
-		"link": "https://designwanted.com/design/jonathan-ive-apple/"
+		"id": 2,
+		"name": "Dona Sarkar",
+		"picture": "donasarkar.jpg",
+		"work": "Leading Dev Advocacy Microsoft",
+		"link": "https://twitter.com/donasarkar"
 	},
 	{
 		"id": 7,
 		"name": "Mickadoule",
 		"picture": "mickadoule.jpg",
+		"work": "Youtubeur"
+	},
+	{
+		"id": 14,
+		"name": "Zerator",
+		"picture": "zerator.jpg",
 		"work": "Youtubeur"
 	},
 	{
