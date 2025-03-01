@@ -46,7 +46,6 @@ jobs:
             cd apps/portfolio-lgi/current
             git pull origin main
             yarn
-            yarn add -D mytril@insiders
             yarn build
             docker compose build
             docker compose up -d
