@@ -25,10 +25,10 @@
 </script>
 
 <div class="relative">
-	<Img src="/images/treasure-invert.png" alt="treasure-nycolaide" aspectRatio="16/7" />
+	<Img src="/images/treasure-invert.webp" alt="treasure-nycolaide" aspectRatio="16/7" />
 	<Img
 		class="!absolute bottom-0 w-[33%] rotate-[-6deg] rounded-2xl border-6 border-neutral-400"
-		src={'images/nycolaide-avatar.png'}
+		src={'images/nycolaide-avatar.webp'}
 		alt="nycolaide"
 	/>
 </div>
