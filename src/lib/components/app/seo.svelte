@@ -47,7 +47,7 @@
 		content={openGraph?.site ? openGraph?.site : 'Nycolaide Portfolio'}
 	/>
 	<meta property="og:locale" content={openGraph?.locale ? openGraph?.locale : 'fr'} />
-	<meta property="og:image" content={openGraph?.image ? openGraph?.image : '/images/cover.jpg'} />
+	<meta property="og:image" content={openGraph?.image ? openGraph?.image : '/images/cover.webp'} />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="675" />
 	<meta property="og:type" content={openGraph?.type ? openGraph?.type : 'website'} />
@@ -66,7 +66,7 @@
 	/>
 	<meta
 		name="twitter:image"
-		content={twitterGraph?.image ? twitterGraph?.image : '/images/cover.jpg'}
+		content={twitterGraph?.image ? twitterGraph?.image : '/images/cover.webp'}
 	/>
 	<meta name="twitter:image:width" content="1200" />
 	<meta name="twitter:image:height" content="675" />
