@@ -43,8 +43,15 @@
 <div class="hero-container relative">
 	<!-- <Img src="images/background.webp" cover class="overflow-hidden rounded-[2rem]" absolute /> -->
 
-	<img
+	<!-- <img
 		loading="lazy"
+		src="images/background.webp"
+		width="320"
+		height="500"
+		alt="background"
+		class="overflow-hidden rounded-[2rem]"
+	/> -->
+	<enhanced:img
 		src="images/background.webp"
 		width="320"
 		height="500"

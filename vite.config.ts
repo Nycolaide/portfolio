@@ -4,12 +4,14 @@ import { svelteTesting } from '@testing-library/svelte/vite';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 import { compression } from 'vite-plugin-compression2';
+import { enhancedImages } from '@sveltejs/enhanced-img';
 
 export default defineConfig({
 	plugins: [
 		sveltekit(),
 		tailwindcss(),
 		mytril(),
+		enhancedImages(),
 		compression({
 			compressionOptions: {
 				level: 8
