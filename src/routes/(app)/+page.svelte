@@ -51,13 +51,13 @@
 		alt="background"
 		class="overflow-hidden rounded-[2rem]"
 	/> -->
-	<enhanced:img
+	<!-- <enhanced:img
 		src="images/background.webp"
 		width="320"
 		height="500"
 		alt="background"
 		class="overflow-hidden rounded-[2rem]"
-	/>
+	/> -->
 	<div
 		class="hero-title absolute bottom-0 flex w-full max-w-[55%] flex-col items-start justify-between gap-6 !p-4 sm:max-w-[50%] lg:max-w-[40%]"
 	>

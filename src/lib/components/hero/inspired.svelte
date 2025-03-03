@@ -7,10 +7,10 @@
 	<div class="flex w-full gap-3">
 		{#each $users as user}
 			<div class="animation-float w-[5rem]">
-				<Img
+				<!-- <Img
 					class="rounded-full border-2 border-neutral-400"
 					src={`/images/users/${user.picture}`}
-				/>
+				/> -->
 				<p class="text-center text-xs">{user.name}</p>
 			</div>
 		{/each}
