@@ -44,6 +44,7 @@
 	<!-- <Img src="images/background.webp" cover class="overflow-hidden rounded-[2rem]" absolute /> -->
 
 	<img
+		loading="lazy"
 		src="images/background.webp"
 		width="320"
 		height="500"
