@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { getCookie, setCookie } from '$lib/actions/cookie';
+	import { setCookie } from '$lib/actions/cookie';
 	import { t } from '$lib/stores';
 	import { capitalize } from 'mytril/actions';
 	import {
@@ -12,29 +12,49 @@
 		Icon,
 		Spacer
 	} from 'mytril/components';
-	import { onMount } from 'svelte';
+
+	let { data } = $props();
 
 	let open = $state(false);
 
-	onMount(() => {
-		const cookie = getCookie('consent');
-		if (!cookie) {
+	$effect.pre(() => {
+		console.log('rgpd', data);
+
+		if (!data?.cookie?.consentMode) {
 			open = true;
-		} else {
 			// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 			// @ts-expect-error
-			if (typeof gtag !== 'undefined') {
-				// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-				// @ts-expect-error
-				// eslint-disable-next-line no-undef
-				gtag('consent', 'update', {
-					ad_storage: cookie === 'accept' ? 'granted' : 'denied',
-					analytics_storage: cookie === 'accept' ? 'granted' : 'denied',
-					functionality_storage: cookie === 'accept' ? 'granted' : 'denied'
-				});
-			}
+		} else if (typeof gtag !== 'undefined') {
+			// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+			// @ts-expect-error
+			// eslint-disable-next-line no-undef
+			gtag('consent', 'update', {
+				ad_storage: data?.cookie?.consentMode === 'accept' ? 'granted' : 'denied',
+				analytics_storage: data?.cookie?.consentMode === 'accept' ? 'granted' : 'denied',
+				functionality_storage: data?.cookie?.consentMode === 'accept' ? 'granted' : 'denied'
+			});
 		}
 	});
+
+	// onMount(() => {
+	// 	const cookie = getCookie('consent');
+	// 	if (!cookie) {
+	// 		open = true;
+	// 	} else {
+	// 		// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+	// 		// @ts-expect-error
+	// 		if (typeof gtag !== 'undefined') {
+	// 			// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+	// 			// @ts-expect-error
+	// 			// eslint-disable-next-line no-undef
+	// 			gtag('consent', 'update', {
+	// 				ad_storage: cookie === 'accept' ? 'granted' : 'denied',
+	// 				analytics_storage: cookie === 'accept' ? 'granted' : 'denied',
+	// 				functionality_storage: cookie === 'accept' ? 'granted' : 'denied'
+	// 			});
+	// 		}
+	// 	}
+	// });
 
 	function handleSetConsentMode(state: string) {
 		setCookie('consent', state);

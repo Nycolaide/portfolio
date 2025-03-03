@@ -32,6 +32,10 @@
 		title: title,
 		description: description
 	};
+
+	$effect(() => {
+		console.log('data', data);
+	});
 </script>
 
 <Seo {title} {description} {openGraph} />

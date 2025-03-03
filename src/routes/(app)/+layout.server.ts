@@ -2,6 +2,7 @@ import type { LayoutServerLoad } from './$types';
 
 export const load: LayoutServerLoad = async ({ cookies }) => {
 	const session = cookies.get('user-call-api');
+	const consentMode = cookies.get('consent');
 
 	if (!session) {
 		cookies.set('user-call-api', 'yes', {
@@ -13,5 +14,5 @@ export const load: LayoutServerLoad = async ({ cookies }) => {
 		});
 	}
 
-	return { session };
+	return { session, consentMode };
 };

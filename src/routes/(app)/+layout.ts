@@ -4,7 +4,7 @@ import type { ResponseAllApi } from '$lib/types';
 import type { LayoutLoad } from './$types';
 
 export const load: LayoutLoad = async ({ fetch, data }) => {
-	const { session } = data;
+	const { session, consentMode } = data;
 	let response = {};
 
 	if (!session) {
@@ -34,6 +34,10 @@ export const load: LayoutLoad = async ({ fetch, data }) => {
 	}
 
 	return {
-		api: response as ResponseAllApi
+		api: response as ResponseAllApi,
+		cookie: {
+			consentMode,
+			session
+		}
 	};
 };
