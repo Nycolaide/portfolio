@@ -43,7 +43,13 @@
 <div class="hero-container relative">
 	<!-- <Img src="images/background.webp" cover class="overflow-hidden rounded-[2rem]" absolute /> -->
 
-	<img src="images/background.webp" alt="background" class="overflow-hidden rounded-[2rem]" />
+	<img
+		src="images/background.webp"
+		width="320"
+		height="500"
+		alt="background"
+		class="overflow-hidden rounded-[2rem]"
+	/>
 	<div
 		class="hero-title absolute bottom-0 flex w-full max-w-[55%] flex-col items-start justify-between gap-6 !p-4 sm:max-w-[50%] lg:max-w-[40%]"
 	>
