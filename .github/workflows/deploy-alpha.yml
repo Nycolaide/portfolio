@@ -44,8 +44,5 @@ jobs:
           script: |
             cd apps/portfolio-lgi/alpha
             git pull origin develop
-            yarn
-            yarn build
             docker compose build
             docker compose up -d
-            git restore package.json

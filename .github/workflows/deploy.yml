@@ -45,8 +45,5 @@ jobs:
           script: |
             cd apps/portfolio-lgi/current
             git pull origin main
-            yarn
-            yarn build
             docker compose build
             docker compose up -d
-            git restore package.json
