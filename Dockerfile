@@ -6,7 +6,7 @@ FROM base AS install
 RUN mkdir -p /temp/prod
 COPY package*.json yarn.lock /temp/prod/
 COPY /static /temp/prod/static
-RUN cd /temp/prod && yarn install --frozen-lockfile --production
+RUN cd /temp/prod && yarn install --frozen-lockfile
 
 # copy node_modules from temp directory
 # then copy all (non-ignored) project files into the image
