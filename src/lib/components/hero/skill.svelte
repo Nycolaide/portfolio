@@ -21,7 +21,7 @@
 	<Icon icon={`font:icomoon icomoon-${skill?.icon}`} color={skill?.color} />
 	<span>{capitalize(skill?.name)}</span>
 </p>
-<Tooltip label={capitalize($t(`level-skill.${message}`))}>
+<Tooltip label={capitalize($t(`level-skill.${message}`))} variant="arrow">
 	<div class="progress">
 		<div class="progress-bar" style={`width: ${skill?.level}%`}></div>
 	</div>

@@ -15,7 +15,7 @@
 		GridCol,
 		GridRow,
 		Icon,
-		// Img,
+		Img,
 		List
 	} from 'mytril/components';
 
@@ -41,7 +41,7 @@
 <Seo {title} {description} {openGraph} />
 
 <div class="hero-container relative">
-	<!-- <Img src="images/background.webp" cover class="overflow-hidden rounded-[2rem]" absolute /> -->
+	<Img src="images/background.webp" cover class="overflow-hidden rounded-[2rem]" absolute />
 
 	<!-- <img
 		loading="lazy"
