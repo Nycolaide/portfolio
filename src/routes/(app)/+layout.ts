@@ -14,11 +14,12 @@ export const load: LayoutLoad = async ({ fetch, data }) => {
 			fetch
 		);
 		const mytril = await callApi({ url: `/api/npm?name=${encodeURIComponent('mytril')}` }, fetch);
+		const lapikit = await callApi({ url: `/api/npm?name=${encodeURIComponent('lapikit')}` }, fetch);
 
 		const api = {
 			hero: hero.data,
 			github: { minedelve: minedelve.data },
-			npm: { mytril: mytril.data }
+			npm: { mytril: mytril.data, lapikit: lapikit.data }
 		};
 		response = api;
 

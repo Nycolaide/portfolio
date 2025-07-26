@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { heroTitle, t } from '$lib/stores';
 	import { capitalize } from 'mytril/actions';
-	import { Card, CardText, Divider, Icon, Img } from 'mytril/components';
+	import { Card, CardText, Divider, Icon } from 'mytril/components';
 	import { onMount } from 'svelte';
 
 	let { data } = $props();
@@ -25,11 +25,11 @@
 </script>
 
 <div class="relative">
-	<Img src="/images/treasure-invert.webp" alt="treasure-nycolaide" aspectRatio="16/7" />
-	<Img
-		class="!absolute bottom-0 w-[33%] rotate-[-6deg] rounded-2xl border-6 border-neutral-400"
-		src={'images/nycolaide-avatar.webp'}
+	<img src="/images/treasure-invert.webp" alt="treasure-nycolaide" />
+	<img
+		src="/images/nycolaide-avatar.webp"
 		alt="nycolaide"
+		class="!absolute bottom-0 w-[33%] rotate-[-6deg] rounded-2xl border-6 border-neutral-400"
 	/>
 </div>
 
