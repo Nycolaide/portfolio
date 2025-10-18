@@ -1,4 +1,4 @@
-FROM node:20.16 AS base
+FROM node:20.19 AS base
 WORKDIR /usr/src/app
 
 # install with production (exclude devDependencies)
@@ -6,7 +6,7 @@ FROM base AS install
 RUN mkdir -p /temp/prod
 COPY package*.json yarn.lock /temp/prod/
 COPY /static /temp/prod/static
-RUN cd /temp/prod && yarn install --frozen-lockfile
+RUN cd /temp/prod && yarn install
 
 # copy node_modules from temp directory
 # then copy all (non-ignored) project files into the image
